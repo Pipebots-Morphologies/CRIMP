@@ -1,8 +1,8 @@
 /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/uninstall.dir
 /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/crimp_cpp_uninstall.dir
-/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/talker.dir
-/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/listener.dir
-/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/pubsub.dir
+/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/joint_mover.dir
+/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/motion_planner.dir
+/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/suction_cups.dir
 /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/test.dir
 /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/edit_cache.dir
 /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/rebuild_cache.dir

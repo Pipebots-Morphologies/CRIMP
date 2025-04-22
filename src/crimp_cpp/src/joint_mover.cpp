@@ -27,40 +27,45 @@ using namespace std::chrono_literals;
 /* This example creates a subclass of Node and uses std::bind() to register a
  * member function as a callback from the timer. */
 
-class MinimalPubSub : public rclcpp::Node
+class JointMover : public rclcpp::Node
 {
 public:
-  MinimalPubSub() // constructor function
-  : Node("simple_pubsub"), count_(0) // defines two variables
+JointMover() // constructor function
+  : Node("joint_mover"), count_(0) // defines two variables
   {
-    publisher_ = this->create_publisher<std_msgs::msg::String>("topic1", 10); // creates the publisher
+    joint_pos_pub = this->create_publisher<std_msgs::msg::String>("joint_pos", 10); // creates the publisher to joint_pos topic
+
+    // FOR TESTING: calls timer_callback ever 0.5s
     timer_ = this->create_wall_timer(
-      500ms, std::bind(&MinimalPubSub::timer_callback, this)); // creates a timer object to run timer_callback every 500ms
-    subscription_ = this->create_subscription<std_msgs::msg::String>("topic2", 10, 
-      std::bind(&MinimalPubSub::sub_callback, this, _1));
+      500ms, std::bind(&JointMover::timer_callback, this)); 
+    
+    joint_target_sub = this->create_subscription<std_msgs::msg::String>("joint_targets", 10, 
+      std::bind(&JointMover::sub_callback, this, _1)); // creates a subscriber to joint_targets topic
   }
 
 private:
+  // called when the timer triggers
   void timer_callback()
   {
     auto message = std_msgs::msg::String();
-    message.data = "Hello, world! " + std::to_string(count_++);
+    message.data = "Hello, joint_pos! " + std::to_string(count_++);
     RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str()); // equivalent of print()
-    publisher_->publish(message); // publishes the message
+    joint_pos_pub->publish(message); // publishes the message
   }
+  // called when joint targets are received
   void sub_callback(const std_msgs::msg::String & msg) {
     RCLCPP_INFO(this->get_logger(), "I heard: '%s'", msg.data.c_str());
   }
   rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
-  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscription_;
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr joint_pos_pub;
+  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr joint_target_sub;
   size_t count_;
 };
 
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<MinimalPubSub>()); // alternatively use spin_some()
+  rclcpp::spin(std::make_shared<JointMover>()); // alternatively use spin_some()
   rclcpp::shutdown();
   return 0;
 }

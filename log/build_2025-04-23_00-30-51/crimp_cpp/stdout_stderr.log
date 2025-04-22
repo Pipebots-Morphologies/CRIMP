@@ -1,0 +1,13 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o[0m
+[ 50%] Built target joint_mover
+[ 66%] [32mBuilding CXX object CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o[0m
+[01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:[m[K In constructor ‘[01m[KMotionPlanner::[01;32m[KMotionPlanner[m[K()[m[K’:
+[01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:48:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kslow_timer_[m[K’ was not declared in this scope
+   48 |     [01;31m[Kslow_timer_[m[K = this->create_wall_timer(5s, slow_timer_callback);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/motion_planner.dir/build.make:76: CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/motion_planner.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 83%] [32m[1mLinking CXX executable suction_cups[0m
+[ 83%] Built target suction_cups
+gmake: *** [Makefile:146: all] Error 2

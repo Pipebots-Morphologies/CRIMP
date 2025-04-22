@@ -1,6 +1,6 @@
 set(_AMENT_PACKAGE_NAME "crimp_cpp")
 set(crimp_cpp_VERSION "0.0.0")
-set(crimp_cpp_MAINTAINER "ethan <ethan@todo.todo>")
+set(crimp_cpp_MAINTAINER "Ethan Silver <ethansilver248@gmail.com>")
 set(crimp_cpp_BUILD_DEPENDS "rclcpp" "std_msgs")
 set(crimp_cpp_BUILDTOOL_DEPENDS "ament_cmake")
 set(crimp_cpp_BUILD_EXPORT_DEPENDS "rclcpp" "std_msgs")

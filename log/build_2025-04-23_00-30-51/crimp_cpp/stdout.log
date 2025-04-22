@@ -1,0 +1,5 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o[0m
+[ 50%] Built target joint_mover
+[ 66%] [32mBuilding CXX object CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o[0m
+[ 83%] [32m[1mLinking CXX executable suction_cups[0m
+[ 83%] Built target suction_cups

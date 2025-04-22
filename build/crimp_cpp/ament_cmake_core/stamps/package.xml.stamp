@@ -3,8 +3,8 @@
 <package format="3">
   <name>crimp_cpp</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
-  <maintainer email="ethan@todo.todo">ethan</maintainer>
+  <description>The C++ package for the CRIMP robot</description>
+  <maintainer email="ethansilver248@gmail.com">Ethan Silver</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

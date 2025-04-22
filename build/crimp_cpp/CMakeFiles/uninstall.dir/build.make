@@ -53,7 +53,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/crimp_ws/src/examples
+CMAKE_SOURCE_DIR = /home/ethan/crimp_ws/src/crimp_cpp
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ethan/crimp_ws/build/crimp_cpp
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/ethan/crimp_ws/build/crimp_cpp && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/crimp_ws/src/examples /home/ethan/crimp_ws/src/examples /home/ethan/crimp_ws/build/crimp_cpp /home/ethan/crimp_ws/build/crimp_cpp /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/ethan/crimp_ws/build/crimp_cpp && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/crimp_ws/src/crimp_cpp /home/ethan/crimp_ws/src/crimp_cpp /home/ethan/crimp_ws/build/crimp_cpp /home/ethan/crimp_ws/build/crimp_cpp /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 

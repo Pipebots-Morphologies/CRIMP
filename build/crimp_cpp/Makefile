@@ -57,7 +57,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/crimp_ws/src/examples
+CMAKE_SOURCE_DIR = /home/ethan/crimp_ws/src/crimp_cpp
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ethan/crimp_ws/build/crimp_cpp
@@ -198,115 +198,115 @@ crimp_cpp_uninstall/fast:
 .PHONY : crimp_cpp_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named talker
+# Target rules for targets named joint_mover
 
 # Build rule for target.
-talker: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 talker
-.PHONY : talker
+joint_mover: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 joint_mover
+.PHONY : joint_mover
 
 # fast build rule for target.
-talker/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
-.PHONY : talker/fast
+joint_mover/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_mover.dir/build.make CMakeFiles/joint_mover.dir/build
+.PHONY : joint_mover/fast
 
 #=============================================================================
-# Target rules for targets named listener
+# Target rules for targets named motion_planner
 
 # Build rule for target.
-listener: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 listener
-.PHONY : listener
+motion_planner: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motion_planner
+.PHONY : motion_planner
 
 # fast build rule for target.
-listener/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/build
-.PHONY : listener/fast
+motion_planner/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_planner.dir/build.make CMakeFiles/motion_planner.dir/build
+.PHONY : motion_planner/fast
 
 #=============================================================================
-# Target rules for targets named pubsub
+# Target rules for targets named suction_cups
 
 # Build rule for target.
-pubsub: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pubsub
-.PHONY : pubsub
+suction_cups: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 suction_cups
+.PHONY : suction_cups
 
 # fast build rule for target.
-pubsub/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubsub.dir/build.make CMakeFiles/pubsub.dir/build
-.PHONY : pubsub/fast
+suction_cups/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/suction_cups.dir/build.make CMakeFiles/suction_cups.dir/build
+.PHONY : suction_cups/fast
 
-src/simple_pub.o: src/simple_pub.cpp.o
-.PHONY : src/simple_pub.o
-
-# target to build an object file
-src/simple_pub.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/simple_pub.cpp.o
-.PHONY : src/simple_pub.cpp.o
-
-src/simple_pub.i: src/simple_pub.cpp.i
-.PHONY : src/simple_pub.i
-
-# target to preprocess a source file
-src/simple_pub.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/simple_pub.cpp.i
-.PHONY : src/simple_pub.cpp.i
-
-src/simple_pub.s: src/simple_pub.cpp.s
-.PHONY : src/simple_pub.s
-
-# target to generate assembly for a file
-src/simple_pub.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/simple_pub.cpp.s
-.PHONY : src/simple_pub.cpp.s
-
-src/simple_pubsub.o: src/simple_pubsub.cpp.o
-.PHONY : src/simple_pubsub.o
+src/joint_mover.o: src/joint_mover.cpp.o
+.PHONY : src/joint_mover.o
 
 # target to build an object file
-src/simple_pubsub.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubsub.dir/build.make CMakeFiles/pubsub.dir/src/simple_pubsub.cpp.o
-.PHONY : src/simple_pubsub.cpp.o
+src/joint_mover.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_mover.dir/build.make CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o
+.PHONY : src/joint_mover.cpp.o
 
-src/simple_pubsub.i: src/simple_pubsub.cpp.i
-.PHONY : src/simple_pubsub.i
+src/joint_mover.i: src/joint_mover.cpp.i
+.PHONY : src/joint_mover.i
 
 # target to preprocess a source file
-src/simple_pubsub.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubsub.dir/build.make CMakeFiles/pubsub.dir/src/simple_pubsub.cpp.i
-.PHONY : src/simple_pubsub.cpp.i
+src/joint_mover.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_mover.dir/build.make CMakeFiles/joint_mover.dir/src/joint_mover.cpp.i
+.PHONY : src/joint_mover.cpp.i
 
-src/simple_pubsub.s: src/simple_pubsub.cpp.s
-.PHONY : src/simple_pubsub.s
+src/joint_mover.s: src/joint_mover.cpp.s
+.PHONY : src/joint_mover.s
 
 # target to generate assembly for a file
-src/simple_pubsub.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubsub.dir/build.make CMakeFiles/pubsub.dir/src/simple_pubsub.cpp.s
-.PHONY : src/simple_pubsub.cpp.s
+src/joint_mover.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_mover.dir/build.make CMakeFiles/joint_mover.dir/src/joint_mover.cpp.s
+.PHONY : src/joint_mover.cpp.s
 
-src/simple_sub.o: src/simple_sub.cpp.o
-.PHONY : src/simple_sub.o
+src/motion_planner.o: src/motion_planner.cpp.o
+.PHONY : src/motion_planner.o
 
 # target to build an object file
-src/simple_sub.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/src/simple_sub.cpp.o
-.PHONY : src/simple_sub.cpp.o
+src/motion_planner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_planner.dir/build.make CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o
+.PHONY : src/motion_planner.cpp.o
 
-src/simple_sub.i: src/simple_sub.cpp.i
-.PHONY : src/simple_sub.i
+src/motion_planner.i: src/motion_planner.cpp.i
+.PHONY : src/motion_planner.i
 
 # target to preprocess a source file
-src/simple_sub.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/src/simple_sub.cpp.i
-.PHONY : src/simple_sub.cpp.i
+src/motion_planner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_planner.dir/build.make CMakeFiles/motion_planner.dir/src/motion_planner.cpp.i
+.PHONY : src/motion_planner.cpp.i
 
-src/simple_sub.s: src/simple_sub.cpp.s
-.PHONY : src/simple_sub.s
+src/motion_planner.s: src/motion_planner.cpp.s
+.PHONY : src/motion_planner.s
 
 # target to generate assembly for a file
-src/simple_sub.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/src/simple_sub.cpp.s
-.PHONY : src/simple_sub.cpp.s
+src/motion_planner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_planner.dir/build.make CMakeFiles/motion_planner.dir/src/motion_planner.cpp.s
+.PHONY : src/motion_planner.cpp.s
+
+src/suction_cups.o: src/suction_cups.cpp.o
+.PHONY : src/suction_cups.o
+
+# target to build an object file
+src/suction_cups.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/suction_cups.dir/build.make CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o
+.PHONY : src/suction_cups.cpp.o
+
+src/suction_cups.i: src/suction_cups.cpp.i
+.PHONY : src/suction_cups.i
+
+# target to preprocess a source file
+src/suction_cups.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/suction_cups.dir/build.make CMakeFiles/suction_cups.dir/src/suction_cups.cpp.i
+.PHONY : src/suction_cups.cpp.i
+
+src/suction_cups.s: src/suction_cups.cpp.s
+.PHONY : src/suction_cups.s
+
+# target to generate assembly for a file
+src/suction_cups.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/suction_cups.dir/build.make CMakeFiles/suction_cups.dir/src/suction_cups.cpp.s
+.PHONY : src/suction_cups.cpp.s
 
 # Help Target
 help:
@@ -323,18 +323,18 @@ help:
 	@echo "... test"
 	@echo "... crimp_cpp_uninstall"
 	@echo "... uninstall"
-	@echo "... listener"
-	@echo "... pubsub"
-	@echo "... talker"
-	@echo "... src/simple_pub.o"
-	@echo "... src/simple_pub.i"
-	@echo "... src/simple_pub.s"
-	@echo "... src/simple_pubsub.o"
-	@echo "... src/simple_pubsub.i"
-	@echo "... src/simple_pubsub.s"
-	@echo "... src/simple_sub.o"
-	@echo "... src/simple_sub.i"
-	@echo "... src/simple_sub.s"
+	@echo "... joint_mover"
+	@echo "... motion_planner"
+	@echo "... suction_cups"
+	@echo "... src/joint_mover.o"
+	@echo "... src/joint_mover.i"
+	@echo "... src/joint_mover.s"
+	@echo "... src/motion_planner.o"
+	@echo "... src/motion_planner.i"
+	@echo "... src/motion_planner.s"
+	@echo "... src/suction_cups.o"
+	@echo "... src/suction_cups.i"
+	@echo "... src/suction_cups.s"
 .PHONY : help
 
 

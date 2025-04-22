@@ -54,7 +54,7 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/crimp_ws/src/examples
+CMAKE_SOURCE_DIR = /home/ethan/crimp_ws/src/crimp_cpp
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/ethan/crimp_ws/build/crimp_cpp
@@ -63,9 +63,9 @@ CMAKE_BINARY_DIR = /home/ethan/crimp_ws/build/crimp_cpp
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/talker.dir/all
-all: CMakeFiles/listener.dir/all
-all: CMakeFiles/pubsub.dir/all
+all: CMakeFiles/joint_mover.dir/all
+all: CMakeFiles/motion_planner.dir/all
+all: CMakeFiles/suction_cups.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -75,9 +75,9 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/crimp_cpp_uninstall.dir/clean
-clean: CMakeFiles/talker.dir/clean
-clean: CMakeFiles/listener.dir/clean
-clean: CMakeFiles/pubsub.dir/clean
+clean: CMakeFiles/joint_mover.dir/clean
+clean: CMakeFiles/motion_planner.dir/clean
+clean: CMakeFiles/suction_cups.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -133,82 +133,82 @@ CMakeFiles/crimp_cpp_uninstall.dir/clean:
 .PHONY : CMakeFiles/crimp_cpp_uninstall.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/talker.dir
+# Target rules for target CMakeFiles/joint_mover.dir
 
 # All Build rule for target.
-CMakeFiles/talker.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles --progress-num=5,6 "Built target talker"
-.PHONY : CMakeFiles/talker.dir/all
+CMakeFiles/joint_mover.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_mover.dir/build.make CMakeFiles/joint_mover.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_mover.dir/build.make CMakeFiles/joint_mover.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles --progress-num=1,2 "Built target joint_mover"
+.PHONY : CMakeFiles/joint_mover.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/talker.dir/rule: cmake_check_build_system
+CMakeFiles/joint_mover.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/talker.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/joint_mover.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles 0
-.PHONY : CMakeFiles/talker.dir/rule
+.PHONY : CMakeFiles/joint_mover.dir/rule
 
 # Convenience name for target.
-talker: CMakeFiles/talker.dir/rule
-.PHONY : talker
+joint_mover: CMakeFiles/joint_mover.dir/rule
+.PHONY : joint_mover
 
 # clean rule for target.
-CMakeFiles/talker.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/clean
-.PHONY : CMakeFiles/talker.dir/clean
+CMakeFiles/joint_mover.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_mover.dir/build.make CMakeFiles/joint_mover.dir/clean
+.PHONY : CMakeFiles/joint_mover.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/listener.dir
+# Target rules for target CMakeFiles/motion_planner.dir
 
 # All Build rule for target.
-CMakeFiles/listener.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles --progress-num=1,2 "Built target listener"
-.PHONY : CMakeFiles/listener.dir/all
+CMakeFiles/motion_planner.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_planner.dir/build.make CMakeFiles/motion_planner.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_planner.dir/build.make CMakeFiles/motion_planner.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles --progress-num=3,4 "Built target motion_planner"
+.PHONY : CMakeFiles/motion_planner.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/listener.dir/rule: cmake_check_build_system
+CMakeFiles/motion_planner.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/listener.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/motion_planner.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles 0
-.PHONY : CMakeFiles/listener.dir/rule
+.PHONY : CMakeFiles/motion_planner.dir/rule
 
 # Convenience name for target.
-listener: CMakeFiles/listener.dir/rule
-.PHONY : listener
+motion_planner: CMakeFiles/motion_planner.dir/rule
+.PHONY : motion_planner
 
 # clean rule for target.
-CMakeFiles/listener.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/listener.dir/build.make CMakeFiles/listener.dir/clean
-.PHONY : CMakeFiles/listener.dir/clean
+CMakeFiles/motion_planner.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motion_planner.dir/build.make CMakeFiles/motion_planner.dir/clean
+.PHONY : CMakeFiles/motion_planner.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/pubsub.dir
+# Target rules for target CMakeFiles/suction_cups.dir
 
 # All Build rule for target.
-CMakeFiles/pubsub.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubsub.dir/build.make CMakeFiles/pubsub.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubsub.dir/build.make CMakeFiles/pubsub.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles --progress-num=3,4 "Built target pubsub"
-.PHONY : CMakeFiles/pubsub.dir/all
+CMakeFiles/suction_cups.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/suction_cups.dir/build.make CMakeFiles/suction_cups.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/suction_cups.dir/build.make CMakeFiles/suction_cups.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles --progress-num=5,6 "Built target suction_cups"
+.PHONY : CMakeFiles/suction_cups.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/pubsub.dir/rule: cmake_check_build_system
+CMakeFiles/suction_cups.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pubsub.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/suction_cups.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles 0
-.PHONY : CMakeFiles/pubsub.dir/rule
+.PHONY : CMakeFiles/suction_cups.dir/rule
 
 # Convenience name for target.
-pubsub: CMakeFiles/pubsub.dir/rule
-.PHONY : pubsub
+suction_cups: CMakeFiles/suction_cups.dir/rule
+.PHONY : suction_cups
 
 # clean rule for target.
-CMakeFiles/pubsub.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubsub.dir/build.make CMakeFiles/pubsub.dir/clean
-.PHONY : CMakeFiles/pubsub.dir/clean
+CMakeFiles/suction_cups.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/suction_cups.dir/build.make CMakeFiles/suction_cups.dir/clean
+.PHONY : CMakeFiles/suction_cups.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

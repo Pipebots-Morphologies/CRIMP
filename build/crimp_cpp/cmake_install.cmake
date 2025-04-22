@@ -1,4 +1,4 @@
-# Install script for directory: /home/ethan/crimp_ws/src/examples
+# Install script for directory: /home/ethan/crimp_ws/src/crimp_cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,75 +43,75 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/talker" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/talker")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/joint_mover" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/joint_mover")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/talker"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/joint_mover"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp" TYPE EXECUTABLE FILES "/home/ethan/crimp_ws/build/crimp_cpp/talker")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/talker" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/talker")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp" TYPE EXECUTABLE FILES "/home/ethan/crimp_ws/build/crimp_cpp/joint_mover")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/joint_mover" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/joint_mover")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/talker"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/joint_mover"
          OLD_RPATH "/opt/ros/jazzy/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/talker")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/joint_mover")
     endif()
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/talker.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+  include("/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/joint_mover.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/listener" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/listener")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/motion_planner" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/motion_planner")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/listener"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/motion_planner"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp" TYPE EXECUTABLE FILES "/home/ethan/crimp_ws/build/crimp_cpp/listener")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/listener" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/listener")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp" TYPE EXECUTABLE FILES "/home/ethan/crimp_ws/build/crimp_cpp/motion_planner")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/motion_planner" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/motion_planner")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/listener"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/motion_planner"
          OLD_RPATH "/opt/ros/jazzy/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/listener")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/motion_planner")
     endif()
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/listener.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+  include("/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/motion_planner.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/pubsub" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/pubsub")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/suction_cups" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/suction_cups")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/pubsub"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/suction_cups"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp" TYPE EXECUTABLE FILES "/home/ethan/crimp_ws/build/crimp_cpp/pubsub")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/pubsub" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/pubsub")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp" TYPE EXECUTABLE FILES "/home/ethan/crimp_ws/build/crimp_cpp/suction_cups")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/suction_cups" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/suction_cups")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/pubsub"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/suction_cups"
          OLD_RPATH "/opt/ros/jazzy/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/pubsub")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/crimp_cpp/suction_cups")
     endif()
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/pubsub.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
+  include("/home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/suction_cups.dir/install-cxx-module-bmi-noconfig.cmake" OPTIONAL)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -170,7 +170,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/crimp_cpp" TYPE FILE FILES "/home/ethan/crimp_ws/src/examples/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/crimp_cpp" TYPE FILE FILES "/home/ethan/crimp_ws/src/crimp_cpp/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

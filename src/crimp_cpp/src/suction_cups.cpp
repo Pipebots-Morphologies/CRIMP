@@ -27,40 +27,40 @@ using namespace std::chrono_literals;
 /* This example creates a subclass of Node and uses std::bind() to register a
  * member function as a callback from the timer. */
 
-class MinimalPubSub : public rclcpp::Node
+class SuctionCups : public rclcpp::Node
 {
 public:
-  MinimalPubSub() // constructor function
-  : Node("simple_pubsub"), count_(0) // defines two variables
+SuctionCups() // constructor function
+  : Node("suction_cups"), count_(0) // defines two variables
   {
-    publisher_ = this->create_publisher<std_msgs::msg::String>("topic1", 10); // creates the publisher
+    suction_p_pub = this->create_publisher<std_msgs::msg::String>("suction_pressure", 10); // creates the publisher
     timer_ = this->create_wall_timer(
-      500ms, std::bind(&MinimalPubSub::timer_callback, this)); // creates a timer object to run timer_callback every 500ms
-    subscription_ = this->create_subscription<std_msgs::msg::String>("topic2", 10, 
-      std::bind(&MinimalPubSub::sub_callback, this, _1));
+      500ms, std::bind(&SuctionCups::timer_callback, this)); // creates a timer object to run timer_callback every 500ms
+    activate_suction_sub = this->create_subscription<std_msgs::msg::String>("activate_suction", 10, 
+      std::bind(&SuctionCups::sub_callback, this, _1));
   }
 
 private:
   void timer_callback()
   {
     auto message = std_msgs::msg::String();
-    message.data = "Hello, world! " + std::to_string(count_++);
+    message.data = "Hello, suction_pressure! " + std::to_string(count_++);
     RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str()); // equivalent of print()
-    publisher_->publish(message); // publishes the message
+    suction_p_pub->publish(message); // publishes the message
   }
   void sub_callback(const std_msgs::msg::String & msg) {
     RCLCPP_INFO(this->get_logger(), "I heard: '%s'", msg.data.c_str());
   }
   rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
-  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscription_;
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr suction_p_pub;
+  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr activate_suction_sub;
   size_t count_;
 };
 
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<MinimalPubSub>()); // alternatively use spin_some()
+  rclcpp::spin(std::make_shared<SuctionCups>()); // alternatively use spin_some()
   rclcpp::shutdown();
   return 0;
 }

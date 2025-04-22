@@ -12,8 +12,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
   "ament_cmake_core/package.cmake"
   "ament_cmake_package_templates/templates.cmake"
-  "/home/ethan/crimp_ws/src/examples/CMakeLists.txt"
-  "/home/ethan/crimp_ws/src/examples/package.xml"
+  "/home/ethan/crimp_ws/src/crimp_cpp/CMakeLists.txt"
+  "/home/ethan/crimp_ws/src/crimp_cpp/package.xml"
   "/opt/ros/jazzy/lib/cmake/fastcdr/fastcdr-config-version.cmake"
   "/opt/ros/jazzy/lib/cmake/fastcdr/fastcdr-config.cmake"
   "/opt/ros/jazzy/lib/cmake/fastcdr/fastcdr-shared-targets-none.cmake"
@@ -748,7 +748,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/uninstall.dir/DependInfo.cmake"
   "CMakeFiles/crimp_cpp_uninstall.dir/DependInfo.cmake"
-  "CMakeFiles/talker.dir/DependInfo.cmake"
-  "CMakeFiles/listener.dir/DependInfo.cmake"
-  "CMakeFiles/pubsub.dir/DependInfo.cmake"
+  "CMakeFiles/joint_mover.dir/DependInfo.cmake"
+  "CMakeFiles/motion_planner.dir/DependInfo.cmake"
+  "CMakeFiles/suction_cups.dir/DependInfo.cmake"
   )
