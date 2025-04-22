@@ -1,0 +1,14 @@
+[ 16%] [32mBuilding CXX object CMakeFiles/pubsub.dir/src/simple_pubsub.cpp.o[0m
+[ 50%] Built target listener
+[ 83%] Built target talker
+[01m[K/home/ethan/crimp_ws/src/examples/src/simple_pubsub.cpp:56:11:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+   56 |   rclcpp::[01;31m[KSubscriber[m[K<std_msgs::msg::String>::SharedPtr subscriber_;
+      |           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/ethan/crimp_ws/src/examples/src/simple_pubsub.cpp:[m[K In constructor ‘[01m[KMinimalPubSub::[01;32m[KMinimalPubSub[m[K()[m[K’:
+[01m[K/home/ethan/crimp_ws/src/examples/src/simple_pubsub.cpp:39:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+   39 |     [01;31m[Ksubscription_[m[K = this->create_subscription<std_msgs::msg::String>("topic2", 10,
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+      |     [32m[Krmw_subscription_t[m[K
+gmake[2]: *** [CMakeFiles/pubsub.dir/build.make:76: CMakeFiles/pubsub.dir/src/simple_pubsub.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/pubsub.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

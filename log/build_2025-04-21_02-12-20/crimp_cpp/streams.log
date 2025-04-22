@@ -1,0 +1,16 @@
+[0.021s] Invoking command in '/home/ethan/crimp_ws/build/crimp_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ethan/crimp_ws/build/crimp_cpp -- -j8 -l8
+[0.161s] [ 16%] [32mBuilding CXX object CMakeFiles/pubsub.dir/src/simple_pubsub.cpp.o[0m
+[0.161s] [ 50%] Built target listener
+[0.162s] [ 83%] Built target talker
+[2.833s] [01m[K/home/ethan/crimp_ws/src/examples/src/simple_pubsub.cpp:56:11:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+[2.833s]    56 |   rclcpp::[01;31m[KSubscriber[m[K<std_msgs::msg::String>::SharedPtr subscriber_;
+[2.833s]       |           [01;31m[K^~~~~~~~~~[m[K
+[2.851s] [01m[K/home/ethan/crimp_ws/src/examples/src/simple_pubsub.cpp:[m[K In constructor ‘[01m[KMinimalPubSub::[01;32m[KMinimalPubSub[m[K()[m[K’:
+[2.851s] [01m[K/home/ethan/crimp_ws/src/examples/src/simple_pubsub.cpp:39:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+[2.852s]    39 |     [01;31m[Ksubscription_[m[K = this->create_subscription<std_msgs::msg::String>("topic2", 10,
+[2.852s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[2.852s]       |     [32m[Krmw_subscription_t[m[K
+[5.176s] gmake[2]: *** [CMakeFiles/pubsub.dir/build.make:76: CMakeFiles/pubsub.dir/src/simple_pubsub.cpp.o] Error 1
+[5.177s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/pubsub.dir/all] Error 2
+[5.177s] gmake: *** [Makefile:146: all] Error 2
+[5.183s] Invoked command in '/home/ethan/crimp_ws/build/crimp_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ethan/crimp_ws/build/crimp_cpp -- -j8 -l8

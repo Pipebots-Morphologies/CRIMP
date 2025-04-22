@@ -1,0 +1,24 @@
+[0.020s] Invoking command in '/home/ethan/crimp_ws/build/crimp_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ethan/crimp_ws/build/crimp_cpp -- -j8 -l8
+[0.066s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.390s] -- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.436s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.450s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.468s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.489s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.581s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.584s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.681s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.775s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.797s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.922s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:53 (message):
+[0.922s]   ament_package_xml() package name 'crimp_cpp' in '/package.xml' does not
+[0.923s]   match current PROJECT_NAME 'examples'.  You must call project() with the
+[0.923s]   same package name before.
+[0.923s] Call Stack (most recent call first):
+[0.923s]   /opt/ros/jazzy/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[0.923s]   CMakeLists.txt:40 (ament_lint_auto_find_test_dependencies)
+[0.923s] 
+[0.923s] [0m
+[0.923s] -- Configuring incomplete, errors occurred!
+[0.934s] gmake: *** [Makefile:349: cmake_check_build_system] Error 1
+[0.940s] Invoked command in '/home/ethan/crimp_ws/build/crimp_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ethan/crimp_ws/build/crimp_cpp -- -j8 -l8

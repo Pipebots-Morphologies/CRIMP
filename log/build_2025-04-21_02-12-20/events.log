@@ -1,0 +1,74 @@
+[0.000000] (-) TimerEvent: {}
+[0.000966] (crimp_cpp) JobQueued: {'identifier': 'crimp_cpp', 'dependencies': OrderedDict()}
+[0.001087] (crimp_cpp) JobStarted: {'identifier': 'crimp_cpp'}
+[0.018392] (crimp_cpp) JobProgress: {'identifier': 'crimp_cpp', 'progress': 'cmake'}
+[0.019626] (crimp_cpp) JobProgress: {'identifier': 'crimp_cpp', 'progress': 'build'}
+[0.020424] (crimp_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ethan/crimp_ws/build/crimp_cpp', '--', '-j8', '-l8'], 'cwd': '/home/ethan/crimp_ws/build/crimp_cpp', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ethan', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ethan/ros2_tutorial_ws/install/turtlesim/lib:/home/ethan/ros2_ws/install/turtlesim/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ethan', 'OLDPWD': '/home/ethan/crimp_ws/src/examples/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '58832', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', '_colcon_cd_root': '/opt/ros/jazzy/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ethan/ros2_tutorial_ws/install:/home/ethan/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ethan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ethan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/laptop:@/tmp/.ICE-unix/58627,unix/laptop:/tmp/.ICE-unix/58627', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/484b2a14_515c_4cec_ac71_42783e22c3d9', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.CU6B52', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.105', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/home/ethan/ros2_tutorial_ws/install/cpp_pubsub:/home/ethan/ros2_tutorial_ws/install/turtlesim:/home/ethan/ros2_tutorial_ws/install/my_package:/home/ethan/ros2_ws/install/turtlesim:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ethan/crimp_ws/build/crimp_cpp', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ethan/ros2_tutorial_ws/install/turtlesim/lib/python3.12/site-packages:/home/ethan/ros2_ws/install/turtlesim/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/ethan/ros2_tutorial_ws/install/cpp_pubsub:/home/ethan/ros2_tutorial_ws/install/turtlesim:/home/ethan/ros2_tutorial_ws/install/my_package:/home/ethan/ros2_ws/install/turtlesim:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099873] (-) TimerEvent: {}
+[0.160924] (crimp_cpp) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/pubsub.dir/src/simple_pubsub.cpp.o\x1b[0m\n'}
+[0.162216] (crimp_cpp) StdoutLine: {'line': b'[ 50%] Built target listener\n'}
+[0.162745] (crimp_cpp) StdoutLine: {'line': b'[ 83%] Built target talker\n'}
+[0.200008] (-) TimerEvent: {}
+[0.300472] (-) TimerEvent: {}
+[0.401002] (-) TimerEvent: {}
+[0.501504] (-) TimerEvent: {}
+[0.601971] (-) TimerEvent: {}
+[0.702431] (-) TimerEvent: {}
+[0.802875] (-) TimerEvent: {}
+[0.903348] (-) TimerEvent: {}
+[1.003864] (-) TimerEvent: {}
+[1.104350] (-) TimerEvent: {}
+[1.204842] (-) TimerEvent: {}
+[1.305346] (-) TimerEvent: {}
+[1.405828] (-) TimerEvent: {}
+[1.506306] (-) TimerEvent: {}
+[1.606812] (-) TimerEvent: {}
+[1.707373] (-) TimerEvent: {}
+[1.807878] (-) TimerEvent: {}
+[1.908368] (-) TimerEvent: {}
+[2.008876] (-) TimerEvent: {}
+[2.109355] (-) TimerEvent: {}
+[2.209870] (-) TimerEvent: {}
+[2.310301] (-) TimerEvent: {}
+[2.410811] (-) TimerEvent: {}
+[2.511264] (-) TimerEvent: {}
+[2.611716] (-) TimerEvent: {}
+[2.712200] (-) TimerEvent: {}
+[2.812673] (-) TimerEvent: {}
+[2.833385] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/examples/src/simple_pubsub.cpp:56:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KSubscriber\x1b[m\x1b[K\xe2\x80\x99 in namespace \xe2\x80\x98\x1b[01m\x1b[Krclcpp\x1b[m\x1b[K\xe2\x80\x99 does not name a template type\n'}
+[2.833872] (crimp_cpp) StderrLine: {'line': b'   56 |   rclcpp::\x1b[01;31m\x1b[KSubscriber\x1b[m\x1b[K<std_msgs::msg::String>::SharedPtr subscriber_;\n'}
+[2.834165] (crimp_cpp) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.851808] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/examples/src/simple_pubsub.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMinimalPubSub::\x1b[01;32m\x1b[KMinimalPubSub\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.852224] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/examples/src/simple_pubsub.cpp:39:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksubscription_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_subscription_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[2.852513] (crimp_cpp) StderrLine: {'line': b'   39 |     \x1b[01;31m\x1b[Ksubscription_\x1b[m\x1b[K = this->create_subscription<std_msgs::msg::String>("topic2", 10,\n'}
+[2.852761] (crimp_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.853052] (crimp_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[Krmw_subscription_t\x1b[m\x1b[K\n'}
+[2.912872] (-) TimerEvent: {}
+[3.013351] (-) TimerEvent: {}
+[3.114223] (-) TimerEvent: {}
+[3.214705] (-) TimerEvent: {}
+[3.315160] (-) TimerEvent: {}
+[3.415509] (-) TimerEvent: {}
+[3.515897] (-) TimerEvent: {}
+[3.616263] (-) TimerEvent: {}
+[3.716709] (-) TimerEvent: {}
+[3.817158] (-) TimerEvent: {}
+[3.918025] (-) TimerEvent: {}
+[4.018902] (-) TimerEvent: {}
+[4.119370] (-) TimerEvent: {}
+[4.219867] (-) TimerEvent: {}
+[4.320762] (-) TimerEvent: {}
+[4.421649] (-) TimerEvent: {}
+[4.522157] (-) TimerEvent: {}
+[4.622627] (-) TimerEvent: {}
+[4.723143] (-) TimerEvent: {}
+[4.823598] (-) TimerEvent: {}
+[4.924505] (-) TimerEvent: {}
+[5.024996] (-) TimerEvent: {}
+[5.125449] (-) TimerEvent: {}
+[5.176941] (crimp_cpp) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/pubsub.dir/build.make:76: CMakeFiles/pubsub.dir/src/simple_pubsub.cpp.o] Error 1\n'}
+[5.177608] (crimp_cpp) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/pubsub.dir/all] Error 2\n'}
+[5.178287] (crimp_cpp) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[5.182458] (crimp_cpp) CommandEnded: {'returncode': 2}
+[5.202996] (crimp_cpp) JobEnded: {'identifier': 'crimp_cpp', 'rc': 2}
+[5.213999] (-) EventReactorShutdown: {}

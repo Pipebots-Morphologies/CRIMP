@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: examples-python
+Version: 0.0.0
+Summary: A collection of simple python nodes
+Maintainer: Ethan Silver
+Maintainer-email: ethansilver248@gmail.com
+License: Apache-2.0
+License-File: LICENSE

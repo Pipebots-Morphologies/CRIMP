@@ -1,0 +1,4 @@
+[console_scripts]
+listener = examples_python.simple_sub:main
+pubsub = examples_python.simple_pubsub:main
+talker = examples_python.simple_pub:main
