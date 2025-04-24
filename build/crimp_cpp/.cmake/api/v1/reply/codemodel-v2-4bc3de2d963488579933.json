@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-0865cb984ca0f8dadd3c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "crimp_cpp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "crimp_cpp_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crimp_cpp_uninstall-459c9682407a1e654719.json",
+					"name" : "crimp_cpp_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "joint_mover::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-joint_mover-c0175e59a72946d94e1a.json",
+					"name" : "joint_mover",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motion_planner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motion_planner-3b48f344f62ec93e6db3.json",
+					"name" : "motion_planner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "suction_cups::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-suction_cups-8a19ccb13cf46f86d917.json",
+					"name" : "suction_cups",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-069c2428480a38cf479d.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ethan/crimp_ws/build/crimp_cpp",
+		"source" : "/home/ethan/crimp_ws/src/crimp_cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

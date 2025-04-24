@@ -19,8 +19,10 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
+#include "sensor_msgs/msg/joint_state.hpp"
 
 using std::placeholders::_1;
+using std::to_string;
 
 using namespace std::chrono_literals;
 
@@ -33,13 +35,13 @@ public:
 JointMover() // constructor function
   : Node("joint_mover"), count_(0) // defines two variables
   {
-    joint_pos_pub = this->create_publisher<std_msgs::msg::String>("joint_pos", 10); // creates the publisher to joint_pos topic
+    joint_pos_pub = this->create_publisher<sensor_msgs::msg::JointState>("joint_pos", 10); // creates the publisher to joint_pos topic
 
     // FOR TESTING: calls timer_callback ever 0.5s
     timer_ = this->create_wall_timer(
       500ms, std::bind(&JointMover::timer_callback, this)); 
     
-    joint_target_sub = this->create_subscription<std_msgs::msg::String>("joint_targets", 10, 
+    joint_target_sub = this->create_subscription<sensor_msgs::msg::JointState>("joint_targets", 10, 
       std::bind(&JointMover::sub_callback, this, _1)); // creates a subscriber to joint_targets topic
   }
 
@@ -47,18 +49,21 @@ private:
   // called when the timer triggers
   void timer_callback()
   {
-    auto message = std_msgs::msg::String();
-    message.data = "Hello, joint_pos! " + std::to_string(count_++);
-    RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str()); // equivalent of print()
-    joint_pos_pub->publish(message); // publishes the message
+    count_++;
+    auto msg = sensor_msgs::msg::JointState();
+    msg.name = {"joint2"};
+    msg.position = {count_*10};
+    RCLCPP_INFO(this->get_logger(), "Publishing: '%s position=%f'", msg.name[0].c_str(), msg.position[0]); // equivalent of print()
+    joint_pos_pub->publish(msg); // publishes the message
   }
   // called when joint targets are received
-  void sub_callback(const std_msgs::msg::String & msg) {
-    RCLCPP_INFO(this->get_logger(), "I heard: '%s'", msg.data.c_str());
+  void sub_callback(const sensor_msgs::msg::JointState & msg) {
+    auto pos = to_string(msg.position[0]).c_str();
+    RCLCPP_INFO(this->get_logger(), "I heard: '%s position = %f'", msg.name[0].c_str(), msg.position[0]);
   }
   rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr joint_pos_pub;
-  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr joint_target_sub;
+  rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_pos_pub;
+  rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_target_sub;
   size_t count_;
 };
 

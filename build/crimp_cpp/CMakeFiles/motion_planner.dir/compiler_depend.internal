@@ -3,6 +3,17 @@
 
 CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o
  /home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__builder.hpp
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__struct.hpp
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__traits.hpp
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.hpp
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__builder.hpp
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__struct.hpp
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__traits.hpp
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.hpp
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_force.hpp
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_request.hpp
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__traits.hpp
@@ -15,6 +26,16 @@ CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
  /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/time.hpp
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__traits.hpp
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__builder.hpp
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__traits.hpp
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__type_support.hpp
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__traits.hpp
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose.hpp
+ /opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
  /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/collector.hpp
  /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp
  /opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp
@@ -380,6 +401,12 @@ CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o
  /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h
  /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp/message_introspection.hpp
  /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp/visibility_control.h
+ /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp
+ /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp
+ /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp
+ /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp
+ /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp
+ /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp
  /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__traits.hpp
@@ -391,6 +418,8 @@ CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o
  /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__traits.hpp
  /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp
  /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__builder.hpp
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__struct.hpp
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__traits.hpp

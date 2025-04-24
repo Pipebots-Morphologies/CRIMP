@@ -687,4 +687,15 @@ CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o: \
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp \
- /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+ /opt/ros/jazzy/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_request.hpp \
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__struct.hpp \
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__builder.hpp \
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__traits.hpp \
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.hpp \
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_force.hpp \
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__struct.hpp \
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__builder.hpp \
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__traits.hpp \
+ /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.hpp

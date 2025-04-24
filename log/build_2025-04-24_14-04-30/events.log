@@ -1,0 +1,378 @@
+[0.000000] (-) TimerEvent: {}
+[0.000406] (crimp_python) JobQueued: {'identifier': 'crimp_python', 'dependencies': OrderedDict()}
+[0.000547] (custom_msgs) JobQueued: {'identifier': 'custom_msgs', 'dependencies': OrderedDict()}
+[0.000619] (crimp_cpp) JobQueued: {'identifier': 'crimp_cpp', 'dependencies': OrderedDict({'custom_msgs': '/home/ethan/crimp_ws/install/custom_msgs'})}
+[0.000690] (custom_msgs) JobStarted: {'identifier': 'custom_msgs'}
+[0.009844] (crimp_python) JobStarted: {'identifier': 'crimp_python'}
+[0.019509] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'cmake'}
+[0.021365] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'build'}
+[0.021488] (custom_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ethan/crimp_ws/build/custom_msgs', '--', '-j8', '-l8'], 'cwd': '/home/ethan/crimp_ws/build/custom_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ethan', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ethan/crimp_ws/install/custom_msgs/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ethan', 'OLDPWD': '/home/ethan/crimp_ws/src/crimp_cpp', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '58832', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', '_colcon_cd_root': '/opt/ros/jazzy/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ethan/crimp_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ethan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ethan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/laptop:@/tmp/.ICE-unix/58627,unix/laptop:/tmp/.ICE-unix/58627', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a2fb62f2_3b8e_4580_aed0_fbda429b0974', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.CU6B52', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.440', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/home/ethan/crimp_ws/install/crimp_cpp:/home/ethan/crimp_ws/install/custom_msgs:/home/ethan/crimp_ws/install/crimp_python:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ethan/crimp_ws/build/custom_msgs', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages:/home/ethan/crimp_ws/install/crimp_python/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/ethan/crimp_ws/install/crimp_cpp:/home/ethan/crimp_ws/install/custom_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ethan/crimp_ws/install/crimp_python:/opt/ros/jazzy'}), 'shell': False}
+[0.098999] (-) TimerEvent: {}
+[0.126797] (custom_msgs) StdoutLine: {'line': b'[  2%] Built target custom_msgs__rosidl_generator_type_description\n'}
+[0.144213] (custom_msgs) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_custom_msgs\n'}
+[0.163339] (custom_msgs) StdoutLine: {'line': b'[  6%] Built target custom_msgs__cpp\n'}
+[0.163766] (custom_msgs) StdoutLine: {'line': b'[ 22%] Built target custom_msgs__rosidl_generator_c\n'}
+[0.199317] (-) TimerEvent: {}
+[0.209395] (custom_msgs) StdoutLine: {'line': b'[ 40%] Built target custom_msgs__rosidl_typesupport_cpp\n'}
+[0.209758] (custom_msgs) StdoutLine: {'line': b'[ 40%] Built target custom_msgs__rosidl_typesupport_c\n'}
+[0.211917] (custom_msgs) StdoutLine: {'line': b'[ 50%] Built target custom_msgs__rosidl_typesupport_introspection_c\n'}
+[0.219799] (custom_msgs) StdoutLine: {'line': b'[ 61%] Built target custom_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.220214] (custom_msgs) StdoutLine: {'line': b'[ 68%] Built target custom_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.225059] (custom_msgs) StdoutLine: {'line': b'[ 77%] Built target custom_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.263152] (custom_msgs) StdoutLine: {'line': b'[ 77%] Built target custom_msgs\n'}
+[0.299470] (-) TimerEvent: {}
+[0.306149] (custom_msgs) StdoutLine: {'line': b'[ 79%] Built target custom_msgs__py\n'}
+[0.350654] (custom_msgs) StdoutLine: {'line': b'[ 86%] Built target custom_msgs__rosidl_generator_py\n'}
+[0.390820] (custom_msgs) StdoutLine: {'line': b'[ 90%] Built target custom_msgs_s__rosidl_typesupport_introspection_c\n'}
+[0.394508] (custom_msgs) StdoutLine: {'line': b'[ 95%] Built target custom_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[0.399618] (-) TimerEvent: {}
+[0.407477] (custom_msgs) StdoutLine: {'line': b'[100%] Built target custom_msgs_s__rosidl_typesupport_c\n'}
+[0.499749] (-) TimerEvent: {}
+[0.520517] (custom_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.550363] (custom_msgs) StdoutLine: {'line': b'writing custom_msgs.egg-info/PKG-INFO\n'}
+[0.550756] (custom_msgs) StdoutLine: {'line': b'writing dependency_links to custom_msgs.egg-info/dependency_links.txt\n'}
+[0.551084] (custom_msgs) StdoutLine: {'line': b'writing top-level names to custom_msgs.egg-info/top_level.txt\n'}
+[0.599878] (-) TimerEvent: {}
+[0.642882] (custom_msgs) StdoutLine: {'line': b"reading manifest file 'custom_msgs.egg-info/SOURCES.txt'\n"}
+[0.643625] (custom_msgs) StdoutLine: {'line': b"writing manifest file 'custom_msgs.egg-info/SOURCES.txt'\n"}
+[0.698511] (custom_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_custom_msgs_egg\n'}
+[0.699998] (-) TimerEvent: {}
+[0.728938] (custom_msgs) CommandEnded: {'returncode': 0}
+[0.730344] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'install'}
+[0.747512] (custom_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ethan/crimp_ws/build/custom_msgs'], 'cwd': '/home/ethan/crimp_ws/build/custom_msgs', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ethan', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ethan/crimp_ws/install/custom_msgs/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ethan', 'OLDPWD': '/home/ethan/crimp_ws/src/crimp_cpp', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '58832', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', '_colcon_cd_root': '/opt/ros/jazzy/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ethan/crimp_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ethan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ethan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/laptop:@/tmp/.ICE-unix/58627,unix/laptop:/tmp/.ICE-unix/58627', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a2fb62f2_3b8e_4580_aed0_fbda429b0974', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.CU6B52', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.440', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/home/ethan/crimp_ws/install/crimp_cpp:/home/ethan/crimp_ws/install/custom_msgs:/home/ethan/crimp_ws/install/crimp_python:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ethan/crimp_ws/build/custom_msgs', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages:/home/ethan/crimp_ws/install/crimp_python/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/ethan/crimp_ws/install/crimp_cpp:/home/ethan/crimp_ws/install/custom_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ethan/crimp_ws/install/crimp_python:/opt/ros/jazzy'}), 'shell': False}
+[0.759990] (custom_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.760868] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/ament_index/resource_index/rosidl_interfaces/custom_msgs\n'}
+[0.761304] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionForce.json\n'}
+[0.761701] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.json\n'}
+[0.762023] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.762592] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.762907] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.763256] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_force.h\n'}
+[0.763542] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.763793] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__functions.h\n'}
+[0.764046] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__struct.h\n'}
+[0.764642] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.c\n'}
+[0.764916] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.h\n'}
+[0.765371] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__struct.h\n'}
+[0.765638] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__functions.h\n'}
+[0.765899] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__functions.c\n'}
+[0.766211] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__description.c\n'}
+[0.766496] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.c\n'}
+[0.766754] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__functions.c\n'}
+[0.767012] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__description.c\n'}
+[0.767559] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.h\n'}
+[0.767824] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_request.h\n'}
+[0.768085] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/library_path.sh\n'}
+[0.768389] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/library_path.dsv\n'}
+[0.768647] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_c.so\n'}
+[0.768901] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.769225] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.769509] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.769767] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.770023] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_fastrtps_c.h\n'}
+[0.770316] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_fastrtps_c.h\n'}
+[0.770582] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.770847] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.771093] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.771426] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.771689] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.771928] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_introspection_c.h\n'}
+[0.772273] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.c\n'}
+[0.772555] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.c\n'}
+[0.772806] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_introspection_c.h\n'}
+[0.773055] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.773349] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_c.so\n'}
+[0.773608] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.773868] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.774150] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.774428] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_force.hpp\n'}
+[0.774685] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.774935] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__traits.hpp\n'}
+[0.775225] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__struct.hpp\n'}
+[0.775500] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.hpp\n'}
+[0.775754] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__struct.hpp\n'}
+[0.776006] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.hpp\n'}
+[0.776329] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__traits.hpp\n'}
+[0.776598] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__builder.hpp\n'}
+[0.776845] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__builder.hpp\n'}
+[0.777090] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_request.hpp\n'}
+[0.777380] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.777643] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.777900] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.778180] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.778453] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/dds_fastrtps\n'}
+[0.778755] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.779008] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.779288] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.779552] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.779799] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.780043] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.780374] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.cpp\n'}
+[0.780649] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.780902] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.cpp\n'}
+[0.781188] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.781489] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.781755] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_cpp.so\n'}
+[0.782004] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/pythonpath.sh\n'}
+[0.782313] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/pythonpath.dsv\n'}
+[0.782594] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info\n'}
+[0.782857] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[0.783145] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[0.783447] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[0.783705] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[0.783991] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs\n'}
+[0.784301] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.so\n'}
+[0.784572] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.784838] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/__init__.py\n'}
+[0.785138] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.785436] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg\n'}
+[0.785700] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/__init__.py\n'}
+[0.785960] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_force_s.c\n'}
+[0.786261] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_request.py\n'}
+[0.786542] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_request_s.c\n'}
+[0.786803] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_force.py\n'}
+[0.787059] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[0.787373] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[0.787641] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.800177] (-) TimerEvent: {}
+[0.822687] (custom_msgs) StdoutLine: {'line': b"Listing '/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs'...\n"}
+[0.823068] (custom_msgs) StdoutLine: {'line': b"Listing '/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg'...\n"}
+[0.831154] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[0.832026] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[0.832841] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.so\n'}
+[0.833650] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_py.so\n'}
+[0.834123] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionForce.idl\n'}
+[0.834568] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.idl\n'}
+[0.834885] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionForce.msg\n'}
+[0.835353] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.msg\n'}
+[0.835718] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/ament_index/resource_index/package_run_dependencies/custom_msgs\n'}
+[0.836023] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/ament_index/resource_index/parent_prefix_path/custom_msgs\n'}
+[0.836329] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.sh\n'}
+[0.836615] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.dsv\n'}
+[0.837009] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/path.sh\n'}
+[0.837385] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/path.dsv\n'}
+[0.837699] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/local_setup.bash\n'}
+[0.837997] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/local_setup.sh\n'}
+[0.838470] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/local_setup.zsh\n'}
+[0.838771] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/local_setup.dsv\n'}
+[0.839065] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/package.dsv\n'}
+[0.839509] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/ament_index/resource_index/packages/custom_msgs\n'}
+[0.839817] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport.cmake\n'}
+[0.840173] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.840533] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.840852] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.841150] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.841580] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.841821] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.842060] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.842342] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.842586] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.842816] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.843053] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.843354] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.843591] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.843825] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.844051] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.844348] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.844589] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.844820] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.845052] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.845324] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.845591] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.845925] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.846283] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.846603] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig.cmake\n'}
+[0.846907] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig-version.cmake\n'}
+[0.847335] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/package.xml\n'}
+[0.849081] (custom_msgs) CommandEnded: {'returncode': 0}
+[0.901151] (-) TimerEvent: {}
+[0.905517] (custom_msgs) JobEnded: {'identifier': 'custom_msgs', 'rc': 0}
+[0.906792] (crimp_cpp) JobStarted: {'identifier': 'crimp_cpp'}
+[0.923851] (crimp_cpp) JobProgress: {'identifier': 'crimp_cpp', 'progress': 'cmake'}
+[0.925283] (crimp_cpp) JobProgress: {'identifier': 'crimp_cpp', 'progress': 'build'}
+[0.926254] (crimp_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ethan/crimp_ws/build/crimp_cpp', '--', '-j8', '-l8'], 'cwd': '/home/ethan/crimp_ws/build/crimp_cpp', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ethan', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ethan/crimp_ws/install/custom_msgs/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ethan', 'OLDPWD': '/home/ethan/crimp_ws/src/crimp_cpp', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '58832', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', '_colcon_cd_root': '/opt/ros/jazzy/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ethan/crimp_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ethan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ethan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/laptop:@/tmp/.ICE-unix/58627,unix/laptop:/tmp/.ICE-unix/58627', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a2fb62f2_3b8e_4580_aed0_fbda429b0974', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.CU6B52', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.440', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/home/ethan/crimp_ws/install/crimp_cpp:/home/ethan/crimp_ws/install/custom_msgs:/home/ethan/crimp_ws/install/crimp_python:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ethan/crimp_ws/build/crimp_cpp', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages:/home/ethan/crimp_ws/install/crimp_python/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/ethan/crimp_ws/install/custom_msgs:/home/ethan/crimp_ws/install/crimp_cpp:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/ethan/crimp_ws/install/crimp_python:/opt/ros/jazzy'}), 'shell': False}
+[1.001345] (-) TimerEvent: {}
+[1.029809] (crimp_cpp) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o\x1b[0m\n'}
+[1.036431] (crimp_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o\x1b[0m\n'}
+[1.036754] (crimp_cpp) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o\x1b[0m\n'}
+[1.101484] (-) TimerEvent: {}
+[1.201847] (-) TimerEvent: {}
+[1.302221] (-) TimerEvent: {}
+[1.308932] (crimp_python) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/crimp_python', 'build', '--build-base', '/home/ethan/crimp_ws/build/crimp_python/build', 'install', '--record', '/home/ethan/crimp_ws/build/crimp_python/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/ethan/crimp_ws/src/crimp_python', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ethan', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/ethan/crimp_ws/install/custom_msgs/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/ethan', 'OLDPWD': '/home/ethan/crimp_ws/src/crimp_cpp', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'SYSTEMD_EXEC_PID': '58832', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'GNOME_KEYRING_CONTROL': '/run/user/1000/keyring', '_colcon_cd_root': '/opt/ros/jazzy/', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/ethan/crimp_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'ethan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.SettingsDaemon.MediaKeys.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ethan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/laptop:@/tmp/.ICE-unix/58627,unix/laptop:/tmp/.ICE-unix/58627', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a2fb62f2_3b8e_4580_aed0_fbda429b0974', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.CU6B52', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.440', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/home/ethan/crimp_ws/install/crimp_cpp:/home/ethan/crimp_ws/install/custom_msgs:/home/ethan/crimp_ws/install/crimp_python:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ethan/crimp_ws/build/crimp_python', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ethan/crimp_ws/build/crimp_python/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/ethan/crimp_ws/install/crimp_python/lib/python3.12/site-packages:/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages:/home/ethan/crimp_ws/install/crimp_python/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/ethan/crimp_ws/install/crimp_cpp:/home/ethan/crimp_ws/install/custom_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.402372] (-) TimerEvent: {}
+[1.502762] (-) TimerEvent: {}
+[1.603195] (-) TimerEvent: {}
+[1.703609] (-) TimerEvent: {}
+[1.762888] (crimp_python) StdoutLine: {'line': b'running egg_info\n'}
+[1.796635] (crimp_python) StdoutLine: {'line': b'writing ../../build/crimp_python/crimp_python.egg-info/PKG-INFO\n'}
+[1.797081] (crimp_python) StdoutLine: {'line': b'writing dependency_links to ../../build/crimp_python/crimp_python.egg-info/dependency_links.txt\n'}
+[1.797449] (crimp_python) StdoutLine: {'line': b'writing entry points to ../../build/crimp_python/crimp_python.egg-info/entry_points.txt\n'}
+[1.797773] (crimp_python) StdoutLine: {'line': b'writing requirements to ../../build/crimp_python/crimp_python.egg-info/requires.txt\n'}
+[1.798236] (crimp_python) StdoutLine: {'line': b'writing top-level names to ../../build/crimp_python/crimp_python.egg-info/top_level.txt\n'}
+[1.803770] (-) TimerEvent: {}
+[1.872260] (crimp_python) StdoutLine: {'line': b"reading manifest file '../../build/crimp_python/crimp_python.egg-info/SOURCES.txt'\n"}
+[1.872729] (crimp_python) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[1.873594] (crimp_python) StdoutLine: {'line': b"writing manifest file '../../build/crimp_python/crimp_python.egg-info/SOURCES.txt'\n"}
+[1.874023] (crimp_python) StdoutLine: {'line': b'running build\n'}
+[1.874282] (crimp_python) StdoutLine: {'line': b'running build_py\n'}
+[1.874631] (crimp_python) StdoutLine: {'line': b'running install\n'}
+[1.884049] (crimp_python) StdoutLine: {'line': b'running install_lib\n'}
+[1.904013] (-) TimerEvent: {}
+[1.920802] (crimp_python) StdoutLine: {'line': b'running install_data\n'}
+[1.921268] (crimp_python) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.956659] (crimp_python) StdoutLine: {'line': b"removing '/home/ethan/crimp_ws/install/crimp_python/lib/python3.12/site-packages/crimp_python-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[1.957604] (crimp_python) StdoutLine: {'line': b'Copying ../../build/crimp_python/crimp_python.egg-info to /home/ethan/crimp_ws/install/crimp_python/lib/python3.12/site-packages/crimp_python-0.0.0-py3.12.egg-info\n'}
+[1.958813] (crimp_python) StdoutLine: {'line': b'running install_scripts\n'}
+[2.004218] (-) TimerEvent: {}
+[2.104688] (-) TimerEvent: {}
+[2.199176] (crimp_python) StdoutLine: {'line': b'Installing lidar script to /home/ethan/crimp_ws/install/crimp_python/lib/crimp_python\n'}
+[2.199686] (crimp_python) StdoutLine: {'line': b"writing list of installed files to '/home/ethan/crimp_ws/build/crimp_python/install.log'\n"}
+[2.204878] (-) TimerEvent: {}
+[2.266534] (crimp_python) CommandEnded: {'returncode': 0}
+[2.279415] (crimp_python) JobEnded: {'identifier': 'crimp_python', 'rc': 0}
+[2.305043] (-) TimerEvent: {}
+[2.405490] (-) TimerEvent: {}
+[2.506725] (-) TimerEvent: {}
+[2.607225] (-) TimerEvent: {}
+[2.707721] (-) TimerEvent: {}
+[2.808236] (-) TimerEvent: {}
+[2.908769] (-) TimerEvent: {}
+[3.009243] (-) TimerEvent: {}
+[3.109726] (-) TimerEvent: {}
+[3.210201] (-) TimerEvent: {}
+[3.310612] (-) TimerEvent: {}
+[3.411097] (-) TimerEvent: {}
+[3.511616] (-) TimerEvent: {}
+[3.612091] (-) TimerEvent: {}
+[3.712554] (-) TimerEvent: {}
+[3.812998] (-) TimerEvent: {}
+[3.913511] (-) TimerEvent: {}
+[4.013986] (-) TimerEvent: {}
+[4.114487] (-) TimerEvent: {}
+[4.215019] (-) TimerEvent: {}
+[4.315491] (-) TimerEvent: {}
+[4.385749] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid JointMover::\x1b[01;32m\x1b[Ktimer_callback\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.386193] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:55:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K(((JointMover*)this)->JointMover::count_ * 10)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.386522] (crimp_cpp) StderrLine: {'line': b'   55 |     msg.position = {\x1b[01;35m\x1b[Kcount_*10\x1b[m\x1b[K};\n'}
+[4.386779] (crimp_cpp) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.386982] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:55:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K(((JointMover*)this)->JointMover::count_ * 10)\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.388304] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid JointMover::\x1b[01;32m\x1b[Ksub_callback\x1b[m\x1b[K(const sensor_msgs::msg::JointState&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.388661] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:61:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kpos\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.388889] (crimp_cpp) StderrLine: {'line': b'   61 |     auto \x1b[01;35m\x1b[Kpos\x1b[m\x1b[K = to_string(msg.position[0]).c_str();\n'}
+[4.389099] (crimp_cpp) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.415676] (-) TimerEvent: {}
+[4.439996] (crimp_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[4.440475] (crimp_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27\x1b[m\x1b[K,\n'}
+[4.440943] (crimp_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171\x1b[m\x1b[K,\n'}
+[4.441364] (crimp_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:20\x1b[m\x1b[K:\n'}
+[4.441634] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:\x1b[m\x1b[K In lambda function:\n'}
+[4.441868] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:53:98:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kequest_msg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krequest_msg\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.442134] (crimp_cpp) StderrLine: {'line': b'   53 |         RCLCPP_INFO(this->get_logger(), "Publishing: cup_1=%hhu, cup_2=%hhu", request_msg.cup_1, \x1b[01;31m\x1b[Kequest_msg\x1b[m\x1b[K.cup_2); // equivalent of print()\n'}
+[4.442376] (crimp_cpp) StderrLine: {'line': b'      |                                                                                                  \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.442598] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:51:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcup_1\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.442819] (crimp_cpp) StderrLine: {'line': b'   51 |         auto \x1b[01;35m\x1b[Kcup_1\x1b[m\x1b[K = to_string(request_msg.cup_1).c_str();\n'}
+[4.443171] (crimp_cpp) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.443406] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:52:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcup_2\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.443644] (crimp_cpp) StderrLine: {'line': b'   52 |         auto \x1b[01;35m\x1b[Kcup_2\x1b[m\x1b[K = to_string(request_msg.cup_2).c_str();\n'}
+[4.443848] (crimp_cpp) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.456646] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MotionPlanner::\x1b[01;32m\x1b[Ktimer_callback\x1b[m\x1b[K()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.457012] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:71:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K((MotionPlanner*)this)->MotionPlanner::count_\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.457315] (crimp_cpp) StderrLine: {'line': b'   71 |     target_msg.position = {\x1b[01;35m\x1b[Kcount_\x1b[m\x1b[K};\n'}
+[4.457553] (crimp_cpp) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.457759] (crimp_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:71:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Knarrowing conversion of \xe2\x80\x98\x1b[01m\x1b[K((MotionPlanner*)this)->MotionPlanner::count_\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} to \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing\x07-Wnarrowing\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.515824] (-) TimerEvent: {}
+[4.616226] (-) TimerEvent: {}
+[4.716658] (-) TimerEvent: {}
+[4.817081] (-) TimerEvent: {}
+[4.917544] (-) TimerEvent: {}
+[5.018062] (-) TimerEvent: {}
+[5.118606] (-) TimerEvent: {}
+[5.219143] (-) TimerEvent: {}
+[5.319592] (-) TimerEvent: {}
+[5.420131] (-) TimerEvent: {}
+[5.520723] (-) TimerEvent: {}
+[5.621228] (-) TimerEvent: {}
+[5.721623] (-) TimerEvent: {}
+[5.822091] (-) TimerEvent: {}
+[5.922598] (-) TimerEvent: {}
+[6.023086] (-) TimerEvent: {}
+[6.123522] (-) TimerEvent: {}
+[6.224003] (-) TimerEvent: {}
+[6.324496] (-) TimerEvent: {}
+[6.424928] (-) TimerEvent: {}
+[6.525430] (-) TimerEvent: {}
+[6.625910] (-) TimerEvent: {}
+[6.726405] (-) TimerEvent: {}
+[6.826885] (-) TimerEvent: {}
+[6.927419] (-) TimerEvent: {}
+[7.027913] (-) TimerEvent: {}
+[7.128447] (-) TimerEvent: {}
+[7.228928] (-) TimerEvent: {}
+[7.329451] (-) TimerEvent: {}
+[7.429965] (-) TimerEvent: {}
+[7.530496] (-) TimerEvent: {}
+[7.630922] (-) TimerEvent: {}
+[7.731434] (-) TimerEvent: {}
+[7.831917] (-) TimerEvent: {}
+[7.932376] (-) TimerEvent: {}
+[8.036230] (-) TimerEvent: {}
+[8.136665] (-) TimerEvent: {}
+[8.237053] (-) TimerEvent: {}
+[8.337560] (-) TimerEvent: {}
+[8.438055] (-) TimerEvent: {}
+[8.538622] (-) TimerEvent: {}
+[8.639141] (-) TimerEvent: {}
+[8.739600] (-) TimerEvent: {}
+[8.840095] (-) TimerEvent: {}
+[8.940650] (-) TimerEvent: {}
+[9.041146] (-) TimerEvent: {}
+[9.141606] (-) TimerEvent: {}
+[9.242054] (-) TimerEvent: {}
+[9.262880] (crimp_cpp) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/motion_planner.dir/build.make:76: CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o] Error 1\n'}
+[9.263528] (crimp_cpp) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/motion_planner.dir/all] Error 2\n'}
+[9.263874] (crimp_cpp) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[9.342231] (-) TimerEvent: {}
+[9.442682] (-) TimerEvent: {}
+[9.543172] (-) TimerEvent: {}
+[9.643618] (-) TimerEvent: {}
+[9.744145] (-) TimerEvent: {}
+[9.844629] (-) TimerEvent: {}
+[9.945089] (-) TimerEvent: {}
+[10.045594] (-) TimerEvent: {}
+[10.146038] (-) TimerEvent: {}
+[10.246521] (-) TimerEvent: {}
+[10.346978] (-) TimerEvent: {}
+[10.447491] (-) TimerEvent: {}
+[10.547964] (-) TimerEvent: {}
+[10.648479] (-) TimerEvent: {}
+[10.748953] (-) TimerEvent: {}
+[10.849458] (-) TimerEvent: {}
+[10.949922] (-) TimerEvent: {}
+[11.050404] (-) TimerEvent: {}
+[11.150871] (-) TimerEvent: {}
+[11.251367] (-) TimerEvent: {}
+[11.351834] (-) TimerEvent: {}
+[11.452297] (-) TimerEvent: {}
+[11.552739] (-) TimerEvent: {}
+[11.653123] (-) TimerEvent: {}
+[11.753499] (-) TimerEvent: {}
+[11.853887] (-) TimerEvent: {}
+[11.954307] (-) TimerEvent: {}
+[12.054697] (-) TimerEvent: {}
+[12.155098] (-) TimerEvent: {}
+[12.162765] (crimp_cpp) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable joint_mover\x1b[0m\n'}
+[12.255244] (-) TimerEvent: {}
+[12.355669] (-) TimerEvent: {}
+[12.456238] (-) TimerEvent: {}
+[12.459299] (crimp_cpp) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking CXX executable suction_cups\x1b[0m\n'}
+[12.556417] (-) TimerEvent: {}
+[12.656839] (-) TimerEvent: {}
+[12.748103] (crimp_cpp) StdoutLine: {'line': b'[ 83%] Built target joint_mover\n'}
+[12.756989] (-) TimerEvent: {}
+[12.857392] (-) TimerEvent: {}
+[12.957727] (-) TimerEvent: {}
+[12.958024] (crimp_cpp) StdoutLine: {'line': b'[ 83%] Built target suction_cups\n'}
+[12.961430] (crimp_cpp) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[12.968696] (crimp_cpp) CommandEnded: {'returncode': 2}
+[12.989905] (crimp_cpp) JobEnded: {'identifier': 'crimp_cpp', 'rc': 2}
+[13.000896] (-) EventReactorShutdown: {}

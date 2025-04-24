@@ -19,8 +19,11 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
+#include "custom_msgs/msg/suction_request.hpp"
+#include "custom_msgs/msg/suction_force.hpp"
 
 using std::placeholders::_1;
+using std::to_string;
 
 using namespace std::chrono_literals;
 
@@ -33,27 +36,29 @@ public:
 SuctionCups() // constructor function
   : Node("suction_cups"), count_(0) // defines two variables
   {
-    suction_p_pub = this->create_publisher<std_msgs::msg::String>("suction_pressure", 10); // creates the publisher
+    suction_force_pub = this->create_publisher<custom_msgs::msg::SuctionForce>("suction_force", 10); // creates the publisher
     timer_ = this->create_wall_timer(
       500ms, std::bind(&SuctionCups::timer_callback, this)); // creates a timer object to run timer_callback every 500ms
-    activate_suction_sub = this->create_subscription<std_msgs::msg::String>("activate_suction", 10, 
+    activate_suction_sub = this->create_subscription<custom_msgs::msg::SuctionRequest>("activate_suction", 10, 
       std::bind(&SuctionCups::sub_callback, this, _1));
   }
 
 private:
   void timer_callback()
   {
-    auto message = std_msgs::msg::String();
-    message.data = "Hello, suction_pressure! " + std::to_string(count_++);
-    RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str()); // equivalent of print()
-    suction_p_pub->publish(message); // publishes the message
+    count_++;
+    auto msg = custom_msgs::msg::SuctionForce();
+    msg.force_1 = count_;
+    msg.force_2 = 10000-msg.force_1;
+    RCLCPP_INFO(this->get_logger(), "Publishing: 'force_1=%u, force_2=%u'", msg.force_1, msg.force_2); // equivalent of print()
+    suction_force_pub->publish(msg); // publishes the msg
   }
-  void sub_callback(const std_msgs::msg::String & msg) {
-    RCLCPP_INFO(this->get_logger(), "I heard: '%s'", msg.data.c_str());
+  void sub_callback(const custom_msgs::msg::SuctionRequest & msg) {
+    RCLCPP_INFO(this->get_logger(), "I heard: 'cup_1=%hhu, cup_2=%hhu'", msg.cup_1, msg.cup_2);
   }
   rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr suction_p_pub;
-  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr activate_suction_sub;
+  rclcpp::Publisher<custom_msgs::msg::SuctionForce>::SharedPtr suction_force_pub;
+  rclcpp::Subscription<custom_msgs::msg::SuctionRequest>::SharedPtr activate_suction_sub;
   size_t count_;
 };
 

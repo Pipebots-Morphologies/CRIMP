@@ -379,6 +379,12 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
   /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
   /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp/message_introspection.hpp \
   /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp/visibility_control.h \
+  /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp \
+  /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp \
+  /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp \
+  /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
+  /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp \
+  /opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h \
   /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp \
   /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__traits.hpp \
@@ -390,6 +396,8 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
   /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__traits.hpp \
   /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp \
   /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
+  /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
   /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
@@ -1041,6 +1049,12 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 
 /usr/include/c++/13/cstring:
 
+/usr/include/c++/13/cstdint:
+
+/usr/include/c++/13/condition_variable:
+
+/usr/include/c++/13/compare:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/subscription_wait_set_mask.hpp:
 
 /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/individual_type_description__struct.h:
@@ -1117,6 +1131,8 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_clock_interface.hpp:
 
+/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_base_interface_traits.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/wait_set.hpp:
@@ -1136,6 +1152,10 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 /opt/ros/jazzy/include/rmw/rmw/security_options.h:
 
 /usr/include/c++/13/bits/stl_deque.h:
+
+/usr/include/c++/13/codecvt:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_client.hpp:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__type_support.hpp:
 
@@ -1160,8 +1180,6 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 /opt/ros/jazzy/include/rclcpp/rclcpp/allocator/allocator_common.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/macros.hpp:
-
-/usr/include/c++/13/cstdint:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/intra_process_setting.hpp:
 
@@ -1278,12 +1296,6 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 /opt/ros/jazzy/include/rclcpp/rclcpp/create_generic_publisher.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/create_client.hpp:
-
-/usr/include/c++/13/cstdlib:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics_state.hpp:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:
 
 /usr/include/c++/13/bits/unordered_set.h:
 
@@ -1451,6 +1463,12 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 
 /opt/ros/jazzy/include/rmw/rmw/publisher_options.h:
 
+/usr/include/c++/13/cstddef:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp:
+
+/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__builder.hpp:
+
 /opt/ros/jazzy/include/rcl/rcl/types.h:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:
@@ -1460,8 +1478,6 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/dynamic_typesupport/dynamic_message_type.hpp:
-
-/usr/include/c++/13/bits/stl_bvector.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -1481,6 +1497,8 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/node_interfaces/node_clock_interface_traits.hpp:
 
+/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp:
+
 /opt/ros/jazzy/include/rcl/rcl/log_level.h:
 
 /opt/ros/jazzy/include/rcutils/rcutils/shared_library.h:
@@ -1496,8 +1514,6 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 /opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:
 
 /opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:
-
-/usr/include/c++/13/condition_variable:
 
 /opt/ros/jazzy/include/rcpputils/rcpputils/thread_safety_annotations.hpp:
 
@@ -1548,6 +1564,8 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 /usr/include/c++/13/bits/stl_iterator.h:
 
 /opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
+
+/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/intra_process_buffer_type.hpp:
 
@@ -1646,8 +1664,6 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 /usr/include/c++/13/stdexcept:
 
 /usr/include/c++/13/clocale:
-
-/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__traits.hpp:
 
 /opt/ros/jazzy/include/rclcpp/rclcpp/timer.hpp:
 
@@ -2051,6 +2067,12 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 
 /opt/ros/jazzy/include/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp/visibility_control.h:
 
+/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__traits.hpp:
+
+/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp:
+
+/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp:
+
 /usr/include/c++/13/typeinfo:
 
 /opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.h:
@@ -2082,6 +2104,18 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 /opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
 
 /usr/include/alloca.h:
+
+/usr/include/c++/13/bits/stl_bvector.h:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:
+
+/usr/include/c++/13/cstdlib:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics_state.hpp:
+
+/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:
+
+/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/header__traits.hpp:
 
 /opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__builder.hpp:
 
@@ -2172,6 +2206,8 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 /opt/ros/jazzy/include/rcl/rcl/logging_rosout.h:
 
 /usr/include/c++/13/bits/hashtable_policy.h:
+
+/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp:
 
 /usr/include/c++/13/bits/invoke.h:
 
@@ -2270,15 +2306,3 @@ CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o: /home/ethan/crimp_ws/src/crimp
 /usr/include/c++/13/bits/stringfwd.h:
 
 /usr/include/c++/13/cerrno:
-
-/opt/ros/jazzy/include/rclcpp/rclcpp/parameter_client.hpp:
-
-/usr/include/c++/13/codecvt:
-
-/usr/include/c++/13/compare:
-
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__builder.hpp:
-
-/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__builder.hpp:
-
-/usr/include/c++/13/cstddef:

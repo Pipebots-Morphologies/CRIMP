@@ -1,0 +1,192 @@
+[0.022s] Invoking command in '/home/ethan/crimp_ws/build/crimp_cpp': AMENT_PREFIX_PATH=/home/ethan/crimp_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ethan/crimp_ws/install/custom_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/ethan/crimp_ws/install/custom_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ethan/crimp_ws/src/crimp_cpp -DCMAKE_INSTALL_PREFIX=/home/ethan/crimp_ws/install/crimp_cpp
+[0.106s] -- The C compiler identification is GNU 13.3.0
+[0.219s] -- The CXX compiler identification is GNU 13.3.0
+[0.264s] -- Detecting C compiler ABI info
+[0.464s] -- Detecting C compiler ABI info - done
+[0.502s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.503s] -- Detecting C compile features
+[0.505s] -- Detecting C compile features - done
+[0.527s] -- Detecting CXX compiler ABI info
+[0.738s] -- Detecting CXX compiler ABI info - done
+[0.775s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.776s] -- Detecting CXX compile features
+[0.777s] -- Detecting CXX compile features - done
+[0.785s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.996s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.166s] -- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.217s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.236s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.258s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.280s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.377s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.381s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.558s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.583s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.615s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.709s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.727s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.780s] -- Found custom_msgs: 0.0.0 (/home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake)
+[1.801s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.956s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.956s] -- Configured cppcheck include dirs: 
+[1.956s] -- Configured cppcheck exclude dirs and/or files: 
+[1.957s] -- Added test 'lint_cmake' to check CMake code style
+[1.958s] -- Added test 'uncrustify' to check C / C++ code style
+[1.958s] -- Configured uncrustify additional arguments: 
+[1.959s] -- Added test 'xmllint' to check XML markup files
+[1.961s] -- Configuring done (1.9s)
+[1.965s] [33mCMake Warning (dev) at CMakeLists.txt:19 (add_executable):
+[1.966s]   Policy CMP0115 is not set: Source file extensions must be explicit.  Run
+[1.966s]   "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy
+[1.966s]   command to set the policy and suppress this warning.
+[1.966s] 
+[1.967s]   File:
+[1.967s] 
+[1.967s]     /home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp
+[1.968s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.968s] [0m
+[1.968s] [33mCMake Warning (dev) at CMakeLists.txt:22 (add_executable):
+[1.969s]   Policy CMP0115 is not set: Source file extensions must be explicit.  Run
+[1.969s]   "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy
+[1.969s]   command to set the policy and suppress this warning.
+[1.969s] 
+[1.970s]   File:
+[1.970s] 
+[1.970s]     /home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp
+[1.970s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.971s] [0m
+[1.971s] [33mCMake Warning (dev) at CMakeLists.txt:25 (add_executable):
+[1.971s]   Policy CMP0115 is not set: Source file extensions must be explicit.  Run
+[1.972s]   "cmake --help-policy CMP0115" for policy details.  Use the cmake_policy
+[1.972s]   command to set the policy and suppress this warning.
+[1.972s] 
+[1.972s]   File:
+[1.973s] 
+[1.973s]     /home/ethan/crimp_ws/src/crimp_cpp/src/suction_cups.cpp
+[1.973s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[1.973s] [0m
+[1.985s] -- Generating done (0.0s)
+[1.993s] -- Build files have been written to: /home/ethan/crimp_ws/build/crimp_cpp
+[2.008s] Invoked command in '/home/ethan/crimp_ws/build/crimp_cpp' returned '0': AMENT_PREFIX_PATH=/home/ethan/crimp_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ethan/crimp_ws/install/custom_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/ethan/crimp_ws/install/custom_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake /home/ethan/crimp_ws/src/crimp_cpp -DCMAKE_INSTALL_PREFIX=/home/ethan/crimp_ws/install/crimp_cpp
+[2.010s] Invoking command in '/home/ethan/crimp_ws/build/crimp_cpp': AMENT_PREFIX_PATH=/home/ethan/crimp_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ethan/crimp_ws/install/custom_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/ethan/crimp_ws/install/custom_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ethan/crimp_ws/build/crimp_cpp -- -j8 -l8
+[2.112s] [ 33%] [32mBuilding CXX object CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o[0m
+[2.113s] [ 33%] [32mBuilding CXX object CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o[0m
+[2.113s] [ 50%] [32mBuilding CXX object CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o[0m
+[5.241s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/suction_cups.cpp:[m[K In member function ‘[01m[Kvoid SuctionCups::[01;32m[Ktimer_callback[m[K()[m[K’:
+[5.242s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/suction_cups.cpp:50:34:[m[K [01;31m[Kerror: [m[K‘[01m[KSuctionForces[m[K’ is not a member of ‘[01m[Kcustom_msgs::msg[m[K’; did you mean ‘[01m[KSuctionForce_[m[K’?
+[5.242s]    50 |     auto msg = custom_msgs::msg::[01;31m[KSuctionForces[m[K();
+[5.242s]       |                                  [01;31m[K^~~~~~~~~~~~~[m[K
+[5.242s]       |                                  [32m[KSuctionForce_[m[K
+[5.269s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:[m[K In member function ‘[01m[Kvoid JointMover::[01;32m[Ktimer_callback[m[K()[m[K’:
+[5.269s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:54:27:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((JointMover*)this)->JointMover::count_ * 100)[m[K’ from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kdouble[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[5.269s]    54 |     msg.position = {[01;35m[Kcount_*100[m[K};
+[5.270s]       |                     [01;35m[K~~~~~~^~~~[m[K
+[5.270s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:54:27:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((JointMover*)this)->JointMover::count_ * 100)[m[K’ from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kdouble[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[5.271s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:55:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kto_string[m[K’ was not declared in this scope
+[5.271s]    55 |     auto pos = [01;31m[Kto_string[m[K(msg.position[0]).c_str();
+[5.271s]       |                [01;31m[K^~~~~~~~~[m[K
+[5.272s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:55:16:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[5.272s] In file included from [01m[K/usr/include/c++/13/string:54[m[K,
+[5.272s]                  from [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:18[m[K:
+[5.273s] [01m[K/usr/include/c++/13/bits/basic_string.h:4261:3:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::__cxx11::to_string[m[K’
+[5.273s]  4261 |   [01;36m[Kto_string[m[K(long double __val)
+[5.273s]       |   [01;36m[K^~~~~~~~~[m[K
+[5.274s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:41[m[K,
+[5.274s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[5.274s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[5.274s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K,
+[5.275s]                  from [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:20[m[K:
+[5.275s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/future_return_code.hpp:43:1:[m[K [01;36m[Knote: [m[K  ‘[01m[Krclcpp::to_string[m[K’
+[5.275s]    43 | [01;36m[Kto_string[m[K(const FutureReturnCode & future_return_code);
+[5.276s]       | [01;36m[K^~~~~~~~~[m[K
+[5.276s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:[m[K In member function ‘[01m[Kvoid JointMover::[01;32m[Ksub_callback[m[K(const sensor_msgs::msg::JointState&)[m[K’:
+[5.276s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:61:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kto_string[m[K’ was not declared in this scope
+[5.277s]    61 |     auto pos = [01;31m[Kto_string[m[K(msg.position[0]).c_str();
+[5.277s]       |                [01;31m[K^~~~~~~~~[m[K
+[5.277s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/joint_mover.cpp:61:16:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[5.277s] [01m[K/usr/include/c++/13/bits/basic_string.h:4261:3:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::__cxx11::to_string[m[K’
+[5.278s]  4261 |   [01;36m[Kto_string[m[K(long double __val)
+[5.278s]       |   [01;36m[K^~~~~~~~~[m[K
+[5.278s] [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/future_return_code.hpp:43:1:[m[K [01;36m[Knote: [m[K  ‘[01m[Krclcpp::to_string[m[K’
+[5.279s]    43 | [01;36m[Kto_string[m[K(const FutureReturnCode & future_return_code);
+[5.279s]       | [01;36m[K^~~~~~~~~[m[K
+[5.300s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:[m[K In lambda function:
+[5.301s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:54:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+[5.301s]    54 |         this->activate_suction_pub->publish([01;31m[Kmsg[m[K); // publishes the message
+[5.301s]       |                                             [01;31m[K^~~[m[K
+[5.302s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:54:45:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[5.302s] In file included from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:156[m[K,
+[5.302s]                  from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/list_parameters.hpp:7[m[K,
+[5.303s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:21[m[K,
+[5.303s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+[5.303s]                  from [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:20[m[K:
+[5.304s] [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:30:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+[5.304s]    30 | namespace [01;36m[Kmsg[m[K
+[5.304s]       |           [01;36m[K^~~[m[K
+[5.304s] In file included from [01m[K/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp:23[m[K,
+[5.305s]                  from [01m[K/opt/ros/jazzy/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:267[m[K:
+[5.305s] [01m[K/opt/ros/jazzy/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:30:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+[5.305s]    30 | namespace [01;36m[Kmsg[m[K
+[5.306s]       |           [01;36m[K^~~[m[K
+[5.306s] [01m[K/opt/ros/jazzy/include/service_msgs/service_msgs/msg/detail/service_event_info__struct.hpp:34:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kservice_msgs::msg[m[K’
+[5.306s]    34 | namespace [01;36m[Kmsg[m[K
+[5.306s]       |           [01;36m[K^~~[m[K
+[5.307s] In file included from [01m[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:26[m[K,
+[5.307s]                  from [01m[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+[5.307s]                  from [01m[K/opt/ros/jazzy/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+[5.308s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[5.308s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+[5.308s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[5.308s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[5.309s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[5.309s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor_options.hpp:22[m[K,
+[5.309s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executor.hpp:38[m[K,
+[5.310s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[5.310s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[5.310s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:172[m[K:
+[5.310s] [01m[K/opt/ros/jazzy/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:30:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+[5.311s]    30 | namespace [01;36m[Kmsg[m[K
+[5.311s]       |           [01;36m[K^~~[m[K
+[5.311s] In file included from [01m[K/opt/ros/jazzy/include/std_msgs/std_msgs/msg/string.hpp:7[m[K,
+[5.311s]                  from [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:21[m[K:
+[5.312s] [01m[K/opt/ros/jazzy/include/std_msgs/std_msgs/msg/detail/string__struct.hpp:30:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+[5.312s]    30 | namespace [01;36m[Kmsg[m[K
+[5.312s]       |           [01;36m[K^~~[m[K
+[5.313s] In file included from [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/joint_state.hpp:7[m[K,
+[5.313s]                  from [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:22[m[K:
+[5.313s] [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__struct.hpp:34:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg[m[K’
+[5.314s]    34 | namespace [01;36m[Kmsg[m[K
+[5.314s]       |           [01;36m[K^~~[m[K
+[5.314s] In file included from [01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/pose__struct.hpp:23[m[K,
+[5.315s]                  from [01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/pose.hpp:7[m[K,
+[5.315s]                  from [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:23[m[K:
+[5.315s] [01m[K/opt/ros/jazzy/include/geometry_msgs/geometry_msgs/msg/detail/point__struct.hpp:30:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::msg[m[K’
+[5.316s]    30 | namespace [01;36m[Kmsg[m[K
+[5.316s]       |           [01;36m[K^~~[m[K
+[5.316s] In file included from [01m[K/home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_request.hpp:7[m[K,
+[5.316s]                  from [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:24[m[K:
+[5.317s] [01m[K/home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__struct.hpp:30:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kcustom_msgs::msg[m[K’
+[5.317s]    30 | namespace [01;36m[Kmsg[m[K
+[5.317s]       |           [01;36m[K^~~[m[K
+[5.318s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:[m[K In member function ‘[01m[Kvoid MotionPlanner::[01;32m[Ktimer_callback[m[K()[m[K’:
+[5.318s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:71:28:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((MotionPlanner*)this)->MotionPlanner::count_[m[K’ from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kdouble[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[5.318s]    71 |     target_msg.position = {[01;35m[Kcount_[m[K};
+[5.318s]       |                            [01;35m[K^~~~~~[m[K
+[5.319s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:71:28:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((MotionPlanner*)this)->MotionPlanner::count_[m[K’ from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kdouble[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[5.324s] In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[5.324s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K:
+[5.324s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:73:97:[m[K [01;31m[Kerror: [m[K‘[01m[Kposition[m[K’ was not declared in this scope
+[5.325s]    73 |     RCLCPP_INFO(this->get_logger(), "Publishing: '%s position=%s'", target_msg.name[0].c_str(), [01;31m[Kposition[m[K); // equivalent of print()
+[5.325s]       |                                                                                                 [01;31m[K^~~~~~~~[m[K
+[5.326s] [01m[K/home/ethan/crimp_ws/src/crimp_cpp/src/motion_planner.cpp:72:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpos[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[5.326s]    72 |     auto [01;35m[Kpos[m[K = to_string(target_msg.position[0]).c_str();
+[5.326s]       |          [01;35m[K^~~[m[K
+[8.348s] gmake[2]: *** [CMakeFiles/joint_mover.dir/build.make:76: CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o] Error 1
+[8.348s] gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/joint_mover.dir/all] Error 2
+[8.348s] gmake[1]: *** Waiting for unfinished jobs....
+[8.406s] gmake[2]: *** [CMakeFiles/suction_cups.dir/build.make:76: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o] Error 1
+[8.407s] gmake[1]: *** [CMakeFiles/Makefile2:193: CMakeFiles/suction_cups.dir/all] Error 2
+[9.529s] gmake[2]: *** [CMakeFiles/motion_planner.dir/build.make:76: CMakeFiles/motion_planner.dir/src/motion_planner.cpp.o] Error 1
+[9.530s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/motion_planner.dir/all] Error 2
+[9.530s] gmake: *** [Makefile:146: all] Error 2
+[9.536s] Invoked command in '/home/ethan/crimp_ws/build/crimp_cpp' returned '2': AMENT_PREFIX_PATH=/home/ethan/crimp_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ethan/crimp_ws/install/custom_msgs:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com LD_LIBRARY_PATH=/home/ethan/crimp_ws/install/custom_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/ethan/crimp_ws/build/crimp_cpp -- -j8 -l8

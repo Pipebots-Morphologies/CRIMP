@@ -1,0 +1,170 @@
+[0.022s] Invoking command in '/home/ethan/crimp_ws/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/crimp_ws/install/crimp_python:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ethan/crimp_ws/build/custom_msgs -- -j8 -l8
+[0.126s] [  2%] Built target custom_msgs__rosidl_generator_type_description
+[0.151s] [  2%] Built target ament_cmake_python_copy_custom_msgs
+[0.163s] [  6%] Built target custom_msgs__cpp
+[0.164s] [ 22%] Built target custom_msgs__rosidl_generator_c
+[0.212s] [ 40%] Built target custom_msgs__rosidl_typesupport_introspection_c
+[0.213s] [ 40%] Built target custom_msgs__rosidl_typesupport_c
+[0.213s] [ 56%] Built target custom_msgs__rosidl_typesupport_introspection_cpp
+[0.213s] [ 59%] Built target custom_msgs__rosidl_typesupport_fastrtps_c
+[0.217s] [ 77%] Built target custom_msgs__rosidl_typesupport_cpp
+[0.218s] [ 77%] Built target custom_msgs__rosidl_typesupport_fastrtps_cpp
+[0.255s] [ 77%] Built target custom_msgs
+[0.293s] [ 79%] Built target custom_msgs__py
+[0.340s] [ 86%] Built target custom_msgs__rosidl_generator_py
+[0.380s] [ 90%] Built target custom_msgs_s__rosidl_typesupport_introspection_c
+[0.385s] [ 95%] Built target custom_msgs_s__rosidl_typesupport_c
+[0.387s] [100%] Built target custom_msgs_s__rosidl_typesupport_fastrtps_c
+[0.526s] running egg_info
+[0.556s] writing custom_msgs.egg-info/PKG-INFO
+[0.557s] writing dependency_links to custom_msgs.egg-info/dependency_links.txt
+[0.557s] writing top-level names to custom_msgs.egg-info/top_level.txt
+[0.651s] reading manifest file 'custom_msgs.egg-info/SOURCES.txt'
+[0.652s] writing manifest file 'custom_msgs.egg-info/SOURCES.txt'
+[0.709s] [100%] Built target ament_cmake_python_build_custom_msgs_egg
+[0.741s] Invoked command in '/home/ethan/crimp_ws/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/crimp_ws/install/crimp_python:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/ethan/crimp_ws/build/custom_msgs -- -j8 -l8
+[0.765s] Invoking command in '/home/ethan/crimp_ws/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/crimp_ws/install/crimp_python:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ethan/crimp_ws/build/custom_msgs
+[0.779s] -- Install configuration: ""
+[0.779s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/ament_index/resource_index/rosidl_interfaces/custom_msgs
+[0.780s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionForce.json
+[0.780s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.json
+[0.780s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs
+[0.780s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[0.780s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_c__visibility_control.h
+[0.781s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_force.h
+[0.781s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[0.781s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__functions.h
+[0.782s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__struct.h
+[0.782s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.c
+[0.783s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.h
+[0.783s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__struct.h
+[0.783s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__functions.h
+[0.783s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__functions.c
+[0.784s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__description.c
+[0.784s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.c
+[0.784s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__functions.c
+[0.784s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__description.c
+[0.784s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.h
+[0.785s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_request.h
+[0.785s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/library_path.sh
+[0.785s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/library_path.dsv
+[0.785s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_c.so
+[0.786s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs
+[0.786s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[0.786s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.786s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[0.787s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_fastrtps_c.h
+[0.787s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_fastrtps_c.h
+[0.787s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_c.so
+[0.787s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs
+[0.787s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[0.788s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.788s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[0.788s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_introspection_c.h
+[0.788s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.c
+[0.788s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.c
+[0.789s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_introspection_c.h
+[0.789s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_c.so
+[0.789s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_c.so
+[0.789s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs
+[0.789s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[0.790s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.790s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_force.hpp
+[0.790s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[0.790s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__traits.hpp
+[0.790s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__struct.hpp
+[0.791s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.hpp
+[0.791s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__struct.hpp
+[0.791s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.hpp
+[0.791s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__traits.hpp
+[0.791s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__builder.hpp
+[0.792s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__builder.hpp
+[0.792s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_request.hpp
+[0.792s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs
+[0.792s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[0.792s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.793s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[0.793s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/dds_fastrtps
+[0.793s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_fastrtps_cpp.hpp
+[0.793s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_fastrtps_cpp.hpp
+[0.793s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so
+[0.794s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs
+[0.794s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[0.794s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[0.794s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.cpp
+[0.794s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_introspection_cpp.hpp
+[0.794s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.cpp
+[0.795s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_introspection_cpp.hpp
+[0.795s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_cpp.so
+[0.795s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_cpp.so
+[0.795s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/pythonpath.sh
+[0.795s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/pythonpath.dsv
+[0.796s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info
+[0.796s] -- Installing: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/PKG-INFO
+[0.796s] -- Installing: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/dependency_links.txt
+[0.796s] -- Installing: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/SOURCES.txt
+[0.796s] -- Installing: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/top_level.txt
+[0.797s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs
+[0.797s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.so
+[0.797s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[0.797s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/__init__.py
+[0.797s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.798s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg
+[0.798s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/__init__.py
+[0.798s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_force_s.c
+[0.798s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_request.py
+[0.798s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_request_s.c
+[0.798s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_force.py
+[0.799s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.so
+[0.799s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.so
+[0.799s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_c.c
+[0.850s] Listing '/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs'...
+[0.850s] Listing '/home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg'...
+[0.858s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.so
+[0.859s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.so
+[0.860s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.so
+[0.861s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_py.so
+[0.862s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionForce.idl
+[0.862s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.idl
+[0.862s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionForce.msg
+[0.862s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.msg
+[0.863s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/ament_index/resource_index/package_run_dependencies/custom_msgs
+[0.863s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/ament_index/resource_index/parent_prefix_path/custom_msgs
+[0.863s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.sh
+[0.863s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.dsv
+[0.863s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/path.sh
+[0.864s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/environment/path.dsv
+[0.864s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/local_setup.bash
+[0.864s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/local_setup.sh
+[0.864s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/local_setup.zsh
+[0.864s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/local_setup.dsv
+[0.865s] -- Installing: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/package.dsv
+[0.865s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/ament_index/resource_index/packages/custom_msgs
+[0.865s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport.cmake
+[0.865s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport-noconfig.cmake
+[0.866s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[0.866s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.866s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport.cmake
+[0.866s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.866s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport.cmake
+[0.867s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[0.867s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cppExport.cmake
+[0.867s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.867s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.867s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[0.868s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.868s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport.cmake
+[0.868s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[0.868s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport.cmake
+[0.869s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport-noconfig.cmake
+[0.869s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake-extras.cmake
+[0.869s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.869s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[0.869s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[0.870s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.870s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.870s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.870s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig.cmake
+[0.870s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig-version.cmake
+[0.871s] -- Up-to-date: /home/ethan/crimp_ws/install/custom_msgs/share/custom_msgs/package.xml
+[0.876s] Invoked command in '/home/ethan/crimp_ws/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/ethan/crimp_ws/install/crimp_python:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/ethan/crimp_ws/build/custom_msgs
