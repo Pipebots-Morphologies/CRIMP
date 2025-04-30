@@ -1,7 +1,0 @@
-{
-  "package_name": "custom_msgs",
-  "non_idl_tuples": [
-    "/home/andy/CRIMP/src/custom_msgs:msg/SuctionForce.msg",
-    "/home/andy/CRIMP/src/custom_msgs:msg/SuctionRequest.msg"
-  ]
-}

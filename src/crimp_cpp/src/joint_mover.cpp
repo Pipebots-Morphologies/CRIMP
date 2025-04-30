@@ -69,10 +69,12 @@ private:
       int id = joint_ids[joint_name];
       float pos;
       if(joint_name[0]=='w'){
-        pos = sc.ReadPos(id);
+        int steps = sc.ReadPos(id);
+        pos = sc_steps2angle(steps);
         // NEED TO CONVERT FROM STEPS TO DEGREES
       }else if(joint_name[0]=='e'){
-        pos = sm_st.ReadPos(id);
+        int steps = sm_st.ReadPos(id);
+        pos = st_steps2angle(steps);
         // NEED TO CONVERT FROM STEPS TO DEGREES
       }
       joint_angles[joint_name] = pos;
@@ -102,24 +104,41 @@ private:
     }
   }
   // moves a wrist joint to a target position at a set velocity or over a set time
-  void wrist_move(int id, int position, int velocity, int time=0){
-    if(position >= 150) position = 150;
-    if(position <= 0) position = 0;
-    int steps = static_cast<int>((position / 150.0) * 1023.0);
+  void wrist_move(int id, float position, int velocity, int time=0){
+    if(position >= 150) position = 150; // joint max limit
+    if(position <= 0) position = 0; // joint min limit
+    int steps = sc_angle2steps(position);
     if(velocity == 0){velocity = st_default_vel; }
     if(time==0){
       sc.WritePos(id, steps, time, velocity);
     }
   }
   // moves an elbow joint to a target position at a set velocity
-  void elbow_move(int id, int position, int velocity){
-    if(position >= 300) position = 300;
-    if(position <= 60) position = 60;
-    int steps = static_cast<int>((position / 360.0) * 4095.0);
+  void elbow_move(int id, float position, int velocity){
+    if(position >= 300) position = 300; // joint max limit
+    if(position <= 60) position = 60; // joint min limit
+    int steps = st_angle2steps(position);
     if(velocity == 0){velocity = st_default_vel; }
     sm_st.WritePosEx(id, steps, velocity, 50);
   }
-
+  // convert between steps and angles
+  float sc_steps2angle(int steps){
+    float angle = (steps/1023.0)*150.0;
+    return angle;
+  }
+  int sc_angle2steps(float angle){
+    int steps = (angle/150.0)*1023.0;
+    return steps;
+  }
+  float st_steps2angle(int steps){
+    float angle = (steps/4095.0)*360.0;
+    return angle;
+  }
+  int st_angle2steps(float angle){
+    int steps = (angle/360.0)*4095.0;
+    return steps;
+  }
+  // define variables
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_pos_pub;
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_target_sub;
@@ -133,7 +152,7 @@ private:
     {joint_names[4], 6}
   };
   // change this to float when we switch from steps to degrees 
-  std::map<std::string, double> joint_angles = {
+  std::map<std::string, float> joint_angles = {
     {joint_names[0], 180},
     {joint_names[1], 180},
     {joint_names[2], 180},

@@ -1,7 +1,0 @@
-[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:[m[K In member function ‘[01m[Kvoid SuctionCups::[01;32m[Kcentre[m[K(int)[m[K’:
-[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:70:3:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
-   70 |   [01;31m[K}[m[K
-      |   [01;31m[K^[m[K
-gmake[2]: *** [CMakeFiles/suction_cups.dir/build.make:76: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/suction_cups.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

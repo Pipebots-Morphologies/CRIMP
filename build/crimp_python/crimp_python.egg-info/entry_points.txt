@@ -1,2 +1,0 @@
-[console_scripts]
-lidar = crimp_python.lidar:main

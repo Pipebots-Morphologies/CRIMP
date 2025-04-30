@@ -1,4 +1,0 @@
-[ 53%] Built target servo_lib
-[ 69%] Built target motion_planner
-[ 76%] [32mBuilding CXX object CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o[0m
-[ 92%] Built target suction_cups
