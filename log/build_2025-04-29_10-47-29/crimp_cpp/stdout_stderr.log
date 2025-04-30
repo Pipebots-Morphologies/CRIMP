@@ -1,0 +1,50 @@
+-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Found custom_msgs: 0.0.0 (/home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake)
+-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: /home/andy/CRIMP/src/crimp_cpp/include
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done (1.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/andy/CRIMP/build/crimp_cpp
+[ 53%] Built target servo_lib
+[ 76%] Built target motion_planner
+[ 76%] [32m[1mLinking CXX executable suction_cups[0m
+[ 84%] [32m[1mLinking CXX executable joint_mover[0m
+/usr/bin/ld: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o: in function `SuctionCups::SuctionCups()':
+suction_cups.cpp:(.text._ZN11SuctionCupsC2Ev[_ZN11SuctionCupsC5Ev]+0xd8): undefined reference to `SCSCL::SCSCL()'
+/usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCupsC2Ev[_ZN11SuctionCupsC5Ev]+0x294): undefined reference to `SCSerial::begin(int, char const*)'
+/usr/bin/ld: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o: in function `SuctionCups::attach(int)':
+suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x4c): undefined reference to `SCSCL::ReadPos(int)'
+/usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x64): undefined reference to `SCSCL::PWMMode(unsigned char)'
+/usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x7c): undefined reference to `SCSCL::WritePWM(unsigned char, short)'
+/usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x1dc): undefined reference to `SCSCL::ReadPos(int)'
+/usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x218): undefined reference to `SCSCL::ReadPos(int)'
+/usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x58c): undefined reference to `SCSCL::ReadPos(int)'
+/usr/bin/ld: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o: in function `SuctionCups::detatch(int)':
+suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x4c): undefined reference to `SCSCL::ReadPos(int)'
+/usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x64): undefined reference to `SCSCL::PWMMode(unsigned char)'
+/usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x7c): undefined reference to `SCSCL::WritePWM(unsigned char, short)'
+/usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x1dc): undefined reference to `SCSCL::ReadPos(int)'
+/usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x218): undefined reference to `SCSCL::ReadPos(int)'
+/usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x58c): undefined reference to `SCSCL::ReadPos(int)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/suction_cups.dir/build.make:179: suction_cups] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/suction_cups.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 92%] Built target joint_mover
+gmake: *** [Makefile:146: all] Error 2

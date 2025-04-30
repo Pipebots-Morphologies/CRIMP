@@ -1,0 +1,36 @@
+running egg_info
+creating ../../build/crimp_python/crimp_python.egg-info
+writing ../../build/crimp_python/crimp_python.egg-info/PKG-INFO
+writing dependency_links to ../../build/crimp_python/crimp_python.egg-info/dependency_links.txt
+writing entry points to ../../build/crimp_python/crimp_python.egg-info/entry_points.txt
+writing requirements to ../../build/crimp_python/crimp_python.egg-info/requires.txt
+writing top-level names to ../../build/crimp_python/crimp_python.egg-info/top_level.txt
+writing manifest file '../../build/crimp_python/crimp_python.egg-info/SOURCES.txt'
+reading manifest file '../../build/crimp_python/crimp_python.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/crimp_python/crimp_python.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/andy/CRIMP/build/crimp_python/build
+creating /home/andy/CRIMP/build/crimp_python/build/lib
+creating /home/andy/CRIMP/build/crimp_python/build/lib/crimp_python
+copying crimp_python/lidar.py -> /home/andy/CRIMP/build/crimp_python/build/lib/crimp_python
+copying crimp_python/__init__.py -> /home/andy/CRIMP/build/crimp_python/build/lib/crimp_python
+running install
+running install_lib
+creating /home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages/crimp_python
+copying /home/andy/CRIMP/build/crimp_python/build/lib/crimp_python/lidar.py -> /home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages/crimp_python
+copying /home/andy/CRIMP/build/crimp_python/build/lib/crimp_python/__init__.py -> /home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages/crimp_python
+byte-compiling /home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages/crimp_python/lidar.py to lidar.cpython-312.pyc
+byte-compiling /home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages/crimp_python/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/andy/CRIMP/install/crimp_python/share/ament_index
+creating /home/andy/CRIMP/install/crimp_python/share/ament_index/resource_index
+creating /home/andy/CRIMP/install/crimp_python/share/ament_index/resource_index/packages
+copying resource/crimp_python -> /home/andy/CRIMP/install/crimp_python/share/ament_index/resource_index/packages
+copying package.xml -> /home/andy/CRIMP/install/crimp_python/share/crimp_python
+running install_egg_info
+Copying ../../build/crimp_python/crimp_python.egg-info to /home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages/crimp_python-0.0.0-py3.12.egg-info
+running install_scripts
+Installing lidar script to /home/andy/CRIMP/install/crimp_python/lib/crimp_python
+writing list of installed files to '/home/andy/CRIMP/build/crimp_python/install.log'

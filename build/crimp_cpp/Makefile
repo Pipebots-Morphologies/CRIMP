@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/crimp_ws/src/crimp_cpp
+CMAKE_SOURCE_DIR = /home/andy/CRIMP/src/crimp_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ethan/crimp_ws/build/crimp_cpp
+CMAKE_BINARY_DIR = /home/andy/CRIMP/build/crimp_cpp
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles /home/ethan/crimp_ws/build/crimp_cpp//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andy/CRIMP/build/crimp_cpp/CMakeFiles /home/andy/CRIMP/build/crimp_cpp//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/andy/CRIMP/build/crimp_cpp/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -196,6 +196,19 @@ crimp_cpp_uninstall: cmake_check_build_system
 crimp_cpp_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/crimp_cpp_uninstall.dir/build.make CMakeFiles/crimp_cpp_uninstall.dir/build
 .PHONY : crimp_cpp_uninstall/fast
+
+#=============================================================================
+# Target rules for targets named servo_lib
+
+# Build rule for target.
+servo_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 servo_lib
+.PHONY : servo_lib
+
+# fast build rule for target.
+servo_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/build
+.PHONY : servo_lib/fast
 
 #=============================================================================
 # Target rules for targets named joint_mover
@@ -259,6 +272,150 @@ src/joint_mover.s: src/joint_mover.cpp.s
 src/joint_mover.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/joint_mover.dir/build.make CMakeFiles/joint_mover.dir/src/joint_mover.cpp.s
 .PHONY : src/joint_mover.cpp.s
+
+src/lib/SCS.o: src/lib/SCS.cpp.o
+.PHONY : src/lib/SCS.o
+
+# target to build an object file
+src/lib/SCS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SCS.cpp.o
+.PHONY : src/lib/SCS.cpp.o
+
+src/lib/SCS.i: src/lib/SCS.cpp.i
+.PHONY : src/lib/SCS.i
+
+# target to preprocess a source file
+src/lib/SCS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SCS.cpp.i
+.PHONY : src/lib/SCS.cpp.i
+
+src/lib/SCS.s: src/lib/SCS.cpp.s
+.PHONY : src/lib/SCS.s
+
+# target to generate assembly for a file
+src/lib/SCS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SCS.cpp.s
+.PHONY : src/lib/SCS.cpp.s
+
+src/lib/SCSCL.o: src/lib/SCSCL.cpp.o
+.PHONY : src/lib/SCSCL.o
+
+# target to build an object file
+src/lib/SCSCL.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SCSCL.cpp.o
+.PHONY : src/lib/SCSCL.cpp.o
+
+src/lib/SCSCL.i: src/lib/SCSCL.cpp.i
+.PHONY : src/lib/SCSCL.i
+
+# target to preprocess a source file
+src/lib/SCSCL.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SCSCL.cpp.i
+.PHONY : src/lib/SCSCL.cpp.i
+
+src/lib/SCSCL.s: src/lib/SCSCL.cpp.s
+.PHONY : src/lib/SCSCL.s
+
+# target to generate assembly for a file
+src/lib/SCSCL.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SCSCL.cpp.s
+.PHONY : src/lib/SCSCL.cpp.s
+
+src/lib/SCSerial.o: src/lib/SCSerial.cpp.o
+.PHONY : src/lib/SCSerial.o
+
+# target to build an object file
+src/lib/SCSerial.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SCSerial.cpp.o
+.PHONY : src/lib/SCSerial.cpp.o
+
+src/lib/SCSerial.i: src/lib/SCSerial.cpp.i
+.PHONY : src/lib/SCSerial.i
+
+# target to preprocess a source file
+src/lib/SCSerial.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SCSerial.cpp.i
+.PHONY : src/lib/SCSerial.cpp.i
+
+src/lib/SCSerial.s: src/lib/SCSerial.cpp.s
+.PHONY : src/lib/SCSerial.s
+
+# target to generate assembly for a file
+src/lib/SCSerial.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SCSerial.cpp.s
+.PHONY : src/lib/SCSerial.cpp.s
+
+src/lib/SMSBL.o: src/lib/SMSBL.cpp.o
+.PHONY : src/lib/SMSBL.o
+
+# target to build an object file
+src/lib/SMSBL.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SMSBL.cpp.o
+.PHONY : src/lib/SMSBL.cpp.o
+
+src/lib/SMSBL.i: src/lib/SMSBL.cpp.i
+.PHONY : src/lib/SMSBL.i
+
+# target to preprocess a source file
+src/lib/SMSBL.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SMSBL.cpp.i
+.PHONY : src/lib/SMSBL.cpp.i
+
+src/lib/SMSBL.s: src/lib/SMSBL.cpp.s
+.PHONY : src/lib/SMSBL.s
+
+# target to generate assembly for a file
+src/lib/SMSBL.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SMSBL.cpp.s
+.PHONY : src/lib/SMSBL.cpp.s
+
+src/lib/SMSCL.o: src/lib/SMSCL.cpp.o
+.PHONY : src/lib/SMSCL.o
+
+# target to build an object file
+src/lib/SMSCL.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SMSCL.cpp.o
+.PHONY : src/lib/SMSCL.cpp.o
+
+src/lib/SMSCL.i: src/lib/SMSCL.cpp.i
+.PHONY : src/lib/SMSCL.i
+
+# target to preprocess a source file
+src/lib/SMSCL.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SMSCL.cpp.i
+.PHONY : src/lib/SMSCL.cpp.i
+
+src/lib/SMSCL.s: src/lib/SMSCL.cpp.s
+.PHONY : src/lib/SMSCL.s
+
+# target to generate assembly for a file
+src/lib/SMSCL.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SMSCL.cpp.s
+.PHONY : src/lib/SMSCL.cpp.s
+
+src/lib/SMS_STS.o: src/lib/SMS_STS.cpp.o
+.PHONY : src/lib/SMS_STS.o
+
+# target to build an object file
+src/lib/SMS_STS.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SMS_STS.cpp.o
+.PHONY : src/lib/SMS_STS.cpp.o
+
+src/lib/SMS_STS.i: src/lib/SMS_STS.cpp.i
+.PHONY : src/lib/SMS_STS.i
+
+# target to preprocess a source file
+src/lib/SMS_STS.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SMS_STS.cpp.i
+.PHONY : src/lib/SMS_STS.cpp.i
+
+src/lib/SMS_STS.s: src/lib/SMS_STS.cpp.s
+.PHONY : src/lib/SMS_STS.s
+
+# target to generate assembly for a file
+src/lib/SMS_STS.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/servo_lib.dir/build.make CMakeFiles/servo_lib.dir/src/lib/SMS_STS.cpp.s
+.PHONY : src/lib/SMS_STS.cpp.s
 
 src/motion_planner.o: src/motion_planner.cpp.o
 .PHONY : src/motion_planner.o
@@ -325,10 +482,29 @@ help:
 	@echo "... uninstall"
 	@echo "... joint_mover"
 	@echo "... motion_planner"
+	@echo "... servo_lib"
 	@echo "... suction_cups"
 	@echo "... src/joint_mover.o"
 	@echo "... src/joint_mover.i"
 	@echo "... src/joint_mover.s"
+	@echo "... src/lib/SCS.o"
+	@echo "... src/lib/SCS.i"
+	@echo "... src/lib/SCS.s"
+	@echo "... src/lib/SCSCL.o"
+	@echo "... src/lib/SCSCL.i"
+	@echo "... src/lib/SCSCL.s"
+	@echo "... src/lib/SCSerial.o"
+	@echo "... src/lib/SCSerial.i"
+	@echo "... src/lib/SCSerial.s"
+	@echo "... src/lib/SMSBL.o"
+	@echo "... src/lib/SMSBL.i"
+	@echo "... src/lib/SMSBL.s"
+	@echo "... src/lib/SMSCL.o"
+	@echo "... src/lib/SMSCL.i"
+	@echo "... src/lib/SMSCL.s"
+	@echo "... src/lib/SMS_STS.o"
+	@echo "... src/lib/SMS_STS.i"
+	@echo "... src/lib/SMS_STS.s"
 	@echo "... src/motion_planner.o"
 	@echo "... src/motion_planner.i"
 	@echo "... src/motion_planner.s"

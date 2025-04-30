@@ -1,0 +1,185 @@
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:82:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksc[m[K’ does not name a type; did you mean ‘[01m[Ks8[m[K’?
+   82 |     [01;31m[Ksc[m[K.PWMMode(id);
+      |     [01;31m[K^~[m[K
+      |     [32m[Ks8[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:27[m[K,
+                 from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+                 from [01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:20[m[K:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:84:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kdo[m[K’
+   84 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "attaching ID: %u", id);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:84:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kwhile[m[K’
+   84 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "attaching ID: %u", id);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:85:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kdo[m[K’
+   85 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "starting position: %u ", Pos);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:85:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kwhile[m[K’
+   85 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "starting position: %u ", Pos);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:87:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kid[m[K’ has not been declared
+   87 |     centre([01;31m[Kid[m[K);
+      |            [01;31m[K^~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:87:5:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Kcentre[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+   87 |     [01;31m[Kcentre[m[K(id);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:87:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kint SuctionCups::[01;32m[Kcentre[m[K(int)[m[K’ cannot be overloaded with ‘[01m[Kvoid SuctionCups::[01;32m[Kcentre[m[K(int)[m[K’
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:62:8:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid SuctionCups::[01;32m[Kcentre[m[K(int)[m[K’
+   62 |   void [01;36m[Kcentre[m[K(int id){
+      |        [01;36m[K^~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:88:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksc[m[K’ does not name a type; did you mean ‘[01m[Ks8[m[K’?
+   88 |     [01;31m[Ksc[m[K.WritePWM(id, 800);
+      |     [01;31m[K^~[m[K
+      |     [32m[Ks8[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:89:12:[m[K [01;31m[Kerror: [m[Kexpected identifier before numeric constant
+   89 |     usleep([01;31m[K250[m[K * millis);
+      |            [01;31m[K^~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:89:12:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before numeric constant
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:89:5:[m[K [01;31m[Kerror: [m[KISO C++ forbids declaration of ‘[01m[Kusleep[m[K’ with no type [[01;31m[K-fpermissive[m[K]
+   89 |     [01;31m[Kusleep[m[K(250 * millis);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:91:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kwhile[m[K’
+   91 |     [01;31m[Kwhile[m[K(Counter < rotations){
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:107:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksc[m[K’ does not name a type; did you mean ‘[01m[Ks8[m[K’?
+  107 |     [01;31m[Ksc[m[K.WritePWM(id, 0);
+      |     [01;31m[K^~[m[K
+      |     [32m[Ks8[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:109:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kdo[m[K’
+  109 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "final position: %u ", sc.ReadPos(id));
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:109:5:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kwhile[m[K’
+  109 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "final position: %u ", sc.ReadPos(id));
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:110:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+  110 |   }
+      |    [01;31m[K^[m[K
+      |    [32m[K;[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:[m[K In constructor ‘[01m[KSuctionCups::[01;32m[KSuctionCups[m[K()[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:42:27:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KSuctionCups[m[K’ does not have any field named ‘[01m[Kcount_[m[K’
+   42 |   : Node("suction_cups"), [01;31m[Kcount_[m[K(0) // defines two variables
+      |                           [01;31m[K^~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:51:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksuction_force_pub[m[K’ was not declared in this scope
+   51 |     [01;31m[Ksuction_force_pub[m[K = this->create_publisher<custom_msgs::msg::SuctionForce>("suction_force", 10); // creates the publisher
+      |     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:52:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+   52 |     [01;31m[Ktimer_[m[K = this->create_wall_timer(
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[Ktimer_t[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:53:38:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_callback[m[K’ is not a member of ‘[01m[KSuctionCups[m[K’
+   53 |       500ms, std::bind(&SuctionCups::[01;31m[Ktimer_callback[m[K, this)); // creates a timer object to run timer_callback every 500ms
+      |                                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:54:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kactivate_suction_sub[m[K’ was not declared in this scope
+   54 |     [01;31m[Kactivate_suction_sub[m[K = this->create_subscription<custom_msgs::msg::SuctionRequest>("activate_suction", 10,
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:55:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_callback[m[K’ is not a member of ‘[01m[KSuctionCups[m[K’
+   55 |       std::bind(&SuctionCups::[01;31m[Ksub_callback[m[K, this, _1));
+      |                               [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:[m[K In member function ‘[01m[Kvoid SuctionCups::[01;32m[Kattach[m[K(int)[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:75:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krotations[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   75 |     int [01;35m[Krotations[m[K = 4;
+      |         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:76:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KCounter[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   76 |     int [01;35m[KCounter[m[K = 0;
+      |         [01;35m[K^~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:77:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KRotation[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   77 |     bool [01;35m[KRotation[m[K = false;
+      |          [01;35m[K^~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:78:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KStrtPos[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   78 |     int [01;35m[KStrtPos[m[K = sc.ReadPos(id);
+      |         [01;35m[K^~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:79:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KPos[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   79 |     int [01;35m[KPos[m[K = sc.ReadPos(id);
+      |         [01;35m[K^~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:[m[K In function ‘[01m[Kvoid[01;32m[K attach[m[K(int)[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:117:19:[m[K [01;31m[Kerror: [m[K‘[01m[Ksc[m[K’ was not declared in this scope; did you mean ‘[01m[Ks8[m[K’?
+  117 |     int StrtPos = [01;31m[Ksc[m[K.ReadPos(id);
+      |                   [01;31m[K^~[m[K
+      |                   [32m[Ks8[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:122:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  122 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "attaching ID: %u", id);
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:122:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:122:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "attaching ID: %u", id);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:122:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "attaching ID: %u", id);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:122:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  122 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "attaching ID: %u", id);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/logging.hpp:24[m[K:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:122:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  122 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "attaching ID: %u", id);
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:122:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  122 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "attaching ID: %u", id);
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:123:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  123 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "starting position: %u ", Pos);
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:123:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:123:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  123 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "starting position: %u ", Pos);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:123:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  123 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "starting position: %u ", Pos);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:123:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  123 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "starting position: %u ", Pos);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:123:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  123 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "starting position: %u ", Pos);
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:123:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  123 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "starting position: %u ", Pos);
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:125:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcentre[m[K’ was not declared in this scope
+  125 |     [01;31m[Kcentre[m[K(id);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:134:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  134 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Rotations: %u ", Counter);
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:134:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:134:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  134 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Rotations: %u ", Counter);
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:134:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  134 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Rotations: %u ", Counter);
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:134:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  134 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Rotations: %u ", Counter);
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:134:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  134 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Rotations: %u ", Counter);
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:134:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  134 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Rotations: %u ", Counter);
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:147:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  147 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "final position: %u ", sc.ReadPos(id));
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:147:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:147:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  147 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "final position: %u ", sc.ReadPos(id));
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:147:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  147 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "final position: %u ", sc.ReadPos(id));
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:147:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  147 |     [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "final position: %u ", sc.ReadPos(id));
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:147:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  147 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "final position: %u ", sc.ReadPos(id));
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:147:17:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  147 |     RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "final position: %u ", sc.ReadPos(id));
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:[m[K At global scope:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:154:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  154 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/suction_cups.dir/build.make:76: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/suction_cups.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

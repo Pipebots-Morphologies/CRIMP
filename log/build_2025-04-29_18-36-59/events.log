@@ -1,0 +1,386 @@
+[0.000000] (-) TimerEvent: {}
+[0.001043] (crimp_python) JobQueued: {'identifier': 'crimp_python', 'dependencies': OrderedDict()}
+[0.001575] (custom_msgs) JobQueued: {'identifier': 'custom_msgs', 'dependencies': OrderedDict()}
+[0.001618] (crimp_cpp) JobQueued: {'identifier': 'crimp_cpp', 'dependencies': OrderedDict({'custom_msgs': '/home/andy/CRIMP/install/custom_msgs'})}
+[0.001658] (custom_msgs) JobStarted: {'identifier': 'custom_msgs'}
+[0.013268] (crimp_python) JobStarted: {'identifier': 'crimp_python'}
+[0.024299] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'cmake'}
+[0.025461] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'build'}
+[0.026522] (custom_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/andy/CRIMP/build/custom_msgs', '--', '-j4', '-l4'], 'cwd': '/home/andy/CRIMP/build/custom_msgs', 'env': OrderedDict({'HOSTNAME': 'PipeBot', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/andy/CRIMP/install/custom_msgs/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/andy', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'COLCON_PREFIX_PATH': '/home/andy/CRIMP/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/andy/CRIMP/build/custom_msgs', 'PYTHONPATH': '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages:/home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy'}), 'shell': False}
+[0.099486] (-) TimerEvent: {}
+[0.143294] (custom_msgs) StdoutLine: {'line': b'[  2%] Built target custom_msgs__rosidl_generator_type_description\n'}
+[0.171176] (custom_msgs) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_custom_msgs\n'}
+[0.197757] (custom_msgs) StdoutLine: {'line': b'[  4%] Built target custom_msgs__cpp\n'}
+[0.199589] (-) TimerEvent: {}
+[0.201193] (custom_msgs) StdoutLine: {'line': b'[ 22%] Built target custom_msgs__rosidl_generator_c\n'}
+[0.274597] (custom_msgs) StdoutLine: {'line': b'[ 31%] Built target custom_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.275146] (custom_msgs) StdoutLine: {'line': b'[ 40%] Built target custom_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.282090] (custom_msgs) StdoutLine: {'line': b'[ 50%] Built target custom_msgs__rosidl_typesupport_cpp\n'}
+[0.300251] (-) TimerEvent: {}
+[0.348798] (custom_msgs) StdoutLine: {'line': b'[ 59%] Built target custom_msgs__rosidl_typesupport_introspection_c\n'}
+[0.353267] (custom_msgs) StdoutLine: {'line': b'[ 68%] Built target custom_msgs__rosidl_typesupport_c\n'}
+[0.367443] (custom_msgs) StdoutLine: {'line': b'[ 77%] Built target custom_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.400391] (-) TimerEvent: {}
+[0.413363] (custom_msgs) StdoutLine: {'line': b'[ 77%] Built target custom_msgs\n'}
+[0.460307] (custom_msgs) StdoutLine: {'line': b'[ 79%] Built target custom_msgs__py\n'}
+[0.500534] (-) TimerEvent: {}
+[0.518798] (custom_msgs) StdoutLine: {'line': b'[ 86%] Built target custom_msgs__rosidl_generator_py\n'}
+[0.581550] (custom_msgs) StdoutLine: {'line': b'[ 90%] Built target custom_msgs_s__rosidl_typesupport_fastrtps_c\n'}
+[0.601513] (-) TimerEvent: {}
+[0.608011] (custom_msgs) StdoutLine: {'line': b'[ 97%] Built target custom_msgs_s__rosidl_typesupport_c\n'}
+[0.611070] (custom_msgs) StdoutLine: {'line': b'[100%] Built target custom_msgs_s__rosidl_typesupport_introspection_c\n'}
+[0.670702] (custom_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.699239] (custom_msgs) StdoutLine: {'line': b'writing custom_msgs.egg-info/PKG-INFO\n'}
+[0.699781] (custom_msgs) StdoutLine: {'line': b'writing dependency_links to custom_msgs.egg-info/dependency_links.txt\n'}
+[0.700165] (custom_msgs) StdoutLine: {'line': b'writing top-level names to custom_msgs.egg-info/top_level.txt\n'}
+[0.701611] (-) TimerEvent: {}
+[0.777828] (custom_msgs) StdoutLine: {'line': b"reading manifest file 'custom_msgs.egg-info/SOURCES.txt'\n"}
+[0.779029] (custom_msgs) StdoutLine: {'line': b"writing manifest file 'custom_msgs.egg-info/SOURCES.txt'\n"}
+[0.801736] (-) TimerEvent: {}
+[0.864180] (custom_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_custom_msgs_egg\n'}
+[0.889954] (custom_msgs) CommandEnded: {'returncode': 0}
+[0.891006] (custom_msgs) JobProgress: {'identifier': 'custom_msgs', 'progress': 'install'}
+[0.901831] (-) TimerEvent: {}
+[0.910772] (custom_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/andy/CRIMP/build/custom_msgs'], 'cwd': '/home/andy/CRIMP/build/custom_msgs', 'env': OrderedDict({'HOSTNAME': 'PipeBot', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/andy/CRIMP/install/custom_msgs/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/andy', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'COLCON_PREFIX_PATH': '/home/andy/CRIMP/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/andy/CRIMP/build/custom_msgs', 'PYTHONPATH': '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages:/home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy'}), 'shell': False}
+[0.930410] (custom_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.930808] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/ament_index/resource_index/rosidl_interfaces/custom_msgs\n'}
+[0.931038] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionForce.json\n'}
+[0.931188] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.json\n'}
+[0.931326] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.931526] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.931800] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.931954] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__description.c\n'}
+[0.932094] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__functions.h\n'}
+[0.932224] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.h\n'}
+[0.932436] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__description.c\n'}
+[0.932661] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__functions.c\n'}
+[0.932786] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__functions.c\n'}
+[0.932904] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__functions.h\n'}
+[0.933021] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__struct.h\n'}
+[0.933135] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.h\n'}
+[0.933269] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__struct.h\n'}
+[0.933420] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.c\n'}
+[0.933543] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.c\n'}
+[0.933658] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_force.h\n'}
+[0.933773] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_request.h\n'}
+[0.933887] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.934000] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/library_path.sh\n'}
+[0.934112] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/library_path.dsv\n'}
+[0.934336] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_c.so\n'}
+[0.934621] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.934763] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.934965] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.935100] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_fastrtps_c.h\n'}
+[0.935233] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_fastrtps_c.h\n'}
+[0.935378] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.935527] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.935661] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.935794] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.935919] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.936038] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.936156] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_introspection_c.h\n'}
+[0.936274] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_introspection_c.h\n'}
+[0.936424] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.c\n'}
+[0.936635] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.c\n'}
+[0.936883] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.937122] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_c.so\n'}
+[0.937245] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.937387] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.937511] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_request.hpp\n'}
+[0.937626] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.937742] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.937856] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.hpp\n'}
+[0.937969] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.hpp\n'}
+[0.938083] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__builder.hpp\n'}
+[0.938195] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__struct.hpp\n'}
+[0.938330] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__builder.hpp\n'}
+[0.938580] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__traits.hpp\n'}
+[0.938749] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__traits.hpp\n'}
+[0.938871] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__struct.hpp\n'}
+[0.938988] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_force.hpp\n'}
+[0.939104] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.939218] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.939353] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.939493] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/dds_fastrtps\n'}
+[0.939610] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.939727] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.939866] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.939983] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.940098] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs\n'}
+[0.940211] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg\n'}
+[0.940357] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail\n'}
+[0.940596] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.940736] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.cpp\n'}
+[0.940867] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.cpp\n'}
+[0.940995] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.941123] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.941252] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_cpp.so\n'}
+[0.941483] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/pythonpath.sh\n'}
+[0.941676] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/pythonpath.dsv\n'}
+[0.941811] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info\n'}
+[0.941943] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[0.942076] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[0.942205] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[0.942418] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[0.942563] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs\n'}
+[0.942680] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.942794] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[0.942921] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[0.943040] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.943153] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.943276] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.so\n'}
+[0.943429] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/__init__.py\n'}
+[0.943556] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg\n'}
+[0.943695] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_request_s.c\n'}
+[0.943814] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_force_s.c\n'}
+[0.943930] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_request.py\n'}
+[0.944043] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/__init__.py\n'}
+[0.944155] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_force.py\n'}
+[1.001940] (-) TimerEvent: {}
+[1.017214] (custom_msgs) StdoutLine: {'line': b"Listing '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs'...\n"}
+[1.017611] (custom_msgs) StdoutLine: {'line': b"Listing '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg'...\n"}
+[1.033893] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.so\n'}
+[1.034510] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.so\n'}
+[1.035108] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.so\n'}
+[1.035731] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_py.so\n'}
+[1.036095] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionForce.idl\n'}
+[1.036272] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.idl\n'}
+[1.036476] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionForce.msg\n'}
+[1.036613] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.msg\n'}
+[1.036788] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/ament_index/resource_index/package_run_dependencies/custom_msgs\n'}
+[1.037035] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/ament_index/resource_index/parent_prefix_path/custom_msgs\n'}
+[1.037184] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.sh\n'}
+[1.037326] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.dsv\n'}
+[1.037553] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/path.sh\n'}
+[1.037679] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/path.dsv\n'}
+[1.037803] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/local_setup.bash\n'}
+[1.037931] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/local_setup.sh\n'}
+[1.038062] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/local_setup.zsh\n'}
+[1.038190] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/local_setup.dsv\n'}
+[1.038307] (custom_msgs) StdoutLine: {'line': b'-- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/package.dsv\n'}
+[1.038533] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/ament_index/resource_index/packages/custom_msgs\n'}
+[1.038792] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport.cmake\n'}
+[1.038935] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.039094] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.039231] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.039463] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.039599] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.039737] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport.cmake\n'}
+[1.039872] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.040001] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cppExport.cmake\n'}
+[1.040128] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.040255] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.040516] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.040683] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.040821] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[1.040950] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.041077] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport.cmake\n'}
+[1.041295] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.041448] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[1.041575] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.041697] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.041819] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.041944] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.042082] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.042203] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.042334] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig.cmake\n'}
+[1.042473] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig-version.cmake\n'}
+[1.042589] (custom_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/package.xml\n'}
+[1.045456] (custom_msgs) CommandEnded: {'returncode': 0}
+[1.084626] (custom_msgs) JobEnded: {'identifier': 'custom_msgs', 'rc': 0}
+[1.090594] (crimp_cpp) JobStarted: {'identifier': 'crimp_cpp'}
+[1.100054] (crimp_cpp) JobProgress: {'identifier': 'crimp_cpp', 'progress': 'cmake'}
+[1.101242] (crimp_cpp) JobProgress: {'identifier': 'crimp_cpp', 'progress': 'build'}
+[1.101768] (crimp_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/andy/CRIMP/build/crimp_cpp', '--', '-j4', '-l4'], 'cwd': '/home/andy/CRIMP/build/crimp_cpp', 'env': OrderedDict({'HOSTNAME': 'PipeBot', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/andy/CRIMP/install/custom_msgs/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/andy', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'COLCON_PREFIX_PATH': '/home/andy/CRIMP/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/andy/CRIMP/build/crimp_cpp', 'PYTHONPATH': '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages:/home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy'}), 'shell': False}
+[1.104676] (-) TimerEvent: {}
+[1.204992] (-) TimerEvent: {}
+[1.220480] (crimp_cpp) StdoutLine: {'line': b'[ 53%] Built target servo_lib\n'}
+[1.237498] (crimp_cpp) StdoutLine: {'line': b'[ 69%] Built target motion_planner\n'}
+[1.283808] (crimp_cpp) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o\x1b[0m\n'}
+[1.284266] (crimp_cpp) StdoutLine: {'line': b'[ 92%] Built target joint_mover\n'}
+[1.305114] (-) TimerEvent: {}
+[1.405566] (-) TimerEvent: {}
+[1.506118] (-) TimerEvent: {}
+[1.588172] (crimp_python) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/crimp_python', 'build', '--build-base', '/home/andy/CRIMP/build/crimp_python/build', 'install', '--record', '/home/andy/CRIMP/build/crimp_python/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/andy/CRIMP/src/crimp_python', 'env': {'HOSTNAME': 'PipeBot', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/andy/CRIMP/install/custom_msgs/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/andy', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'COLCON_PREFIX_PATH': '/home/andy/CRIMP/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/andy/CRIMP/build/crimp_python', 'PYTHONPATH': '/home/andy/CRIMP/build/crimp_python/prefix_override:/usr/local/lib/python3.12/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages:/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages:/home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/custom_msgs'}, 'shell': False}
+[1.606213] (-) TimerEvent: {}
+[1.706618] (-) TimerEvent: {}
+[1.807008] (-) TimerEvent: {}
+[1.907399] (-) TimerEvent: {}
+[2.007793] (-) TimerEvent: {}
+[2.037271] (crimp_python) StdoutLine: {'line': b'running egg_info\n'}
+[2.063963] (crimp_python) StdoutLine: {'line': b'writing ../../build/crimp_python/crimp_python.egg-info/PKG-INFO\n'}
+[2.064603] (crimp_python) StdoutLine: {'line': b'writing dependency_links to ../../build/crimp_python/crimp_python.egg-info/dependency_links.txt\n'}
+[2.065101] (crimp_python) StdoutLine: {'line': b'writing entry points to ../../build/crimp_python/crimp_python.egg-info/entry_points.txt\n'}
+[2.065446] (crimp_python) StdoutLine: {'line': b'writing requirements to ../../build/crimp_python/crimp_python.egg-info/requires.txt\n'}
+[2.065705] (crimp_python) StdoutLine: {'line': b'writing top-level names to ../../build/crimp_python/crimp_python.egg-info/top_level.txt\n'}
+[2.107899] (-) TimerEvent: {}
+[2.120945] (crimp_python) StdoutLine: {'line': b"reading manifest file '../../build/crimp_python/crimp_python.egg-info/SOURCES.txt'\n"}
+[2.121513] (crimp_python) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[2.122690] (crimp_python) StdoutLine: {'line': b"writing manifest file '../../build/crimp_python/crimp_python.egg-info/SOURCES.txt'\n"}
+[2.123011] (crimp_python) StdoutLine: {'line': b'running build\n'}
+[2.123212] (crimp_python) StdoutLine: {'line': b'running build_py\n'}
+[2.123775] (crimp_python) StdoutLine: {'line': b'running install\n'}
+[2.138257] (crimp_python) StdoutLine: {'line': b'running install_lib\n'}
+[2.166362] (crimp_python) StdoutLine: {'line': b'running install_data\n'}
+[2.166713] (crimp_python) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.195961] (crimp_python) StdoutLine: {'line': b"removing '/home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages/crimp_python-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[2.196613] (crimp_python) StdoutLine: {'line': b'Copying ../../build/crimp_python/crimp_python.egg-info to /home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages/crimp_python-0.0.0-py3.12.egg-info\n'}
+[2.198441] (crimp_python) StdoutLine: {'line': b'running install_scripts\n'}
+[2.207998] (-) TimerEvent: {}
+[2.308392] (-) TimerEvent: {}
+[2.393977] (crimp_python) StdoutLine: {'line': b'Installing lidar script to /home/andy/CRIMP/install/crimp_python/lib/crimp_python\n'}
+[2.394827] (crimp_python) StdoutLine: {'line': b"writing list of installed files to '/home/andy/CRIMP/build/crimp_python/install.log'\n"}
+[2.408545] (-) TimerEvent: {}
+[2.497729] (crimp_python) CommandEnded: {'returncode': 0}
+[2.508634] (-) TimerEvent: {}
+[2.509820] (crimp_python) JobEnded: {'identifier': 'crimp_python', 'rc': 0}
+[2.608755] (-) TimerEvent: {}
+[2.709120] (-) TimerEvent: {}
+[2.809535] (-) TimerEvent: {}
+[2.909916] (-) TimerEvent: {}
+[3.010304] (-) TimerEvent: {}
+[3.110716] (-) TimerEvent: {}
+[3.211105] (-) TimerEvent: {}
+[3.311529] (-) TimerEvent: {}
+[3.411917] (-) TimerEvent: {}
+[3.512308] (-) TimerEvent: {}
+[3.612693] (-) TimerEvent: {}
+[3.713041] (-) TimerEvent: {}
+[3.813397] (-) TimerEvent: {}
+[3.913759] (-) TimerEvent: {}
+[4.014137] (-) TimerEvent: {}
+[4.114518] (-) TimerEvent: {}
+[4.214870] (-) TimerEvent: {}
+[4.315355] (-) TimerEvent: {}
+[4.415712] (-) TimerEvent: {}
+[4.516067] (-) TimerEvent: {}
+[4.616399] (-) TimerEvent: {}
+[4.716731] (-) TimerEvent: {}
+[4.817065] (-) TimerEvent: {}
+[4.917410] (-) TimerEvent: {}
+[5.017767] (-) TimerEvent: {}
+[5.118125] (-) TimerEvent: {}
+[5.218488] (-) TimerEvent: {}
+[5.318827] (-) TimerEvent: {}
+[5.419199] (-) TimerEvent: {}
+[5.519587] (-) TimerEvent: {}
+[5.619945] (-) TimerEvent: {}
+[5.720303] (-) TimerEvent: {}
+[5.820671] (-) TimerEvent: {}
+[5.921024] (-) TimerEvent: {}
+[6.021382] (-) TimerEvent: {}
+[6.121740] (-) TimerEvent: {}
+[6.222102] (-) TimerEvent: {}
+[6.322468] (-) TimerEvent: {}
+[6.422817] (-) TimerEvent: {}
+[6.523173] (-) TimerEvent: {}
+[6.623590] (-) TimerEvent: {}
+[6.723949] (-) TimerEvent: {}
+[6.824302] (-) TimerEvent: {}
+[6.924651] (-) TimerEvent: {}
+[7.024995] (-) TimerEvent: {}
+[7.125355] (-) TimerEvent: {}
+[7.225684] (-) TimerEvent: {}
+[7.326008] (-) TimerEvent: {}
+[7.426353] (-) TimerEvent: {}
+[7.526699] (-) TimerEvent: {}
+[7.627054] (-) TimerEvent: {}
+[7.727412] (-) TimerEvent: {}
+[7.827737] (-) TimerEvent: {}
+[7.928065] (-) TimerEvent: {}
+[8.028389] (-) TimerEvent: {}
+[8.128710] (-) TimerEvent: {}
+[8.229028] (-) TimerEvent: {}
+[8.329366] (-) TimerEvent: {}
+[8.429713] (-) TimerEvent: {}
+[8.530051] (-) TimerEvent: {}
+[8.630399] (-) TimerEvent: {}
+[8.730825] (-) TimerEvent: {}
+[8.831168] (-) TimerEvent: {}
+[8.931563] (-) TimerEvent: {}
+[9.031920] (-) TimerEvent: {}
+[9.132267] (-) TimerEvent: {}
+[9.232638] (-) TimerEvent: {}
+[9.332983] (-) TimerEvent: {}
+[9.433338] (-) TimerEvent: {}
+[9.533666] (-) TimerEvent: {}
+[9.634030] (-) TimerEvent: {}
+[9.734392] (-) TimerEvent: {}
+[9.834691] (-) TimerEvent: {}
+[9.934990] (-) TimerEvent: {}
+[10.035311] (-) TimerEvent: {}
+[10.135643] (-) TimerEvent: {}
+[10.235962] (-) TimerEvent: {}
+[10.336275] (-) TimerEvent: {}
+[10.436622] (-) TimerEvent: {}
+[10.536929] (-) TimerEvent: {}
+[10.637244] (-) TimerEvent: {}
+[10.737579] (-) TimerEvent: {}
+[10.837886] (-) TimerEvent: {}
+[10.938193] (-) TimerEvent: {}
+[11.038530] (-) TimerEvent: {}
+[11.138844] (-) TimerEvent: {}
+[11.239149] (-) TimerEvent: {}
+[11.339497] (-) TimerEvent: {}
+[11.439812] (-) TimerEvent: {}
+[11.540119] (-) TimerEvent: {}
+[11.640431] (-) TimerEvent: {}
+[11.740735] (-) TimerEvent: {}
+[11.841049] (-) TimerEvent: {}
+[11.941372] (-) TimerEvent: {}
+[12.041696] (-) TimerEvent: {}
+[12.142029] (-) TimerEvent: {}
+[12.242356] (-) TimerEvent: {}
+[12.342674] (-) TimerEvent: {}
+[12.442999] (-) TimerEvent: {}
+[12.543341] (-) TimerEvent: {}
+[12.643653] (-) TimerEvent: {}
+[12.743972] (-) TimerEvent: {}
+[12.844272] (-) TimerEvent: {}
+[12.944586] (-) TimerEvent: {}
+[13.044854] (-) TimerEvent: {}
+[13.145137] (-) TimerEvent: {}
+[13.245522] (-) TimerEvent: {}
+[13.345876] (-) TimerEvent: {}
+[13.446219] (-) TimerEvent: {}
+[13.546559] (-) TimerEvent: {}
+[13.646914] (-) TimerEvent: {}
+[13.747282] (-) TimerEvent: {}
+[13.847727] (-) TimerEvent: {}
+[13.948269] (-) TimerEvent: {}
+[14.034379] (crimp_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable suction_cups\x1b[0m\n'}
+[14.048393] (-) TimerEvent: {}
+[14.148775] (-) TimerEvent: {}
+[14.249620] (-) TimerEvent: {}
+[14.350051] (-) TimerEvent: {}
+[14.450757] (-) TimerEvent: {}
+[14.551648] (-) TimerEvent: {}
+[14.651977] (-) TimerEvent: {}
+[14.749093] (crimp_cpp) StdoutLine: {'line': b'[100%] Built target suction_cups\n'}
+[14.752074] (-) TimerEvent: {}
+[14.766450] (crimp_cpp) CommandEnded: {'returncode': 0}
+[14.767105] (crimp_cpp) JobProgress: {'identifier': 'crimp_cpp', 'progress': 'install'}
+[14.767428] (crimp_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/andy/CRIMP/build/crimp_cpp'], 'cwd': '/home/andy/CRIMP/build/crimp_cpp', 'env': OrderedDict({'HOSTNAME': 'PipeBot', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/andy/CRIMP/install/custom_msgs/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/lib', 'HOME': '/home/andy', 'ROS_PYTHON_VERSION': '3', 'LC_CTYPE': 'C.UTF-8', 'COLCON_PREFIX_PATH': '/home/andy/CRIMP/install', 'ROS_DISTRO': 'jazzy', '_': '/usr/local/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy', 'DEBIAN_FRONTEND': 'noninteractive', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/andy/CRIMP/build/crimp_cpp', 'PYTHONPATH': '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages:/home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy'}), 'shell': False}
+[14.779787] (crimp_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[14.780070] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/joint_mover\n'}
+[14.780809] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/motion_planner\n'}
+[14.781258] (crimp_cpp) StdoutLine: {'line': b'-- Installing: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/suction_cups\n'}
+[14.791884] (crimp_cpp) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/suction_cups" to ""\n'}
+[14.792093] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/package_run_dependencies/crimp_cpp\n'}
+[14.792183] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/parent_prefix_path/crimp_cpp\n'}
+[14.792309] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/ament_prefix_path.sh\n'}
+[14.792452] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/ament_prefix_path.dsv\n'}
+[14.792538] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/path.sh\n'}
+[14.792621] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/path.dsv\n'}
+[14.792700] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.bash\n'}
+[14.792780] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.sh\n'}
+[14.792859] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.zsh\n'}
+[14.792961] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.dsv\n'}
+[14.793074] (crimp_cpp) StdoutLine: {'line': b'-- Installing: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/package.dsv\n'}
+[14.793154] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/packages/crimp_cpp\n'}
+[14.793231] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/cmake/crimp_cppConfig.cmake\n'}
+[14.793310] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/cmake/crimp_cppConfig-version.cmake\n'}
+[14.793408] (crimp_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/package.xml\n'}
+[14.795594] (crimp_cpp) CommandEnded: {'returncode': 0}
+[14.809245] (crimp_cpp) JobEnded: {'identifier': 'crimp_cpp', 'rc': 0}
+[14.810294] (-) EventReactorShutdown: {}

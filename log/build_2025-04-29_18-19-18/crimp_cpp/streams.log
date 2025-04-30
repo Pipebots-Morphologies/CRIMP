@@ -1,0 +1,22 @@
+[0.015s] Invoking command in '/home/andy/CRIMP/build/crimp_cpp': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4
+[0.130s] [ 53%] Built target servo_lib
+[0.147s] [ 69%] Built target motion_planner
+[0.198s] [ 76%] [32mBuilding CXX object CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o[0m
+[0.203s] [ 92%] Built target joint_mover
+[4.209s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:111:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kvoid SuctionCups::[01;32m[Kattach[m[K(int)[m[K’ cannot be overloaded with ‘[01m[Kvoid SuctionCups::[01;32m[Kattach[m[K(int)[m[K’
+[4.209s]   111 |  void [01;31m[Kattach[m[K(int id){
+[4.209s]       |       [01;31m[K^~~~~~[m[K
+[4.209s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:73:8:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid SuctionCups::[01;32m[Kattach[m[K(int)[m[K’
+[4.209s]    73 |   void [01;36m[Kattach[m[K(int id){
+[4.209s]       |        [01;36m[K^~~~~~[m[K
+[4.257s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:[m[K In constructor ‘[01m[KSuctionCups::[01;32m[KSuctionCups[m[K()[m[K’:
+[4.257s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:53:38:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_callback[m[K’ is not a member of ‘[01m[KSuctionCups[m[K’
+[4.257s]    53 |       500ms, std::bind(&SuctionCups::[01;31m[Ktimer_callback[m[K, this)); // creates a timer object to run timer_callback every 500ms
+[4.257s]       |                                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.257s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:55:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_callback[m[K’ is not a member of ‘[01m[KSuctionCups[m[K’
+[4.257s]    55 |       std::bind(&SuctionCups::[01;31m[Ksub_callback[m[K, this, _1));
+[4.257s]       |                               [01;31m[K^~~~~~~~~~~~[m[K
+[5.746s] gmake[2]: *** [CMakeFiles/suction_cups.dir/build.make:76: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o] Error 1
+[5.746s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/suction_cups.dir/all] Error 2
+[5.746s] gmake: *** [Makefile:146: all] Error 2
+[5.750s] Invoked command in '/home/andy/CRIMP/build/crimp_cpp' returned '2': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4

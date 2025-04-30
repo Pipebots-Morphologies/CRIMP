@@ -1,0 +1,28 @@
+[0.018s] Invoking command in '/home/andy/CRIMP/build/crimp_cpp': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4
+[0.148s] [ 53%] Built target servo_lib
+[0.161s] [ 69%] Built target joint_mover
+[0.176s] [ 76%] [32mBuilding CXX object CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o[0m
+[0.180s] [ 92%] Built target motion_planner
+[12.589s] [100%] [32m[1mLinking CXX executable suction_cups[0m
+[13.131s] /usr/bin/ld: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o: in function `SuctionCups::SuctionCups()':
+[13.132s] suction_cups.cpp:(.text._ZN11SuctionCupsC2Ev[_ZN11SuctionCupsC5Ev]+0xd8): undefined reference to `SCSCL::SCSCL()'
+[13.132s] /usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCupsC2Ev[_ZN11SuctionCupsC5Ev]+0x294): undefined reference to `SCSerial::begin(int, char const*)'
+[13.133s] /usr/bin/ld: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o: in function `SuctionCups::attach(int)':
+[13.133s] suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x4c): undefined reference to `SCSCL::ReadPos(int)'
+[13.134s] /usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x64): undefined reference to `SCSCL::PWMMode(unsigned char)'
+[13.135s] /usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x7c): undefined reference to `SCSCL::WritePWM(unsigned char, short)'
+[13.135s] /usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x1dc): undefined reference to `SCSCL::ReadPos(int)'
+[13.136s] /usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x218): undefined reference to `SCSCL::ReadPos(int)'
+[13.137s] /usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups6attachEi[_ZN11SuctionCups6attachEi]+0x58c): undefined reference to `SCSCL::ReadPos(int)'
+[13.138s] /usr/bin/ld: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o: in function `SuctionCups::detatch(int)':
+[13.138s] suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x4c): undefined reference to `SCSCL::ReadPos(int)'
+[13.138s] /usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x64): undefined reference to `SCSCL::PWMMode(unsigned char)'
+[13.139s] /usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x7c): undefined reference to `SCSCL::WritePWM(unsigned char, short)'
+[13.140s] /usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x1dc): undefined reference to `SCSCL::ReadPos(int)'
+[13.140s] /usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x218): undefined reference to `SCSCL::ReadPos(int)'
+[13.141s] /usr/bin/ld: suction_cups.cpp:(.text._ZN11SuctionCups7detatchEi[_ZN11SuctionCups7detatchEi]+0x58c): undefined reference to `SCSCL::ReadPos(int)'
+[13.228s] collect2: error: ld returned 1 exit status
+[13.231s] gmake[2]: *** [CMakeFiles/suction_cups.dir/build.make:179: suction_cups] Error 1
+[13.231s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/suction_cups.dir/all] Error 2
+[13.231s] gmake: *** [Makefile:146: all] Error 2
+[13.234s] Invoked command in '/home/andy/CRIMP/build/crimp_cpp' returned '2': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4

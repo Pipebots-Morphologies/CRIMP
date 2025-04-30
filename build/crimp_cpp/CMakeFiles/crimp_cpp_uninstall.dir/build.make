@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ethan/crimp_ws/src/crimp_cpp
+CMAKE_SOURCE_DIR = /home/andy/CRIMP/src/crimp_cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ethan/crimp_ws/build/crimp_cpp
+CMAKE_BINARY_DIR = /home/andy/CRIMP/build/crimp_cpp
 
 # Utility rule file for crimp_cpp_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/crimp_cpp_uninstall.dir/compiler_depend.make
 include CMakeFiles/crimp_cpp_uninstall.dir/progress.make
 
 CMakeFiles/crimp_cpp_uninstall:
-	/usr/bin/cmake -P /home/ethan/crimp_ws/build/crimp_cpp/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/andy/CRIMP/build/crimp_cpp/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 crimp_cpp_uninstall: CMakeFiles/crimp_cpp_uninstall
 crimp_cpp_uninstall: CMakeFiles/crimp_cpp_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/crimp_cpp_uninstall.dir/clean:
 .PHONY : CMakeFiles/crimp_cpp_uninstall.dir/clean
 
 CMakeFiles/crimp_cpp_uninstall.dir/depend:
-	cd /home/ethan/crimp_ws/build/crimp_cpp && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ethan/crimp_ws/src/crimp_cpp /home/ethan/crimp_ws/src/crimp_cpp /home/ethan/crimp_ws/build/crimp_cpp /home/ethan/crimp_ws/build/crimp_cpp /home/ethan/crimp_ws/build/crimp_cpp/CMakeFiles/crimp_cpp_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/andy/CRIMP/build/crimp_cpp && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/andy/CRIMP/src/crimp_cpp /home/andy/CRIMP/src/crimp_cpp /home/andy/CRIMP/build/crimp_cpp /home/andy/CRIMP/build/crimp_cpp /home/andy/CRIMP/build/crimp_cpp/CMakeFiles/crimp_cpp_uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/crimp_cpp_uninstall.dir/depend
 

@@ -1,0 +1,37 @@
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/lib/SCSCL.cpp:[m[K In member function ‘[01m[Kvirtual void SCSCL::[01;32m[KSyncWritePos[m[K(u8*, u8, u16*, u16*, u16*)[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/lib/SCSCL.cpp:45:8:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Koffbuf[m[K’ [[01;35m[K-Wvla[m[K]
+   45 |     u8 [01;35m[Koffbuf[m[K[IDN][6];
+      |        [01;35m[K^~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/lib/SMSBL.cpp:[m[K In member function ‘[01m[Kvirtual void SMSBL::[01;32m[KSyncWritePosEx[m[K(u8*, u8, s16*, u16*, u8*)[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/lib/SMSBL.cpp:56:8:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Koffbuf[m[K’ [[01;35m[K-Wvla[m[K]
+   56 |     u8 [01;35m[Koffbuf[m[K[IDN][7];
+      |        [01;35m[K^~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/lib/SMSCL.cpp:[m[K In member function ‘[01m[Kvirtual void SMSCL::[01;32m[KSyncWritePosEx[m[K(u8*, u8, s16*, u16*, u8*)[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/lib/SMSCL.cpp:55:8:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Koffbuf[m[K’ [[01;35m[K-Wvla[m[K]
+   55 |     u8 [01;35m[Koffbuf[m[K[IDN][7];
+      |        [01;35m[K^~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/lib/SMS_STS.cpp:[m[K In member function ‘[01m[Kvirtual void SMS_STS::[01;32m[KSyncWritePosEx[m[K(u8*, u8, s16*, u16*, u8*)[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/lib/SMS_STS.cpp:56:8:[m[K [01;35m[Kwarning: [m[KISO C++ forbids variable length array ‘[01m[Koffbuf[m[K’ [[01;35m[K-Wvla[m[K]
+   56 |     u8 [01;35m[Koffbuf[m[K[IDN][7];
+      |        [01;35m[K^~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:[m[K In member function ‘[01m[Kvoid JointMover::[01;32m[Ktimer_callback[m[K()[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:55:27:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((JointMover*)this)->JointMover::count_ * 10)[m[K’ from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]
+   55 |     msg.position = {[01;35m[Kcount_*10[m[K};
+      |                     [01;35m[K~~~~~~^~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:55:27:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K(((JointMover*)this)->JointMover::count_ * 10)[m[K’ from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:[m[K In member function ‘[01m[Kvoid JointMover::[01;32m[Ksub_callback[m[K(const sensor_msgs::msg::JointState&)[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:61:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpos[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   61 |     auto [01;35m[Kpos[m[K = to_string(msg.position[0]).c_str();
+      |          [01;35m[K^~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/motion_planner.cpp:[m[K In lambda function:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/motion_planner.cpp:51:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcup_1[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   51 |         auto [01;35m[Kcup_1[m[K = to_string(request_msg.cup_1).c_str();
+      |              [01;35m[K^~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/motion_planner.cpp:52:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcup_2[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   52 |         auto [01;35m[Kcup_2[m[K = to_string(request_msg.cup_2).c_str();
+      |              [01;35m[K^~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/motion_planner.cpp:[m[K In member function ‘[01m[Kvoid MotionPlanner::[01;32m[Ktimer_callback[m[K()[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/motion_planner.cpp:71:28:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((MotionPlanner*)this)->MotionPlanner::count_[m[K’ from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]
+   71 |     target_msg.position = {[01;35m[Kcount_[m[K};
+      |                            [01;35m[K^~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/motion_planner.cpp:71:28:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[K((MotionPlanner*)this)->MotionPlanner::count_[m[K’ from ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} to ‘[01m[Kdouble[m[K’ [[01;35m[K-Wnarrowing[m[K]

@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DROSIDL_GENERATOR_C_BUILDING_DLL_custom_msgs -DROS_PACKAGE_NAME=\"custom_msgs\"
 
-C_INCLUDES = -I/home/ethan/crimp_ws/build/custom_msgs/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface
+C_INCLUDES = -I/home/andy/CRIMP/build/custom_msgs/rosidl_generator_c -isystem /opt/ros/jazzy/include/rosidl_runtime_c -isystem /opt/ros/jazzy/include/rcutils -isystem /opt/ros/jazzy/include/rosidl_typesupport_interface
 
 C_FLAGS = -std=gnu11 -fPIC -Wall
 

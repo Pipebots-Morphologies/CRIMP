@@ -1,8 +1,8 @@
-# Install script for directory: /home/ethan/crimp_ws/build/custom_msgs/custom_msgs__py
+# Install script for directory: /home/andy/CRIMP/build/custom_msgs/custom_msgs__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ethan/crimp_ws/install/custom_msgs")
+  set(CMAKE_INSTALL_PREFIX "/home/andy/CRIMP/install/custom_msgs")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

@@ -1,0 +1,30 @@
+[0.014s] Invoking command in '/home/andy/CRIMP/build/crimp_cpp': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4
+[0.130s] [ 53%] Built target servo_lib
+[0.147s] [ 69%] Built target motion_planner
+[0.193s] [ 84%] [32mBuilding CXX object CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o[0m
+[0.194s] [ 92%] Built target joint_mover
+[12.944s] [100%] [32m[1mLinking CXX executable suction_cups[0m
+[13.659s] [100%] Built target suction_cups
+[13.676s] Invoked command in '/home/andy/CRIMP/build/crimp_cpp' returned '0': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4
+[13.678s] Invoking command in '/home/andy/CRIMP/build/crimp_cpp': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --install /home/andy/CRIMP/build/crimp_cpp
+[13.689s] -- Install configuration: ""
+[13.689s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/joint_mover
+[13.690s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/motion_planner
+[13.691s] -- Installing: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/suction_cups
+[13.701s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/suction_cups" to ""
+[13.701s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/package_run_dependencies/crimp_cpp
+[13.702s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/parent_prefix_path/crimp_cpp
+[13.702s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/ament_prefix_path.sh
+[13.702s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/ament_prefix_path.dsv
+[13.702s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/path.sh
+[13.702s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/path.dsv
+[13.702s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.bash
+[13.702s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.sh
+[13.702s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.zsh
+[13.702s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.dsv
+[13.702s] -- Installing: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/package.dsv
+[13.703s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/packages/crimp_cpp
+[13.703s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/cmake/crimp_cppConfig.cmake
+[13.703s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/cmake/crimp_cppConfig-version.cmake
+[13.703s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/package.xml
+[13.706s] Invoked command in '/home/andy/CRIMP/build/crimp_cpp' returned '0': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --install /home/andy/CRIMP/build/crimp_cpp

@@ -1,0 +1,54 @@
+[0.014s] Invoking command in '/home/andy/CRIMP/build/crimp_cpp': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4
+[0.060s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.421s] -- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.462s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.480s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.502s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.527s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.634s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.637s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.741s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.843s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.865s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.927s] -- Found custom_msgs: 0.0.0 (/home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake)
+[0.953s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[1.151s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.151s] -- Configured cppcheck include dirs: /home/andy/CRIMP/src/crimp_cpp/include
+[1.151s] -- Configured cppcheck exclude dirs and/or files: 
+[1.152s] -- Added test 'lint_cmake' to check CMake code style
+[1.155s] -- Added test 'uncrustify' to check C / C++ code style
+[1.155s] -- Configured uncrustify additional arguments: 
+[1.155s] -- Added test 'xmllint' to check XML markup files
+[1.157s] -- Configuring done (1.1s)
+[1.197s] -- Generating done (0.0s)
+[1.210s] -- Build files have been written to: /home/andy/CRIMP/build/crimp_cpp
+[1.276s] [ 53%] Built target servo_lib
+[1.289s] [ 69%] Built target motion_planner
+[1.327s] [ 84%] [32m[1mLinking CXX executable suction_cups[0m
+[1.327s] [ 84%] [32m[1mLinking CXX executable joint_mover[0m
+[2.300s] [ 92%] Built target joint_mover
+[2.329s] [100%] Built target suction_cups
+[2.349s] Invoked command in '/home/andy/CRIMP/build/crimp_cpp' returned '0': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4
+[2.351s] Invoking command in '/home/andy/CRIMP/build/crimp_cpp': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --install /home/andy/CRIMP/build/crimp_cpp
+[2.364s] -- Install configuration: ""
+[2.364s] -- Installing: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/joint_mover
+[2.375s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/joint_mover" to ""
+[2.375s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/motion_planner
+[2.376s] -- Installing: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/suction_cups
+[2.387s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/suction_cups" to ""
+[2.387s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/package_run_dependencies/crimp_cpp
+[2.387s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/parent_prefix_path/crimp_cpp
+[2.387s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/ament_prefix_path.sh
+[2.387s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/ament_prefix_path.dsv
+[2.387s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/path.sh
+[2.388s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/path.dsv
+[2.388s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.bash
+[2.388s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.sh
+[2.388s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.zsh
+[2.388s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.dsv
+[2.388s] -- Installing: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/package.dsv
+[2.388s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/packages/crimp_cpp
+[2.388s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/cmake/crimp_cppConfig.cmake
+[2.389s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/cmake/crimp_cppConfig-version.cmake
+[2.389s] -- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/package.xml
+[2.392s] Invoked command in '/home/andy/CRIMP/build/crimp_cpp' returned '0': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --install /home/andy/CRIMP/build/crimp_cpp

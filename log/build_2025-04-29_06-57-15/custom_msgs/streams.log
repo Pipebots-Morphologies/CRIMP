@@ -1,0 +1,263 @@
+[0.031s] Invoking command in '/home/andy/CRIMP/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake /home/andy/CRIMP/src/custom_msgs -DCMAKE_INSTALL_PREFIX=/home/andy/CRIMP/install/custom_msgs
+[0.410s] -- The C compiler identification is GNU 13.3.0
+[0.651s] -- The CXX compiler identification is GNU 13.3.0
+[0.693s] -- Detecting C compiler ABI info
+[0.903s] -- Detecting C compiler ABI info - done
+[0.926s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.927s] -- Detecting C compile features
+[0.928s] -- Detecting C compile features - done
+[0.948s] -- Detecting CXX compiler ABI info
+[1.167s] -- Detecting CXX compiler ABI info - done
+[1.190s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.191s] -- Detecting CXX compile features
+[1.192s] -- Detecting CXX compile features - done
+[1.199s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.458s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.713s] -- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)
+[1.726s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.840s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.939s] -- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)
+[2.883s] -- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)
+[3.503s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.310s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[4.315s] -- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)
+[4.513s] -- Found PythonExtra: /usr/bin/python3  
+[5.342s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed 
+[5.398s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[5.436s] -- Added test 'lint_cmake' to check CMake code style
+[5.439s] -- Added test 'xmllint' to check XML markup files
+[5.444s] -- Configuring done (5.3s)
+[5.506s] -- Generating done (0.0s)
+[5.526s] -- Build files have been written to: /home/andy/CRIMP/build/custom_msgs
+[5.539s] Invoked command in '/home/andy/CRIMP/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake /home/andy/CRIMP/src/custom_msgs -DCMAKE_INSTALL_PREFIX=/home/andy/CRIMP/install/custom_msgs
+[5.542s] Invoking command in '/home/andy/CRIMP/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/custom_msgs -- -j4 -l4
+[5.631s] [  2%] [34m[1mGenerating type hashes for ROS interfaces[0m
+[5.647s] [  2%] Built target ament_cmake_python_copy_custom_msgs
+[5.973s] running egg_info
+[5.975s] creating custom_msgs.egg-info
+[5.999s] writing custom_msgs.egg-info/PKG-INFO
+[5.999s] writing dependency_links to custom_msgs.egg-info/dependency_links.txt
+[6.000s] writing top-level names to custom_msgs.egg-info/top_level.txt
+[6.000s] writing manifest file 'custom_msgs.egg-info/SOURCES.txt'
+[6.027s] [  2%] Built target custom_msgs__rosidl_generator_type_description
+[6.048s] [  4%] [34m[1mGenerating C code for ROS interfaces[0m
+[6.068s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[6.071s] reading manifest file 'custom_msgs.egg-info/SOURCES.txt'
+[6.072s] writing manifest file 'custom_msgs.egg-info/SOURCES.txt'
+[6.168s] [  6%] Built target ament_cmake_python_build_custom_msgs_egg
+[6.614s] [  6%] Built target custom_msgs__cpp
+[6.680s] [ 13%] [32mBuilding C object CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/suction_force__description.c.o[0m
+[6.681s] [ 13%] [32mBuilding C object CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/suction_force__functions.c.o[0m
+[6.681s] [ 13%] [32mBuilding C object CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/suction_force__type_support.c.o[0m
+[6.682s] [ 15%] [32mBuilding C object CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/suction_request__description.c.o[0m
+[6.765s] [ 18%] [32mBuilding C object CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/suction_request__functions.c.o[0m
+[6.784s] [ 20%] [32mBuilding C object CMakeFiles/custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/custom_msgs/msg/detail/suction_request__type_support.c.o[0m
+[6.857s] [ 22%] [32m[1mLinking C shared library libcustom_msgs__rosidl_generator_c.so[0m
+[6.924s] [ 22%] Built target custom_msgs__rosidl_generator_c
+[6.944s] [ 29%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[6.944s] [ 29%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[6.944s] [ 31%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[6.944s] [ 31%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[7.468s] [ 34%] [32mBuilding CXX object CMakeFiles/custom_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_msgs/msg/suction_force__type_support.cpp.o[0m
+[7.543s] [ 36%] [32mBuilding CXX object CMakeFiles/custom_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_msgs/msg/detail/suction_force__type_support.cpp.o[0m
+[7.595s] [ 38%] [32mBuilding CXX object CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/suction_force__type_support.cpp.o[0m
+[7.613s] [ 40%] [32mBuilding CXX object CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_msgs/msg/detail/suction_force__type_support_c.cpp.o[0m
+[8.226s] [ 43%] [32mBuilding CXX object CMakeFiles/custom_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_msgs/msg/suction_request__type_support.cpp.o[0m
+[8.262s] [ 45%] [32mBuilding CXX object CMakeFiles/custom_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_msgs/msg/detail/suction_request__type_support.cpp.o[0m
+[8.656s] [ 47%] [32mBuilding CXX object CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_msgs/msg/detail/suction_request__type_support_c.cpp.o[0m
+[8.695s] [ 50%] [32mBuilding CXX object CMakeFiles/custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_msgs/msg/detail/dds_fastrtps/suction_request__type_support.cpp.o[0m
+[8.922s] [ 52%] [32m[1mLinking CXX shared library libcustom_msgs__rosidl_typesupport_cpp.so[0m
+[8.967s] [ 54%] [32m[1mLinking CXX shared library libcustom_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[9.016s] [ 54%] Built target custom_msgs__rosidl_typesupport_cpp
+[9.043s] [ 56%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[9.064s] [ 56%] Built target custom_msgs__rosidl_typesupport_introspection_cpp
+[9.088s] [ 59%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[9.651s] [ 61%] [32mBuilding CXX object CMakeFiles/custom_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_msgs/msg/suction_force__type_support.cpp.o[0m
+[9.687s] [ 63%] [32mBuilding C object CMakeFiles/custom_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_msgs/msg/detail/suction_force__type_support.c.o[0m
+[9.721s] [ 65%] [32m[1mLinking CXX shared library libcustom_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[9.746s] [ 68%] [32mBuilding CXX object CMakeFiles/custom_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_msgs/msg/suction_request__type_support.cpp.o[0m
+[9.775s] [ 70%] [32mBuilding C object CMakeFiles/custom_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_msgs/msg/detail/suction_request__type_support.c.o[0m
+[9.843s] [ 70%] Built target custom_msgs__rosidl_typesupport_fastrtps_c
+[9.848s] [ 72%] [32m[1mLinking CXX shared library libcustom_msgs__rosidl_typesupport_c.so[0m
+[9.860s] [ 77%] [32m[1mLinking C shared library libcustom_msgs__rosidl_typesupport_introspection_c.so[0m
+[9.861s] [ 77%] [32m[1mLinking CXX shared library libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[9.926s] [ 77%] Built target custom_msgs__rosidl_typesupport_introspection_c
+[9.933s] [ 77%] Built target custom_msgs__rosidl_typesupport_c
+[9.958s] [ 77%] Built target custom_msgs__rosidl_typesupport_fastrtps_cpp
+[9.990s] [ 77%] Built target custom_msgs
+[10.024s] [ 79%] [34m[1mGenerating Python code for ROS interfaces[0m
+[10.581s] [ 79%] Built target custom_msgs__py
+[10.611s] [ 84%] [32mBuilding C object CMakeFiles/custom_msgs__rosidl_generator_py.dir/rosidl_generator_py/custom_msgs/msg/_suction_request_s.c.o[0m
+[10.611s] [ 84%] [32mBuilding C object CMakeFiles/custom_msgs__rosidl_generator_py.dir/rosidl_generator_py/custom_msgs/msg/_suction_force_s.c.o[0m
+[10.832s] [ 86%] [32m[1mLinking C shared library libcustom_msgs__rosidl_generator_py.so[0m
+[10.895s] [ 86%] Built target custom_msgs__rosidl_generator_py
+[10.930s] [ 90%] [32mBuilding C object CMakeFiles/custom_msgs_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[10.930s] [ 93%] [32mBuilding C object CMakeFiles/custom_msgs_s__rosidl_typesupport_c.dir/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[10.930s] [ 90%] [32mBuilding C object CMakeFiles/custom_msgs_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[11.113s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/custom_msgs/custom_msgs_s__rosidl_typesupport_c.so[0m
+[11.113s] [ 97%] [32m[1mLinking C shared module rosidl_generator_py/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.so[0m
+[11.122s] [100%] [32m[1mLinking C shared module rosidl_generator_py/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.so[0m
+[11.170s] [100%] Built target custom_msgs_s__rosidl_typesupport_introspection_c
+[11.170s] [100%] Built target custom_msgs_s__rosidl_typesupport_c
+[11.178s] [100%] Built target custom_msgs_s__rosidl_typesupport_fastrtps_c
+[11.196s] Invoked command in '/home/andy/CRIMP/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/custom_msgs -- -j4 -l4
+[11.211s] Invoking command in '/home/andy/CRIMP/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --install /home/andy/CRIMP/build/custom_msgs
+[11.224s] -- Install configuration: ""
+[11.224s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/ament_index/resource_index/rosidl_interfaces/custom_msgs
+[11.224s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionForce.json
+[11.224s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.json
+[11.224s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs
+[11.225s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[11.225s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[11.225s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__description.c
+[11.225s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__functions.h
+[11.226s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.h
+[11.226s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__description.c
+[11.226s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__functions.c
+[11.226s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__functions.c
+[11.226s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__functions.h
+[11.226s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__struct.h
+[11.226s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.h
+[11.226s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__struct.h
+[11.227s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.c
+[11.227s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.c
+[11.227s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_force.h
+[11.227s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_request.h
+[11.227s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_c__visibility_control.h
+[11.227s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/library_path.sh
+[11.228s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/library_path.dsv
+[11.228s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_c.so
+[11.228s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_c.so" to ""
+[11.229s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs
+[11.229s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[11.229s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[11.229s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_fastrtps_c.h
+[11.229s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_fastrtps_c.h
+[11.229s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[11.229s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_c.so
+[11.230s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[11.230s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs
+[11.230s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[11.230s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[11.230s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[11.230s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_introspection_c.h
+[11.230s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_introspection_c.h
+[11.231s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.c
+[11.231s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.c
+[11.231s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_c.so
+[11.231s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_c.so" to ""
+[11.231s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_c.so
+[11.232s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_c.so" to ""
+[11.232s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs
+[11.232s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[11.232s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_request.hpp
+[11.232s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[11.233s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[11.233s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.hpp
+[11.233s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.hpp
+[11.233s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__builder.hpp
+[11.233s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__struct.hpp
+[11.233s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__builder.hpp
+[11.233s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__traits.hpp
+[11.233s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__traits.hpp
+[11.233s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__struct.hpp
+[11.234s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/suction_force.hpp
+[11.234s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs
+[11.234s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[11.234s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[11.234s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/dds_fastrtps
+[11.234s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_fastrtps_cpp.hpp
+[11.234s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_fastrtps_cpp.hpp
+[11.234s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[11.235s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so
+[11.235s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[11.235s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs
+[11.235s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg
+[11.235s] -- Up-to-date: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail
+[11.236s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__rosidl_typesupport_introspection_cpp.hpp
+[11.236s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__type_support.cpp
+[11.236s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_request__type_support.cpp
+[11.236s] -- Installing: /home/andy/CRIMP/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/suction_force__rosidl_typesupport_introspection_cpp.hpp
+[11.236s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_cpp.so
+[11.237s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[11.237s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_cpp.so
+[11.237s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_cpp.so" to ""
+[11.237s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/pythonpath.sh
+[11.237s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/pythonpath.dsv
+[11.238s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info
+[11.238s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/SOURCES.txt
+[11.238s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/PKG-INFO
+[11.238s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/dependency_links.txt
+[11.238s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs-0.0.0-py3.12.egg-info/top_level.txt
+[11.238s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs
+[11.238s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[11.239s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.so
+[11.239s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.so
+[11.239s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_c.c
+[11.239s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[11.239s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.so
+[11.240s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/__init__.py
+[11.240s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg
+[11.240s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_request_s.c
+[11.240s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_force_s.c
+[11.240s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_request.py
+[11.240s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/__init__.py
+[11.241s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_force.py
+[11.297s] Listing '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs'...
+[11.297s] Compiling '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/__init__.py'...
+[11.298s] Listing '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg'...
+[11.298s] Compiling '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/__init__.py'...
+[11.298s] Compiling '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_force.py'...
+[11.298s] Compiling '/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/msg/_suction_request.py'...
+[11.310s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.so
+[11.310s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.so" to ""
+[11.310s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.so
+[11.311s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.so" to ""
+[11.311s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.so
+[11.312s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/custom_msgs/lib/python3.12/site-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.so" to ""
+[11.312s] -- Installing: /home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_py.so
+[11.313s] -- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_py.so" to ""
+[11.313s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionForce.idl
+[11.313s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.idl
+[11.313s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionForce.msg
+[11.313s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/msg/SuctionRequest.msg
+[11.313s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/ament_index/resource_index/package_run_dependencies/custom_msgs
+[11.314s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/ament_index/resource_index/parent_prefix_path/custom_msgs
+[11.314s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.sh
+[11.314s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.dsv
+[11.314s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/path.sh
+[11.314s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/environment/path.dsv
+[11.315s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/local_setup.bash
+[11.315s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/local_setup.sh
+[11.315s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/local_setup.zsh
+[11.315s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/local_setup.dsv
+[11.315s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/package.dsv
+[11.315s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/ament_index/resource_index/packages/custom_msgs
+[11.316s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport.cmake
+[11.316s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport-noconfig.cmake
+[11.316s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[11.316s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[11.317s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport.cmake
+[11.317s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[11.317s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport.cmake
+[11.317s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[11.317s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cppExport.cmake
+[11.318s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[11.318s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[11.318s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[11.318s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[11.318s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport.cmake
+[11.319s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[11.319s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport.cmake
+[11.319s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport-noconfig.cmake
+[11.319s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake-extras.cmake
+[11.319s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[11.319s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[11.320s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[11.320s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[11.320s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[11.320s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[11.320s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig.cmake
+[11.321s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig-version.cmake
+[11.321s] -- Installing: /home/andy/CRIMP/install/custom_msgs/share/custom_msgs/package.xml
+[11.325s] Invoked command in '/home/andy/CRIMP/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --install /home/andy/CRIMP/build/custom_msgs

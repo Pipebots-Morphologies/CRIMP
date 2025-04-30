@@ -1,10 +1,10 @@
 {
   "package_name": "custom_msgs",
-  "output_dir": "/home/ethan/crimp_ws/build/custom_msgs/rosidl_generator_py/custom_msgs",
+  "output_dir": "/home/andy/CRIMP/build/custom_msgs/rosidl_generator_py/custom_msgs",
   "template_dir": "/opt/ros/jazzy/share/rosidl_generator_py/cmake/../resource",
   "idl_tuples": [
-    "/home/ethan/crimp_ws/build/custom_msgs/rosidl_adapter/custom_msgs:msg/SuctionForce.idl",
-    "/home/ethan/crimp_ws/build/custom_msgs/rosidl_adapter/custom_msgs:msg/SuctionRequest.idl"
+    "/home/andy/CRIMP/build/custom_msgs/rosidl_adapter/custom_msgs:msg/SuctionForce.idl",
+    "/home/andy/CRIMP/build/custom_msgs/rosidl_adapter/custom_msgs:msg/SuctionRequest.idl"
   ],
   "target_dependencies": [
     "/opt/ros/jazzy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
@@ -20,7 +20,7 @@
     "/opt/ros/jazzy/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
     "/opt/ros/jazzy/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
     "/opt/ros/jazzy/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
-    "/home/ethan/crimp_ws/build/custom_msgs/rosidl_adapter/custom_msgs/msg/SuctionForce.idl",
-    "/home/ethan/crimp_ws/build/custom_msgs/rosidl_adapter/custom_msgs/msg/SuctionRequest.idl"
+    "/home/andy/CRIMP/build/custom_msgs/rosidl_adapter/custom_msgs/msg/SuctionForce.idl",
+    "/home/andy/CRIMP/build/custom_msgs/rosidl_adapter/custom_msgs/msg/SuctionRequest.idl"
   ]
 }

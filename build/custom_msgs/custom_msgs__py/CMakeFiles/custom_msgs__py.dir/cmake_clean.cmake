@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "/home/ethan/crimp_ws/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_c.c"
-  "/home/ethan/crimp_ws/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
-  "/home/ethan/crimp_ws/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c"
-  "/home/ethan/crimp_ws/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/__init__.py"
-  "/home/ethan/crimp_ws/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_suction_force.py"
-  "/home/ethan/crimp_ws/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_suction_force_s.c"
-  "/home/ethan/crimp_ws/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_suction_request.py"
-  "/home/ethan/crimp_ws/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_suction_request_s.c"
+  "/home/andy/CRIMP/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_c.c"
+  "/home/andy/CRIMP/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c"
+  "/home/andy/CRIMP/build/custom_msgs/rosidl_generator_py/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c"
+  "/home/andy/CRIMP/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/__init__.py"
+  "/home/andy/CRIMP/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_suction_force.py"
+  "/home/andy/CRIMP/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_suction_force_s.c"
+  "/home/andy/CRIMP/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_suction_request.py"
+  "/home/andy/CRIMP/build/custom_msgs/rosidl_generator_py/custom_msgs/msg/_suction_request_s.c"
   "CMakeFiles/custom_msgs__py"
 )
 

@@ -1,0 +1,16 @@
+[0.013s] Invoking command in '/home/andy/CRIMP/build/crimp_cpp': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4
+[0.129s] [ 53%] Built target servo_lib
+[0.145s] [ 69%] Built target motion_planner
+[0.193s] [ 84%] Built target joint_mover
+[0.201s] [ 92%] [32mBuilding CXX object CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o[0m
+[4.297s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:[m[K In constructor ‘[01m[KSuctionCups::[01;32m[KSuctionCups[m[K()[m[K’:
+[4.297s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:53:38:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimer_callback[m[K’ is not a member of ‘[01m[KSuctionCups[m[K’
+[4.297s]    53 |       500ms, std::bind(&SuctionCups::[01;31m[Ktimer_callback[m[K, this)); // creates a timer object to run timer_callback every 500ms
+[4.297s]       |                                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.297s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:55:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_callback[m[K’ is not a member of ‘[01m[KSuctionCups[m[K’
+[4.297s]    55 |       std::bind(&SuctionCups::[01;31m[Ksub_callback[m[K, this, _1));
+[4.297s]       |                               [01;31m[K^~~~~~~~~~~~[m[K
+[5.839s] gmake[2]: *** [CMakeFiles/suction_cups.dir/build.make:76: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o] Error 1
+[5.839s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/suction_cups.dir/all] Error 2
+[5.839s] gmake: *** [Makefile:146: all] Error 2
+[5.843s] Invoked command in '/home/andy/CRIMP/build/crimp_cpp' returned '2': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4

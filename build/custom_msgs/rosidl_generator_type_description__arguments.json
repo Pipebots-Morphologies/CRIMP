@@ -1,8 +1,8 @@
 {
   "package_name": "custom_msgs",
-  "output_dir": "/home/ethan/crimp_ws/build/custom_msgs/rosidl_generator_type_description/custom_msgs",
+  "output_dir": "/home/andy/CRIMP/build/custom_msgs/rosidl_generator_type_description/custom_msgs",
   "idl_tuples": [
-    "/home/ethan/crimp_ws/build/custom_msgs/rosidl_adapter/custom_msgs:msg/SuctionForce.idl",
-    "/home/ethan/crimp_ws/build/custom_msgs/rosidl_adapter/custom_msgs:msg/SuctionRequest.idl"
+    "/home/andy/CRIMP/build/custom_msgs/rosidl_adapter/custom_msgs:msg/SuctionForce.idl",
+    "/home/andy/CRIMP/build/custom_msgs/rosidl_adapter/custom_msgs:msg/SuctionRequest.idl"
   ]
 }

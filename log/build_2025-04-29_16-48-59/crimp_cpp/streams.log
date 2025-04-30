@@ -1,0 +1,26 @@
+[0.021s] Invoking command in '/home/andy/CRIMP/build/crimp_cpp': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4
+[0.151s] [ 53%] Built target servo_lib
+[0.196s] [ 69%] Built target motion_planner
+[0.220s] [ 76%] [32mBuilding CXX object CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o[0m
+[0.229s] [ 92%] Built target suction_cups
+[4.520s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:[m[K In member function ‘[01m[Kvoid JointMover::[01;32m[Kget_joint_angles[m[K()[m[K’:
+[4.520s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:67:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[4.520s]    67 |     for(int i = 0; [01;35m[Ki < joint_names.size()[m[K; i++){
+[4.520s]       |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[4.531s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:75:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kst[m[K’ was not declared in this scope; did you mean ‘[01m[Ksc[m[K’?
+[4.531s]    75 |         pos = [01;31m[Kst[m[K.ReadPos(id);
+[4.531s]       |               [01;31m[K^~[m[K
+[4.531s]       |               [32m[Ksc[m[K
+[4.534s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:[m[K In member function ‘[01m[Kvoid JointMover::[01;32m[Ksub_callback[m[K(const sensor_msgs::msg::JointState&)[m[K’:
+[4.534s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:94:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+[4.534s]    94 |     for(int i = 0; [01;35m[Ki < msg.name.size()[m[K; i++){
+[4.534s]       |                    [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[4.546s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:[m[K In member function ‘[01m[Kvoid JointMover::[01;32m[Kelbow_move[m[K(int, int, int)[m[K’:
+[4.546s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:116:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kst[m[K’ was not declared in this scope; did you mean ‘[01m[Ksc[m[K’?
+[4.546s]   116 |     [01;31m[Kst[m[K.WritePosEx(id, steps, velocity, 50);
+[4.546s]       |     [01;31m[K^~[m[K
+[4.546s]       |     [32m[Ksc[m[K
+[7.805s] gmake[2]: *** [CMakeFiles/joint_mover.dir/build.make:76: CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o] Error 1
+[7.805s] gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/joint_mover.dir/all] Error 2
+[7.805s] gmake: *** [Makefile:146: all] Error 2
+[7.809s] Invoked command in '/home/andy/CRIMP/build/crimp_cpp' returned '2': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4

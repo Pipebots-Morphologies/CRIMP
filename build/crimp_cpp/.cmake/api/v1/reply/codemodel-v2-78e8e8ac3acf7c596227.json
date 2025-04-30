@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-e8b5908d65043b57cb3b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "crimp_cpp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "crimp_cpp_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crimp_cpp_uninstall-6f9506f839f43c1cf54b.json",
+					"name" : "crimp_cpp_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "joint_mover::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-joint_mover-7a8fa914a088a5bc1d82.json",
+					"name" : "joint_mover",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "motion_planner::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-motion_planner-31e7379fa299e8ca8b85.json",
+					"name" : "motion_planner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "servo_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-servo_lib-5614b16b14ee321277b5.json",
+					"name" : "servo_lib",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "suction_cups::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-suction_cups-d22f4a47c213552cb476.json",
+					"name" : "suction_cups",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-069c2428480a38cf479d.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/andy/CRIMP/build/crimp_cpp",
+		"source" : "/home/andy/CRIMP/src/crimp_cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

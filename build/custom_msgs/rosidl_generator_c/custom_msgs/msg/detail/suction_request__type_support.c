@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "custom_msgs/msg/detail/suction_request__type_support.h"
-#include "rosidl_typesupport_interface/macros.h"
-#include "custom_msgs/msg/detail/suction_request__functions.h"
 #include "custom_msgs/msg/detail/suction_request__struct.h"
+#include "custom_msgs/msg/detail/suction_request__functions.h"
+#include "rosidl_typesupport_interface/macros.h"
+#include "custom_msgs/msg/detail/suction_request__type_support.h"
 
 #ifdef __cplusplus
 extern "C"
