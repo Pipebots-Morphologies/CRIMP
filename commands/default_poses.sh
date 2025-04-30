@@ -2,7 +2,7 @@
 
 pos="$1"
 if [[ $pos == "" ]]; then
-	read -p "Enter position (1=open, 2=closed): " pos
+	read -p "Enter position (1=open, 2=closed, 3=straight): " pos
 fi
 
 if [[ "$pos" == "1" ]]; then
@@ -15,6 +15,11 @@ elif [[ "$pos" == "2" ]]; then
   e1=210
   e2=60
   e3=150
+elif [[ "$pos" == "3" ]]; then
+  echo "Moving to straight position"
+  e1=180
+  e2=180
+  e3=180
 else
   echo "Invalid input"
   exit 1
