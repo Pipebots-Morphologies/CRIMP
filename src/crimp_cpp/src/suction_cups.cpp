@@ -29,10 +29,6 @@ using std::to_string;
 using namespace std::chrono_literals;
 
 const int millis = 1000;
-const int front_leg_id = 7;
-const int rear_leg_id = 4;
-int front_leg_position = 0;
-int frear_leg_position = 0;
 
 struct cupParams{
   int id;
@@ -77,19 +73,15 @@ private:
 
   SCSCL sc;
   suctionCupStates foot;
+  int home_pos = 400;
 
 
   void timer_callback(){
-    count_++;
-    auto msg = custom_msgs::msg::SuctionForce();
-    msg.force_1 = count_;
-    msg.force_2 = 10000-msg.force_1;
-    //RCLCPP_INFO(this->get_logger(), "Publishing: 'force_1=%u, force_2=%u'", msg.force_1, msg.force_2); // equivalent of print()
-    suction_force_pub->publish(msg); // publishes the msg
+    ; // currently does nothing
   }
 
 
-  //funciton to re-centre the suction cup servo on 510 (150 degrees) between rotations to prevent cumelative error 
+  //funciton to re-centre the suction cup servo on 510 (150 degrees) between rotations to prevent cumulative error 
   void centre(int id){
 
     sc.writeByte(id, 0x30, 0); //unlock eprom
@@ -97,8 +89,12 @@ private:
     sc.writeWord(id, 0x0B, 1003); //set upper angle limit
     sc.writeByte(id, 0x30, 0); // lock eprom
 
-    sc.WritePos(id, 400, 0, 800);
-    usleep(1000 * millis);
+    // go to home position
+    int current_pos = sc.ReadPos(id);
+    sc.WritePos(id, home_pos, 0, 800);
+    int travel_time = (current_pos-400)*millis/800;
+    if(travel_time < 0) travel_time = -travel_time;
+    rclcpp::sleep_for((travel_time+100)ms);
 
   }
 
@@ -107,13 +103,16 @@ private:
   void rotate(int id, int direction, int turns){
 
     int counter = 0;
-    int flagPoint = 400 + 75 * direction;
+    int flagPoint = home_pos;
     int buffer = 25;
     bool flag = true;
     bool prevFlag = true;
+    int speed = 800;
+    auto switch_time = std::chrono::high_resolution_clock::now();
+    double min_circle_time = (1023.0/speed) - 0.2 // in seconds
 
     centre(id);
-    rclcpp::sleep_for(10ms);
+    //rclcpp::sleep_for(10ms);
     sc.PWMMode(id);
     sc.WritePWM(id, 800 * direction);
 
@@ -121,7 +120,15 @@ private:
  
       int pos = sc.ReadPos(id);
 
-      if(direction == 1){
+      auto now = std::chrono::high_resolution_clock::now();
+      if((now-switch_time).count() >= min_circle_time){ // minimum time
+        if(pos >= flagPoint){
+          flag = true;
+        } else{
+          flag = false;
+        }
+      }
+      /*if(direction == 1){
         if(flag && pos >= flagPoint + buffer){
           flag = false;
         }
@@ -137,20 +144,21 @@ private:
         else if(!flag && pos >= flagPoint + buffer){
           flag = true;
         }
-      }
+      }*/
 
       if(flag != prevFlag){
         counter ++;
         if(counter % 2 == 0) {
           RCLCPP_INFO(this->get_logger(), "Rotations: %u ", counter/2);
         }
+        switch_time = std::chrono::high_resolution_clock::now(); // could just sleep here tbh
       }
       
       prevFlag = flag;
-      rclcpp::sleep_for(10ms);
     }
 
     sc.WritePWM(id, 0);
+    centre(id)
   }
 
 
