@@ -1,0 +1,15 @@
+[ 53%] Built target servo_lib
+[ 69%] Built target motion_planner
+[ 84%] Built target joint_mover
+[ 92%] [32mBuilding CXX object CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o[0m
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:40:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after struct definition
+   40 | }
+      |  [01;31m[K^[m[K
+      |  [32m[K;[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:45:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after struct definition
+   45 | }
+      |  [01;31m[K^[m[K
+      |  [32m[K;[m[K
+gmake[2]: *** [CMakeFiles/suction_cups.dir/build.make:76: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/suction_cups.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

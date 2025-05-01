@@ -31,6 +31,19 @@ using namespace std::chrono_literals;
 const int millis = 1000;
 const int front_leg_id = 7;
 const int rear_leg_id = 4;
+int front_leg_position = 0;
+int frear_leg_position = 0;
+
+struct cupParams{
+  int id;
+  int state;
+};
+
+struct suctionCupStates{
+  cupParams front;
+  cupParams rear;
+};
+
 
 /* This example creates a subclass of Node and uses std::bind() to register a
  * member function as a callback from the timer. */
@@ -41,110 +54,30 @@ public:
 SuctionCups() // constructor function
   : Node("suction_cups"), count_(0) // defines two variables
   {
-    const char* serialPort = "/dev/ttyAMA0";
-        RCLCPP_INFO(this->get_logger(), "Using serial port: %s", serialPort);
 
-        if (!sc.begin(1000000, serialPort)) {
-            RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
-        }
+    const char* serialPort = "/dev/ttyAMA0";
+    RCLCPP_INFO(this->get_logger(), "Using serial port: %s", serialPort);
+
+    if (!sc.begin(1000000, serialPort)) {
+      RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
+    }
+
+    foot.front = {7,0};
+    foot.rear = {4,0};
 
     suction_force_pub = this->create_publisher<custom_msgs::msg::SuctionForce>("suction_force", 10); // creates the publisher
     timer_ = this->create_wall_timer(
       500ms, std::bind(&SuctionCups::timer_callback, this)); // creates a timer object to run timer_callback every 500ms
     activate_suction_sub = this->create_subscription<custom_msgs::msg::SuctionRequest>("activate_suction", 10, 
       std::bind(&SuctionCups::sub_callback, this, _1));
+
   }
 
 private:
 
   SCSCL sc;
+  suctionCupStates foot;
 
-  void centre(int id){
-    sc.writeByte(id, 0x30, 0);
-    sc.writeWord(id, 0x09, 20);     // CW angle limit
-    sc.writeWord(id, 0x0B, 1003);
-    sc.writeByte(id, 0x30, 0);
-
-    sc.WritePos(id, 510, 0, 800);
-    usleep(1000 * millis);
-  }
-
-  void attach(int id){
-
-    centre(id);
-
-    int rotations = 4;
-    int Counter = 0;
-    bool Rotation = false;
-    int StrtPos = sc.ReadPos(id);
-    int Pos = sc.ReadPos(id);
-
-    RCLCPP_INFO(this->get_logger(), "attaching ID: %u", id);
-    RCLCPP_INFO(this->get_logger(), "starting position: %u ", Pos);
-
-    sc.PWMMode(id);
-    sc.WritePWM(id, 800);
-    usleep(250 * millis);
-
-    while(Counter < rotations){
-        Pos = sc.ReadPos(id);
-        if(Pos >= StrtPos - 5 && Pos <= StrtPos + 5){
-            Counter += 1;    
-            Rotation = true;
-                  
-        }
-        if(Rotation){
-            if(Counter == rotations) usleep(millis);      
-            else usleep(250 * millis);
-            RCLCPP_INFO(this->get_logger(), "Rotations: %u ", Counter);
-            Rotation = false;          
-        }
-        if(!Rotation){
-          usleep(millis);
-        }
-    }
-    sc.WritePWM(id, 0);
-
-    RCLCPP_INFO(this->get_logger(), "final position: %u ", sc.ReadPos(id));
-  }
-
-  void detatch(int id){
-
-    centre(id);
-
-    int rotations = 4;
-    int Counter = 0;
-    bool Rotation = false;
-    int StrtPos = sc.ReadPos(id);
-    int Pos = sc.ReadPos(id);
-
-    RCLCPP_INFO(this->get_logger(), "attaching ID: %u", id);
-    RCLCPP_INFO(this->get_logger(), "starting position: %u ", Pos);
-
-    sc.PWMMode(id);
-    sc.WritePWM(id, -800);
-    usleep(250 * millis);
-
-    while(Counter < rotations){
-        Pos = sc.ReadPos(id);
-        if(Pos >= StrtPos - 5 && Pos <= StrtPos + 5){
-            Counter += 1;    
-            Rotation = true;
-            RCLCPP_INFO(this->get_logger(), "Rotations: %u ", Counter);      
-        }
-        if(Rotation){
-            if(Counter == rotations) usleep(millis);      
-            else usleep(250 * millis);
-            Rotation = false;          
-        }
-        if(!Rotation){
-          usleep(millis);
-        }
-    }
-    sc.WritePWM(id, 0);
-
-    RCLCPP_INFO(this->get_logger(), "final position: %u ", sc.ReadPos(id));
-  }
 
   void timer_callback(){
     count_++;
@@ -155,16 +88,105 @@ private:
     suction_force_pub->publish(msg); // publishes the msg
   }
 
+
+  //funciton to re-centre the suction cup servo on 510 (150 degrees) between rotations to prevent cumelative error 
+  void centre(int id){
+
+    sc.writeByte(id, 0x30, 0); //unlock eprom
+    sc.writeWord(id, 0x09, 20); //set lower angle limit
+    sc.writeWord(id, 0x0B, 1003); //set upper angle limit
+    sc.writeByte(id, 0x30, 0); // lock eprom
+
+    sc.WritePos(id, 400, 0, 800);
+    usleep(1000 * millis);
+
+  }
+
+
+  //function to rotate the servo a given number of times in a given direction
+  void rotate(int id, int direction, int turns){
+
+    int counter = 0;
+    int flagPoint = 400 + 75 * direction;
+    int buffer = 25;
+    bool flag = true;
+    bool prevFlag = true;
+
+    centre(id);
+    rclcpp::sleep_for(10ms);
+    sc.PWMMode(id);
+    sc.WritePWM(id, 800 * direction);
+
+    while(counter < 2 * turns){
+ 
+      int pos = sc.ReadPos(id);
+
+      if(direction == 1){
+        if(flag && pos >= flagPoint + buffer){
+          flag = false;
+        }
+        else if(!flag && pos <= flagPoint - buffer){
+          flag = true;
+        }
+      }
+
+      else if(direction == -1){
+        if(flag && pos <= flagPoint - buffer){
+          flag = false;
+        }
+        else if(!flag && pos >= flagPoint + buffer){
+          flag = true;
+        }
+      }
+
+      if(flag != prevFlag){
+        counter ++;
+        if(counter % 2 == 0) {
+          RCLCPP_INFO(this->get_logger(), "Rotations: %u ", counter/2);
+        }
+      }
+      
+      prevFlag = flag;
+      rclcpp::sleep_for(10ms);
+    }
+
+    sc.WritePWM(id, 0);
+  }
+
+
+  void driveLogic(cupParams &cup, int request){
+
+    if(request == 1 && cup.state == 0){
+      rotate(cup.id, 1, 6);
+      cup.state = 1;
+    }
+    else if(request == -1 && cup.state == 1){
+      rotate(cup.id, -1, 8);
+      cup.state = -1;
+    }
+    else if(request == 0 && cup.state == -1){
+      rotate(cup.id, 1, 2);
+      cup.state = 0;
+    }
+    else{
+      RCLCPP_ERROR(this->get_logger(), "Unsafe to move foot id %d in this way ", cup.id);
+    }
+  }
+  
+
   void sub_callback(const custom_msgs::msg::SuctionRequest & msg) {
 
     RCLCPP_INFO(this->get_logger(), "I heard: 'cup_1=%hhu, cup_2=%hhu'", msg.cup_1, msg.cup_2);
 
-    if(msg.cup_1 == 1) attach(front_leg_id);
-    if(msg.cup_1 == -1) detatch(front_leg_id);
-    if(msg.cup_2 == 1) attach(rear_leg_id);
-    if(msg.cup_2 == -1) detatch(rear_leg_id);
-
+    if(msg.cup_1 != foot.front.state){
+      driveLogic(foot.front, msg.cup_1);
+    }
+    if(msg.cup_2 != foot.rear.state){
+      driveLogic(foot.rear, msg.cup_2);
+    }
+    
   }
+
 
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<custom_msgs::msg::SuctionForce>::SharedPtr suction_force_pub;

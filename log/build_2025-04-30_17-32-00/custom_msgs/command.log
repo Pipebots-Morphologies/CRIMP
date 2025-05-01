@@ -1,0 +1,1 @@
+Invoking command in '/home/andy/CRIMP/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/custom_msgs -- -j4 -l4

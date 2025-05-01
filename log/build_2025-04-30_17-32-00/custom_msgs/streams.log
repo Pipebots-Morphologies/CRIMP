@@ -1,0 +1,24 @@
+[0.029s] Invoking command in '/home/andy/CRIMP/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/custom_msgs -- -j4 -l4
+[0.142s] [  2%] Built target custom_msgs__rosidl_generator_type_description
+[0.167s] [  2%] Built target ament_cmake_python_copy_custom_msgs
+[0.191s] [  4%] Built target custom_msgs__cpp
+[0.198s] [ 22%] Built target custom_msgs__rosidl_generator_c
+[0.265s] [ 31%] Built target custom_msgs__rosidl_typesupport_fastrtps_cpp
+[0.288s] [ 40%] Built target custom_msgs__rosidl_typesupport_introspection_cpp
+[0.296s] [ 50%] Built target custom_msgs__rosidl_typesupport_cpp
+[0.345s] [ 59%] Built target custom_msgs__rosidl_typesupport_fastrtps_c
+[0.365s] [ 68%] Built target custom_msgs__rosidl_typesupport_introspection_c
+[0.367s] [ 77%] Built target custom_msgs__rosidl_typesupport_c
+[0.413s] [ 77%] Built target custom_msgs
+[0.460s] [ 79%] Built target custom_msgs__py
+[0.520s] [ 86%] Built target custom_msgs__rosidl_generator_py
+[0.585s] [ 90%] Built target custom_msgs_s__rosidl_typesupport_c
+[0.588s] [ 95%] Built target custom_msgs_s__rosidl_typesupport_fastrtps_c
+[0.599s] [100%] Built target custom_msgs_s__rosidl_typesupport_introspection_c
+[0.655s] running egg_info
+[0.683s] writing custom_msgs.egg-info/PKG-INFO
+[0.683s] writing dependency_links to custom_msgs.egg-info/dependency_links.txt
+[0.684s] writing top-level names to custom_msgs.egg-info/top_level.txt
+[0.759s] reading manifest file 'custom_msgs.egg-info/SOURCES.txt'
+[0.761s] writing manifest file 'custom_msgs.egg-info/SOURCES.txt'
+[0.838s] [100%] Built target ament_cmake_python_build_custom_msgs_egg

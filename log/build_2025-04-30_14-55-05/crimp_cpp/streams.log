@@ -1,0 +1,17 @@
+[0.018s] Invoking command in '/home/andy/CRIMP/build/crimp_cpp': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4
+[0.131s] [ 53%] Built target servo_lib
+[0.145s] [ 69%] Built target motion_planner
+[0.195s] [ 84%] Built target joint_mover
+[0.205s] [ 92%] [32mBuilding CXX object CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o[0m
+[4.111s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:40:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after struct definition
+[4.111s]    40 | }
+[4.112s]       |  [01;31m[K^[m[K
+[4.112s]       |  [32m[K;[m[K
+[4.112s] [01m[K/home/andy/CRIMP/src/crimp_cpp/src/suction_cups.cpp:45:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after struct definition
+[4.112s]    45 | }
+[4.112s]       |  [01;31m[K^[m[K
+[4.112s]       |  [32m[K;[m[K
+[7.593s] gmake[2]: *** [CMakeFiles/suction_cups.dir/build.make:76: CMakeFiles/suction_cups.dir/src/suction_cups.cpp.o] Error 1
+[7.593s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/suction_cups.dir/all] Error 2
+[7.593s] gmake: *** [Makefile:146: all] Error 2
+[7.596s] Invoked command in '/home/andy/CRIMP/build/crimp_cpp' returned '2': CMAKE_PREFIX_PATH=/home/andy/CRIMP/install/custom_msgs:/home/andy/CRIMP/install/crimp_cpp:/home/andy/CRIMP/install/crimp_python:/opt/ros/jazzy /usr/bin/cmake --build /home/andy/CRIMP/build/crimp_cpp -- -j4 -l4

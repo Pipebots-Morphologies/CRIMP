@@ -1,0 +1,34 @@
+[ 53%] Built target servo_lib
+[ 69%] Built target motion_planner
+[ 76%] [32mBuilding CXX object CMakeFiles/joint_mover.dir/src/joint_mover.cpp.o[0m
+[ 92%] Built target suction_cups
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:[m[K In member function ‘[01m[Kvoid JointMover::[01;32m[Kget_joint_angles[m[K()[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:67:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   67 |     for(int i = 0; [01;35m[Ki < joint_names.size()[m[K; i++){
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:[m[K In member function ‘[01m[Kvoid JointMover::[01;32m[Ksub_callback[m[K(const sensor_msgs::msg::JointState&)[m[K’:
+[01m[K/home/andy/CRIMP/src/crimp_cpp/src/joint_mover.cpp:94:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::__cxx11::basic_string<char>, std::allocator<std::__cxx11::basic_string<char> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   94 |     for(int i = 0; [01;35m[Ki < msg.name.size()[m[K; i++){
+      |                    [01;35m[K~~^~~~~~~~~~~~~~~~~[m[K
+[100%] [32m[1mLinking CXX executable joint_mover[0m
+[100%] Built target joint_mover
+-- Install configuration: ""
+-- Installing: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/joint_mover
+-- Set non-toolchain portion of runtime path of "/home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/joint_mover" to ""
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/motion_planner
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/lib/crimp_cpp/suction_cups
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/package_run_dependencies/crimp_cpp
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/parent_prefix_path/crimp_cpp
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/ament_prefix_path.sh
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/path.sh
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/environment/path.dsv
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.bash
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.sh
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.zsh
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/local_setup.dsv
+-- Installing: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/package.dsv
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/ament_index/resource_index/packages/crimp_cpp
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/cmake/crimp_cppConfig.cmake
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/cmake/crimp_cppConfig-version.cmake
+-- Up-to-date: /home/andy/CRIMP/install/crimp_cpp/share/crimp_cpp/package.xml

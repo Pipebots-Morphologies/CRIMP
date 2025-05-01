@@ -1,0 +1,22 @@
+[1.558s] Invoking command in '/home/andy/CRIMP/src/crimp_python': PYTHONPATH=/home/andy/CRIMP/build/crimp_python/prefix_override:/usr/local/lib/python3.12/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/crimp_python build --build-base /home/andy/CRIMP/build/crimp_python/build install --record /home/andy/CRIMP/build/crimp_python/install.log --single-version-externally-managed install_data
+[1.984s] running egg_info
+[2.009s] writing ../../build/crimp_python/crimp_python.egg-info/PKG-INFO
+[2.009s] writing dependency_links to ../../build/crimp_python/crimp_python.egg-info/dependency_links.txt
+[2.010s] writing entry points to ../../build/crimp_python/crimp_python.egg-info/entry_points.txt
+[2.010s] writing requirements to ../../build/crimp_python/crimp_python.egg-info/requires.txt
+[2.010s] writing top-level names to ../../build/crimp_python/crimp_python.egg-info/top_level.txt
+[2.062s] reading manifest file '../../build/crimp_python/crimp_python.egg-info/SOURCES.txt'
+[2.063s] adding license file 'LICENSE'
+[2.064s] writing manifest file '../../build/crimp_python/crimp_python.egg-info/SOURCES.txt'
+[2.064s] running build
+[2.064s] running build_py
+[2.065s] running install
+[2.079s] running install_lib
+[2.106s] running install_data
+[2.106s] running install_egg_info
+[2.135s] removing '/home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages/crimp_python-0.0.0-py3.12.egg-info' (and everything under it)
+[2.135s] Copying ../../build/crimp_python/crimp_python.egg-info to /home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages/crimp_python-0.0.0-py3.12.egg-info
+[2.137s] running install_scripts
+[2.290s] Installing lidar script to /home/andy/CRIMP/install/crimp_python/lib/crimp_python
+[2.290s] writing list of installed files to '/home/andy/CRIMP/build/crimp_python/install.log'
+[2.368s] Invoked command in '/home/andy/CRIMP/src/crimp_python' returned '0': PYTHONPATH=/home/andy/CRIMP/build/crimp_python/prefix_override:/usr/local/lib/python3.12/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/andy/CRIMP/install/crimp_python/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/crimp_python build --build-base /home/andy/CRIMP/build/crimp_python/build install --record /home/andy/CRIMP/build/crimp_python/install.log --single-version-externally-managed install_data

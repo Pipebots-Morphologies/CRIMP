@@ -126,11 +126,11 @@ private:
   size_t count_;
   std::vector<std::string> joint_names = {"elbow_1", "elbow_2", "elbow_3", "wrist_1", "wrist_2"};
   std::map<std::string, int> joint_ids = {
-    {joint_names[0], 1},
+    {joint_names[0], 3},
     {joint_names[1], 2},
-    {joint_names[2], 3},
-    {joint_names[3], 5},
-    {joint_names[4], 6}
+    {joint_names[2], 1},
+    {joint_names[3], 6},
+    {joint_names[4], 5}
   };
   // change this to float when we switch from steps to degrees 
   std::map<std::string, double> joint_angles = {
