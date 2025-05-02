@@ -38,13 +38,16 @@ JointMover() // constructor function
     const char* serialPort = "/dev/ttyAMA0";
     RCLCPP_INFO(this->get_logger(), "Using serial port: %s", serialPort);
 
+    /*
     if (!sc.begin(1000000, serialPort)) {
         RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
     }
+    */
 
     if (!sm_st.begin(1000000, serialPort)) {
       RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
     }
+    
 
     joint_pos_pub = this->create_publisher<sensor_msgs::msg::JointState>("joint_pos", 10); // creates the publisher to joint_pos topic
 
