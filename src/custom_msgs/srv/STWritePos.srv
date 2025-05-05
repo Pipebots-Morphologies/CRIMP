@@ -3,4 +3,4 @@ int16 position
 uint16 speed
 uint8 acc
 ---
-int32 response
+int32 result

@@ -20,11 +20,11 @@
 #include "rclcpp/rclcpp.hpp"
 #include "SCServo.h"
 
-#include "custom_msgs/srv/WriteData.hpp"
-#include "custom_msgs/srv/SCWritePos.hpp"
-#include "custom_msgs/srv/ID.hpp"
-#include "custom_msgs/srv/SCWritePWM.hpp"
-#include "custom_msgs/srv/STWritePos.hpp"
+#include "custom_msgs/srv/write_data.hpp"
+#include "custom_msgs/srv/sc_write_pos.hpp"
+#include "custom_msgs/srv/id.hpp"
+#include "custom_msgs/srv/sc_write_pwm.hpp"
+#include "custom_msgs/srv/st_write_pos.hpp"
 
 using std::placeholders::_1;
 using std::placeholders::_2;
@@ -47,7 +47,7 @@ Serial() // constructor function
         }
         
         sc_WriteData_srv = this->create_service<custom_msgs::srv::WriteData>(
-            "sc_writeData", std::bind(&Serial::sc_WriteData, this, _1, _2));
+            "sc_WriteData", std::bind(&Serial::sc_WriteData, this, _1, _2));
 
         sc_WritePos_srv = this->create_service<custom_msgs::srv::SCWritePos>(
             "sc_WritePos", std::bind(&Serial::sc_WritePos, this, _1, _2));
@@ -61,14 +61,17 @@ Serial() // constructor function
         sc_ReadPos_srv = this->create_service<custom_msgs::srv::ID>(
             "sc_ReadPos", std::bind(&Serial::sc_ReadPos, this, _1, _2));
         
-        st_WritePosEx_srv = this->create_service<custom_msgs::srv::STWritePos>(
-            "st_WritePosEx", std::bind(&Serial::st_WritePosEx, this, _1, _2));
+        st_WritePos_srv = this->create_service<custom_msgs::srv::STWritePos>(
+            "st_WritePosEx", std::bind(&Serial::st_WritePos, this, _1, _2));
 
         st_ReadPos_srv = this->create_service<custom_msgs::srv::ID>(
             "st_ReadPos", std::bind(&Serial::st_ReadPos, this, _1, _2));
     }
 
 private:
+
+    SCSCL sc; 
+    SMS_STS st;
 
     void sc_WriteData(
         const std::shared_ptr<custom_msgs::srv::WriteData::Request> request,
@@ -77,7 +80,7 @@ private:
         int id = request->id;
         int addr = request->addr;
         int val = request->val;
-        if(request->word) response->feedback = sc.writeWord(id, addr, val); 
+        if(request->word) response->result = sc.writeWord(id, addr, val); 
         else response->result = sc.writeByte(id, addr, val);
     }
 
@@ -121,7 +124,7 @@ private:
         int position = request->position;
         int speed = request->speed;
         int acc = request->acc;
-        response->result = st.WritePos(id, position, speed, acc);
+        response->result = st.WritePosEx(id, position, speed, acc);
     }
 
     void st_ReadPos(
