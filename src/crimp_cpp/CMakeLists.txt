@@ -10,7 +10,6 @@ find_package(ament_cmake REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 find_package(rclcpp REQUIRED)
-find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(custom_msgs REQUIRED)
@@ -25,19 +24,24 @@ add_library(servo_lib ${SERVO_SOURCES})
 # create executables
 add_executable(joint_mover src/joint_mover.cpp)
 target_link_libraries(joint_mover servo_lib)
-ament_target_dependencies(joint_mover rclcpp std_msgs sensor_msgs)
+ament_target_dependencies(joint_mover rclcpp sensor_msgs)
 
 add_executable(motion_planner src/motion_planner.cpp)
-ament_target_dependencies(motion_planner rclcpp std_msgs sensor_msgs geometry_msgs custom_msgs)
+ament_target_dependencies(motion_planner rclcpp sensor_msgs geometry_msgs custom_msgs)
 
 add_executable(suction_cups src/suction_cups.cpp)
 target_link_libraries(suction_cups servo_lib)
-ament_target_dependencies(suction_cups rclcpp std_msgs custom_msgs)
+ament_target_dependencies(suction_cups rclcpp custom_msgs)
+
+add_executable(serial src/serial.cpp)
+target_link_libraries(serial servo_lib)
+ament_target_dependencies(serial rclcpp custom_msgs)
 
 install(TARGETS
   joint_mover
   motion_planner
   suction_cups
+  serial
   DESTINATION lib/${PROJECT_NAME})
 
 

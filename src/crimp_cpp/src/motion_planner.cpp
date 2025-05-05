@@ -18,7 +18,6 @@
 #include <string>
 
 #include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "geometry_msgs/msg/pose.hpp"
 #include "custom_msgs/msg/suction_request.hpp"

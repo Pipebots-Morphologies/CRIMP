@@ -19,7 +19,6 @@
 #include <map>
 
 #include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "SCServo.h"
 

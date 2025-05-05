@@ -18,7 +18,6 @@
 #include <string>
 
 #include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
 #include "custom_msgs/msg/suction_request.hpp"
 #include "custom_msgs/msg/suction_force.hpp"
 #include "SCServo.h"

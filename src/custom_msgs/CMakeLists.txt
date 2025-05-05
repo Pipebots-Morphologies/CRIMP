@@ -13,7 +13,12 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/SuctionForce.msg"
-  "msg/SuctionRequest.msg")
+  "msg/SuctionRequest.msg"
+  "srv/ID.srv"
+  "srv/SCWritePos.srv"
+  "srv/SCWritePWM.srv"
+  "srv/STWritePos.srv"
+  "srv/WriteData.srv")
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
