@@ -18,6 +18,7 @@
 #include <string>
 
 #include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/string.hpp"
 #include "custom_msgs/msg/suction_request.hpp"
 #include "custom_msgs/msg/suction_force.hpp"
 #include "SCServo.h"
@@ -72,7 +73,7 @@ private:
 
   SCSCL sc;
   suctionCupStates foot;
-  int home_pos = 400;
+  int home_pos = 500;
 
 
   void timer_callback(){
@@ -89,17 +90,15 @@ private:
     sc.writeByte(id, 0x30, 0); // lock eprom
 
     // go to home position
-    int current_pos = sc.ReadPos(id);
     sc.WritePos(id, home_pos, 0, 800);
-    int travel_time = (current_pos-400)*millis/800;
-    if(travel_time < 0) travel_time = -travel_time;
-    rclcpp::sleep_for((travel_time+100)ms);
+    usleep(1000 * millis);
 
   }
 
 
-  //function to rotate the servo a given number of times in a given direction
-  void rotate(int id, int direction, int turns){
+  //function to rotate the servo a given number of times in a given direction -- DEPRECATED
+  /*
+  void rotate2(int id, int direction, int turns){
 
     int counter = 0;
     int flagPoint = home_pos;
@@ -107,62 +106,91 @@ private:
     bool flag = true;
     bool prevFlag = true;
     int speed = 800;
-    auto switch_time = std::chrono::high_resolution_clock::now();
-    double min_circle_time = (1023.0/speed) - 0.2 // in seconds
+    auto switch_time = std::chrono::steady_clock::now();
+    double min_circle_time = 0; // in seconds
 
     centre(id);
-    //rclcpp::sleep_for(10ms);
     sc.PWMMode(id);
-    sc.WritePWM(id, 800 * direction);
+    sc.WritePWM(id, speed * direction);
+    usleep(200*millis);
 
     while(counter < 2 * turns){
- 
+      
+      usleep(millis);
+
       int pos = sc.ReadPos(id);
+      auto now = std::chrono::steady_clock::now();
+      auto elapsed = std::chrono::duration<double>(now - switch_time).count();
+      flag = pos >= (flagPoint - 100 * direction);
 
-      auto now = std::chrono::high_resolution_clock::now();
-      if((now-switch_time).count() >= min_circle_time){ // minimum time
-        if(pos >= flagPoint){
-          flag = true;
-        } else{
-          flag = false;
-        }
-      }
-      /*if(direction == 1){
-        if(flag && pos >= flagPoint + buffer){
-          flag = false;
-        }
-        else if(!flag && pos <= flagPoint - buffer){
-          flag = true;
-        }
-      }
-
-      else if(direction == -1){
-        if(flag && pos <= flagPoint - buffer){
-          flag = false;
-        }
-        else if(!flag && pos >= flagPoint + buffer){
-          flag = true;
-        }
-      }*/
-
-      if(flag != prevFlag){
+      if(flag != prevFlag  && elapsed >= min_circle_time){
         counter ++;
         if(counter % 2 == 0) {
-          RCLCPP_INFO(this->get_logger(), "Rotations: %u ", counter/2);
+          RCLCPP_INFO(this->get_logger(), "Rotations: %d ", counter/2);
         }
-        switch_time = std::chrono::high_resolution_clock::now(); // could just sleep here tbh
+        switch_time = std::chrono::steady_clock::now(); // could just sleep here tbh
       }
       
-      prevFlag = flag;
+      prevFlag = flag; 
+      
     }
 
     sc.WritePWM(id, 0);
-    centre(id)
+  }*/
+
+  void rotate(int id, int direction, int turns){
+    
+    int counter = 0;
+    bool steep_flag = false;
+    bool last_steep_flag = steep_flag;
+    int speed = 800;
+
+    
+    int pos = sc.ReadPos(id);
+    int prev_pos = pos;
+
+    int grad_threshhold = 30;
+    int low_grad_counter = 0;
+
+    int absurd_number = 1200;
+
+    sc.PWMMode(id);
+    sc.WritePWM(id, speed * direction);
+
+    while(counter < turns){
+
+      rclcpp::sleep_for(5ms);
+
+      pos = sc.ReadPos(id);
+      int grad = pos-prev_pos;
+      RCLCPP_INFO(this->get_logger(), "Grad: %d ", grad);
+      if(grad < 0) grad = -grad;
+
+      if(grad > absurd_number) continue;
+
+      if(grad > grad_threshhold){
+        steep_flag = true;
+        low_grad_counter = 0;
+      }
+      else low_grad_counter++;
+
+      if(low_grad_counter >= 8) steep_flag = false;
+
+      if(!steep_flag && last_steep_flag){
+        counter++;
+        RCLCPP_INFO(this->get_logger(), "Rotations: %u ", counter);
+      }
+
+      prev_pos = pos;
+      last_steep_flag = steep_flag;
+    }
+
+    sc.WritePWM(id, 0);
+    centre(id);
   }
 
 
   void driveLogic(cupParams &cup, int request){
-
     if(request == 1 && cup.state == 0){
       rotate(cup.id, 1, 6);
       cup.state = 1;
