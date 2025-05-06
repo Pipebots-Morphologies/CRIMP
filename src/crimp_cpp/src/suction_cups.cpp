@@ -61,6 +61,8 @@ SuctionCups() // constructor function
       RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
     }
 
+    sm_st.begin(1000000, serialPort);
+
     foot.front = {7,0};
     foot.rear = {4,0};
 
@@ -75,6 +77,7 @@ SuctionCups() // constructor function
 private:
 
   SCSCL sc;
+  SMS_STS sm_st;
   suctionCupStates foot;
   int home_pos = 500;
 
@@ -167,14 +170,9 @@ private:
 
       pos = sc.ReadPos(id);
       int attempts = 0;
-      do {
-        pos = sc.ReadPos(id);
-        attempts++;
-        if (attempts > 3) break;
-      }   while (pos == -1 || pos >= 1500);
-
-      if (pos == -1 || pos >= 1500) continue;
       posData.push_back(pos);
+      if (pos == -1 || pos >= 1500) continue;
+      
 
       int grad = pos-prev_pos;
       RCLCPP_INFO(this->get_logger(), "Grad: %d ", grad);

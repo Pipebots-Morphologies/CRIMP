@@ -38,15 +38,13 @@ JointMover() // constructor function
     const char* serialPort = "/dev/ttyAMA0";
     RCLCPP_INFO(this->get_logger(), "Using serial port: %s", serialPort);
 
-    /*
-    if (!sc.begin(1000000, serialPort)) {
+    if (!shared_serial.begin(1000000, serialPort)) {
         RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
     }
-    */
+    
+    sc.pSerial = &shared_serial;
+    sm_st.pSerial = &shared_serial;
 
-    if (!sm_st.begin(1000000, serialPort)) {
-      RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
-    }
     
 
     joint_pos_pub = this->create_publisher<sensor_msgs::msg::JointState>("joint_pos", 10); // creates the publisher to joint_pos topic
@@ -60,6 +58,8 @@ JointMover() // constructor function
   }
 
 private:
+
+  SCSerial shared_serial;
 
   SCSCL sc;     // sc.WritePos(id, uint16 position, uint16 time, uint16 velocity);
   SMS_STS sm_st;   // st.WritePosEx(id, int16 position, uint16 velocity, uint8 ACC=0);
