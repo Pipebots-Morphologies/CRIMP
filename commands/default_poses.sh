@@ -12,9 +12,9 @@ if [[ "$pos" == "1" ]]; then
   e3=90
 elif [[ "$pos" == "2" ]]; then
   echo "Moving to closed position"
-  e1=210
+  e1=150
   e2=60
-  e3=150
+  e3=210
 elif [[ "$pos" == "3" ]]; then
   echo "Moving to straight position"
   e1=180

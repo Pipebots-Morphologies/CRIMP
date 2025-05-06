@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+e1="$1"
+e2="$2"
+e3="$3"
+
+
+# Construct and publish the message
+msg="{name: [\"elbow_1\", \"elbow_2\", \"elbow_3\"], position: [$e1, $e2, $e3], velocity: [600.0, 0.0, 600.0]}"
+
+ros2 topic pub --once /joint_targets sensor_msgs/msg/JointState "$msg"

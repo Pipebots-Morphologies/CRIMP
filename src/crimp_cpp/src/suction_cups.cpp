@@ -16,6 +16,8 @@
 #include <functional>
 #include <memory>
 #include <string>
+#include <iostream>
+#include <vector>
 
 #include "rclcpp/rclcpp.hpp"
 #include "custom_msgs/msg/suction_request.hpp"
@@ -32,6 +34,7 @@ using std::to_string;
 using namespace std::chrono_literals;
 
 const int millis = 1000;
+std::vector<int> posData;
 
 struct cupParams{
   int id;
@@ -53,7 +56,6 @@ public:
 SuctionCups() // constructor function
   : Node("suction_cups"), count_(0) // defines two variables
   {
-
     foot.front = {7,0};
     foot.rear = {4,0};
 
@@ -164,6 +166,9 @@ private:
       rclcpp::sleep_for(5ms);
 
       pos = sc_ReadPos(id);
+      posData.push_back(pos);
+      if (pos == -1 || pos >= 1500) continue;
+
       int grad = pos-prev_pos;
       RCLCPP_INFO(this->get_logger(), "Grad: %d ", grad);
       if(grad < 0) grad = -grad;
@@ -189,6 +194,11 @@ private:
 
     sc_WritePWM(id, 0);
     centre(id);
+
+    for (const auto & val : posData) {
+      std::cout << val << " ";
+    }
+    std::cout << std::endl;
   }
 
 
