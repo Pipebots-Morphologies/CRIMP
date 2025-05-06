@@ -82,6 +82,7 @@ private:
         int val = request->val;
         if(request->word) response->result = sc.writeWord(id, addr, val); 
         else response->result = sc.writeByte(id, addr, val);
+        ROS_INFO(this->get_logger(), "sc_WriteData service called");
     }
 
     void sc_WritePos(
@@ -93,6 +94,7 @@ private:
         int time = request->time;
         int speed = request->speed;
         response->result = sc.WritePos(id, position, time, speed);
+        ROS_INFO(this->get_logger(), "sc_WritePos service called");
     }
 
     void sc_PWMMode(
@@ -100,6 +102,7 @@ private:
         std::shared_ptr<custom_msgs::srv::ID::Response> response) 
     {
         response->result = sc.PWMMode(request->id);
+        ROS_INFO(this->get_logger(), "sc_PWMMode service called");
     }
 
     void sc_WritePWM(
@@ -107,6 +110,7 @@ private:
         std::shared_ptr<custom_msgs::srv::SCWritePWM::Response> response) 
     {
         response->result = sc.WritePWM(request->id, request->speed);
+        ROS_INFO(this->get_logger(), "sc_WritePWM service called");
     }
 
     void sc_ReadPos(
@@ -114,6 +118,7 @@ private:
         std::shared_ptr<custom_msgs::srv::ID::Response> response) 
     {
         response->result = sc.ReadPos(request->id);
+        ROS_INFO(this->get_logger(), "sc_ReadPos service called");
     }
 
     void st_WritePos(
@@ -125,6 +130,7 @@ private:
         int speed = request->speed;
         int acc = request->acc;
         response->result = st.WritePosEx(id, position, speed, acc);
+        ROS_INFO(this->get_logger(), "st_WritePos service called");
     }
 
     void st_ReadPos(
@@ -132,6 +138,7 @@ private:
         std::shared_ptr<custom_msgs::srv::ID::Response> response) 
     {
         response->result = st.ReadPos(request->id);
+        ROS_INFO(this->get_logger(), "st_ReadPos service called");
     }
 
     rclcpp::Service<custom_msgs::srv::WriteData>::SharedPtr sc_WriteData_srv;
