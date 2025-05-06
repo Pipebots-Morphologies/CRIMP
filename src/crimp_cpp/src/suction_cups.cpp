@@ -261,7 +261,7 @@ private:
     auto request = std::make_shared<custom_msgs::srv::ID::Request>();
     request->id = id;
 
-    auto future = sc_ReadPos_client->async_send_request(request);
+    auto future = sc_PWMMode_client->async_send_request(request);
 
     if(async) return 0;
     if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future) ==
@@ -275,11 +275,11 @@ private:
   }
 
   int sc_WritePWM(int id, int speed, bool async = true){
-    auto request = std::make_shared<custom_msgs::srv::SCWritePos::Request>();
+    auto request = std::make_shared<custom_msgs::srv::SCWritePWM::Request>();
     request->id = id;
     request->speed = speed;
     
-    auto future = sc_WritePos_client->async_send_request(request);
+    auto future = sc_WritePWM_client->async_send_request(request);
 
     if(async) return 0;
     if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future) ==
