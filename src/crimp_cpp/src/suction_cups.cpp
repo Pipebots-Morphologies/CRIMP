@@ -241,7 +241,7 @@ private:
 
     if (!sc_WriteData_client->wait_for_service(1s)) {
       RCLCPP_WARN(this->get_logger(), "sc_WriteData Service not available yet");
-      return;
+      return -1;
     }
 
     auto request = std::make_shared<custom_msgs::srv::WriteData::Request>();
@@ -267,7 +267,7 @@ private:
     
     if (!sc_PWMMode_client->wait_for_service(1s)) {
       RCLCPP_WARN(this->get_logger(), "sc_PWMMode Service not available yet");
-      return;
+      return -1;
     }
 
     auto request = std::make_shared<custom_msgs::srv::ID::Request>();
@@ -290,7 +290,7 @@ private:
     
     if (!sc_WritePWM_client->wait_for_service(1s)) {
       RCLCPP_WARN(this->get_logger(), "sc_WritePWM Service not available yet");
-      return;
+      return -1;
     }
 
     auto request = std::make_shared<custom_msgs::srv::SCWritePWM::Request>();
@@ -314,7 +314,7 @@ private:
     
     if (!sc_ReadPos_client->wait_for_service(1s)) {
       RCLCPP_WARN(this->get_logger(), "sc_ReadPos Service not available yet");
-      return;
+      return -1;
     }
     
     auto request = std::make_shared<custom_msgs::srv::ID::Request>();
@@ -336,7 +336,7 @@ private:
     
     if (!sc_WritePos_client->wait_for_service(1s)) {
       RCLCPP_WARN(this->get_logger(), "sc_WritePos Service not available yet");
-      return;
+      return -1;
     }
     
     auto request = std::make_shared<custom_msgs::srv::SCWritePos::Request>();
