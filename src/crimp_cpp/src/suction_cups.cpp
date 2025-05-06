@@ -238,6 +238,12 @@ private:
 
   // Service calling functions
   int sc_WriteData(int id, int addr, int val, bool word = false, bool async = true){
+
+    if (!sc_WriteData_client->wait_for_service(1s)) {
+      RCLCPP_WARN(this->get_logger(), "sc_WriteData Service not available yet");
+      return;
+    }
+
     auto request = std::make_shared<custom_msgs::srv::WriteData::Request>();
     request->id = id;
     request->addr = addr;
@@ -258,6 +264,12 @@ private:
   }
 
   int sc_PWMMode(int id, bool async = true){
+    
+    if (!sc_PWMMode_client->wait_for_service(1s)) {
+      RCLCPP_WARN(this->get_logger(), "sc_PWMMode Service not available yet");
+      return;
+    }
+
     auto request = std::make_shared<custom_msgs::srv::ID::Request>();
     request->id = id;
 
@@ -275,6 +287,12 @@ private:
   }
 
   int sc_WritePWM(int id, int speed, bool async = true){
+    
+    if (!sc_WritePWM_client->wait_for_service(1s)) {
+      RCLCPP_WARN(this->get_logger(), "sc_WritePWM Service not available yet");
+      return;
+    }
+
     auto request = std::make_shared<custom_msgs::srv::SCWritePWM::Request>();
     request->id = id;
     request->speed = speed;
@@ -293,6 +311,12 @@ private:
   }
 
   int sc_ReadPos(int id){
+    
+    if (!sc_ReadPos_client->wait_for_service(1s)) {
+      RCLCPP_WARN(this->get_logger(), "sc_ReadPos Service not available yet");
+      return;
+    }
+    
     auto request = std::make_shared<custom_msgs::srv::ID::Request>();
     request->id = id;
 
@@ -309,6 +333,12 @@ private:
   }
 
   int sc_WritePos(int id, int pos, int time, int speed = 0, int async = true){
+    
+    if (!sc_WritePos_client->wait_for_service(1s)) {
+      RCLCPP_WARN(this->get_logger(), "sc_WritePos Service not available yet");
+      return;
+    }
+    
     auto request = std::make_shared<custom_msgs::srv::SCWritePos::Request>();
     request->id = id;
     request->position = pos;
