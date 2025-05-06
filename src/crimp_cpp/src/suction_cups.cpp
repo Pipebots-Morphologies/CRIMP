@@ -142,7 +142,7 @@ private:
   }*/
 
   void rotate(int id, int direction, int turns){
-    ROS_INFO(this->get_logger(), "rotate method called");
+    RCLCPP_INFO(this->get_logger(), "rotate method called");
     
     int counter = 0;
     bool steep_flag = false;
@@ -203,7 +203,7 @@ private:
 
 
   void driveLogic(cupParams &cup, int request){
-    ROS_INFO(this->get_logger(), "driveLogic method called");
+    RCLCPP_INFO(this->get_logger(), "driveLogic method called");
 
     if(request == 1 && cup.state == 0){
       rotate(cup.id, 1, 6);

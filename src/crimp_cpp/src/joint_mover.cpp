@@ -68,7 +68,7 @@ private:
         pos = st_steps2angle(steps);
       }
       joint_angles[joint_name] = pos;
-      // ROS_INFO(this->get_logger(), "Publishing to joint_pos topic") // uncomment for debugging
+      // RCLCPP_INFO(this->get_logger(), "Publishing to joint_pos topic") // uncomment for debugging
     }
 
     auto msg = sensor_msgs::msg::JointState();
