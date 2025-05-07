@@ -10,6 +10,7 @@ find_package(ament_cmake REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(custom_msgs REQUIRED)
@@ -31,7 +32,7 @@ ament_target_dependencies(joint_mover rclcpp sensor_msgs custom_msgs)
 target_link_libraries(joint_mover servo_lib)
 
 add_executable(motion_planner src/motion_planner.cpp)
-ament_target_dependencies(motion_planner rclcpp sensor_msgs geometry_msgs custom_msgs)
+ament_target_dependencies(motion_planner rclcpp sensor_msgs geometry_msgs custom_msgs std_msgs)
 target_link_libraries(motion_planner servo_lib)
 
 add_executable(suction_cups src/suction_cups.cpp)

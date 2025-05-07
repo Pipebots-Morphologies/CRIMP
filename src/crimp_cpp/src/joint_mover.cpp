@@ -91,7 +91,7 @@ private:
     joint_pos_pub->publish(msg);
   }
   // called when joint targets are received
-  void joint_targets_callback(const sensor_msgs::msg::JointState & msg) {
+  void sub_callback(const sensor_msgs::msg::JointState & msg) {
     //RCLCPP_INFO(this->get_logger(), "Message received from joint_targets topic") // uncomment for debugging
     for(int i = 0; i < msg.name.size(); i++){
       if(msg.name[i][0]=='w'){

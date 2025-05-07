@@ -18,9 +18,10 @@
 #include <string>
 
 #include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/bool.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "geometry_msgs/msg/pose.hpp"
-#include "custom_msgs/msg/suction_request.hpp"
+#include "custom_msgs/srv/suction_control.hpp"
 
 using std::placeholders::_1;
 using std::to_string;
@@ -36,7 +37,6 @@ MotionPlanner() // constructor function
     // create publishers
     joint_targets_pub = this->create_publisher<sensor_msgs::msg::JointState>("joint_targets", 10);
     robot_pose_pub = this->create_publisher<geometry_msgs::msg::Pose>("robot_pose", 10);
-    activate_suction_pub = this->create_publisher<custom_msgs::msg::SuctionRequest>("activate_suction", 10);
 
     suction_control_client = this->create_client<custom_msgs::srv::SuctionControl>("suction_control");
   
@@ -54,18 +54,18 @@ private:
   }
 
   void begin(const std_msgs::msg::Bool &msg){
-    if(msg->data == false) return;
+    if(msg.data == false) return;
 
     closed_position();
   }
 
-  void set_position(){
+  void set_position(float elbow_1, float elbow_2, float elbow_3){
     auto msg = sensor_msgs::msg::JointState();
 
-    msg->name = {"elbow_1", "elbow_2", "elbow_3"};
-    msg->position = {elbow_1, elbow_2, elbow_3};
+    msg.name = {"elbow_1", "elbow_2", "elbow_3"};
+    msg.position = {elbow_1, elbow_2, elbow_3};
 
-    joint_targets_sub->publish(msg);
+    joint_targets_pub->publish(msg);
   }
 
   void closed_position(){
@@ -83,7 +83,7 @@ private:
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_pos_sub;
   rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr start_sub;
 
-  rclcpp::Client<custom_msgs::srv:SuctionControl>::SharedPtr suction_control_client;
+  rclcpp::Client<custom_msgs::srv::SuctionControl>::SharedPtr suction_control_client;
 };
 
 int main(int argc, char * argv[])
