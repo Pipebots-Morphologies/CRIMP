@@ -43,7 +43,7 @@ JointMover() // constructor function
       500ms, std::bind(&JointMover::get_joint_angles, this)); 
     
     joint_target_sub = this->create_subscription<sensor_msgs::msg::JointState>("joint_targets", 10, 
-      std::bind(&JointMover::sub_callback, this, _1)); // creates a subscriber to joint_targets topic
+      std::bind(&JointMover::joint_targets_callback, this, _1)); // creates a subscriber to joint_targets topic
     
     sc_ReadPos_client = this->create_client<custom_msgs::srv::ID>("sc_ReadPos");
     sc_WritePos_client = this->create_client<custom_msgs::srv::SCWritePos>("sc_WritePos");
@@ -82,7 +82,7 @@ private:
   }
   
   // called when joint targets are received
-  void sub_callback(const sensor_msgs::msg::JointState & msg) {
+  void joint_targets_callback(const sensor_msgs::msg::JointState & msg) {
     //RCLCPP_INFO(this->get_logger(), "Message received from joint_targets topic") // uncomment for debugging
     for(int i = 0; i < msg.name.size(); i++){
       if(msg.name[i][0]=='w'){
