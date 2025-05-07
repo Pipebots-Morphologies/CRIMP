@@ -1,3 +1,4 @@
+
 // Copyright 2016 Open Source Robotics Foundation, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,17 +17,11 @@
 #include <functional>
 #include <memory>
 #include <string>
-#include <iostream>
-#include <vector>
 
 #include "rclcpp/rclcpp.hpp"
 #include "custom_msgs/msg/suction_request.hpp"
 #include "custom_msgs/msg/suction_force.hpp"
-
-#include "custom_msgs/srv/write_data.hpp"
-#include "custom_msgs/srv/sc_write_pos.hpp"
-#include "custom_msgs/srv/id.hpp"
-#include "custom_msgs/srv/sc_write_pwm.hpp"
+#include "SCServo.h"
 
 using std::placeholders::_1;
 using std::to_string;
@@ -34,7 +29,6 @@ using std::to_string;
 using namespace std::chrono_literals;
 
 const int millis = 1000;
-std::vector<int> posData;
 
 struct cupParams{
   int id;
@@ -56,6 +50,14 @@ public:
 SuctionCups() // constructor function
   : Node("suction_cups"), count_(0) // defines two variables
   {
+
+    const char* serialPort = "/dev/ttyAMA0";
+    RCLCPP_INFO(this->get_logger(), "Using serial port: %s", serialPort);
+
+    if (!sc.begin(1000000, serialPort)) {
+      RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
+    }
+
     foot.front = {7,0};
     foot.rear = {4,0};
 
@@ -64,17 +66,12 @@ SuctionCups() // constructor function
       500ms, std::bind(&SuctionCups::timer_callback, this)); // creates a timer object to run timer_callback every 500ms
     activate_suction_sub = this->create_subscription<custom_msgs::msg::SuctionRequest>("activate_suction", 10, 
       std::bind(&SuctionCups::sub_callback, this, _1));
-    
-    sc_WriteData_client = this->create_client<custom_msgs::srv::WriteData>("sc_WriteData");
-    sc_PWMMode_client = this->create_client<custom_msgs::srv::ID>("sc_PWMMode");
-    sc_WritePWM_client = this->create_client<custom_msgs::srv::SCWritePWM>("sc_WritePWM");
-    sc_ReadPos_client = this->create_client<custom_msgs::srv::ID>("sc_ReadPos");
-    sc_WritePos_client = this->create_client<custom_msgs::srv::SCWritePos>("sc_WritePos");
 
   }
 
 private:
 
+  SCSCL sc;
   suctionCupStates foot;
   int home_pos = 500;
 
@@ -87,20 +84,19 @@ private:
   //funciton to re-centre the suction cup servo on 510 (150 degrees) between rotations to prevent cumulative error 
   void centre(int id){
 
-    sc_WriteData(id, 0x30, 0); //unlock eprom
-    sc_WriteData(id, 0x09, 20, true); //set lower angle limit
-    sc_WriteData(id, 0x0B, 1003, true); //set upper angle limit
-    sc_WriteData(id, 0x30, 1); // lock eprom
+    sc.writeByte(id, 0x30, 0); //unlock eprom
+    sc.writeWord(id, 0x09, 20); //set lower angle limit
+    sc.writeWord(id, 0x0B, 1003); //set upper angle limit
+    sc.writeByte(id, 0x30, 0); // lock eprom
 
     // go to home position
-    sc_WritePos(id, home_pos, 0, 800);
+    sc.WritePos(id, home_pos, 0, 800);
     usleep(1000 * millis);
 
   }
 
 
-  //function to rotate the servo a given number of times in a given direction -- DEPRECATED
-  /*
+  //function to rotate the servo a given number of times in a given direction
   void rotate2(int id, int direction, int turns){
 
     int counter = 0;
@@ -139,10 +135,9 @@ private:
     }
 
     sc.WritePWM(id, 0);
-  }*/
+  }
 
   void rotate(int id, int direction, int turns){
-    RCLCPP_INFO(this->get_logger(), "rotate method called");
     
     int counter = 0;
     bool steep_flag = false;
@@ -150,7 +145,7 @@ private:
     int speed = 800;
 
     
-    int pos = sc_ReadPos(id);
+    int pos = sc.ReadPos(id);
     int prev_pos = pos;
 
     int grad_threshhold = 30;
@@ -158,17 +153,14 @@ private:
 
     int absurd_number = 1200;
 
-    sc_PWMMode(id);
-    sc_WritePWM(id, speed * direction);
+    sc.PWMMode(id);
+    sc.WritePWM(id, speed * direction);
 
     while(counter < turns){
 
       rclcpp::sleep_for(5ms);
 
-      pos = sc_ReadPos(id);
-      posData.push_back(pos);
-      if (pos == -1 || pos >= 1500) continue;
-
+      pos = sc.ReadPos(id);
       int grad = pos-prev_pos;
       RCLCPP_INFO(this->get_logger(), "Grad: %d ", grad);
       if(grad < 0) grad = -grad;
@@ -192,19 +184,12 @@ private:
       last_steep_flag = steep_flag;
     }
 
-    sc_WritePWM(id, 0);
+    sc.WritePWM(id, 0);
     centre(id);
-
-    for (const auto & val : posData) {
-      std::cout << val << " ";
-    }
-    std::cout << std::endl;
   }
 
 
   void driveLogic(cupParams &cup, int request){
-    RCLCPP_INFO(this->get_logger(), "driveLogic method called");
-
     if(request == 1 && cup.state == 0){
       rotate(cup.id, 1, 6);
       cup.state = 1;
@@ -235,135 +220,6 @@ private:
     }
     
   }
-
-  // Service calling functions
-  int sc_WriteData(int id, int addr, int val, bool word = false, bool async = true){
-
-    if (!sc_WriteData_client->wait_for_service(1s)) {
-      RCLCPP_WARN(this->get_logger(), "sc_WriteData Service not available yet");
-      return -1;
-    }
-
-    auto request = std::make_shared<custom_msgs::srv::WriteData::Request>();
-    request->id = id;
-    request->addr = addr;
-    request->val = val;
-    request->word = word;
-    
-    auto future = sc_WriteData_client->async_send_request(request);
-
-    if(async) return 0;
-    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future) ==
-      rclcpp::FutureReturnCode::SUCCESS)
-    {
-      return future.get()->result;
-    } else {
-      RCLCPP_ERROR(this->get_logger(), "sc_WriteData call failed");
-      return -1;
-    }
-  }
-
-  int sc_PWMMode(int id, bool async = true){
-    
-    if (!sc_PWMMode_client->wait_for_service(1s)) {
-      RCLCPP_WARN(this->get_logger(), "sc_PWMMode Service not available yet");
-      return -1;
-    }
-
-    auto request = std::make_shared<custom_msgs::srv::ID::Request>();
-    request->id = id;
-
-    auto future = sc_PWMMode_client->async_send_request(request);
-
-    if(async) return 0;
-    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future) ==
-      rclcpp::FutureReturnCode::SUCCESS)
-    {
-      return future.get()->result;
-    } else {
-      RCLCPP_ERROR(this->get_logger(), "sc_PWMMode call failed");
-      return -1;
-    }
-  }
-
-  int sc_WritePWM(int id, int speed, bool async = true){
-    
-    if (!sc_WritePWM_client->wait_for_service(1s)) {
-      RCLCPP_WARN(this->get_logger(), "sc_WritePWM Service not available yet");
-      return -1;
-    }
-
-    auto request = std::make_shared<custom_msgs::srv::SCWritePWM::Request>();
-    request->id = id;
-    request->speed = speed;
-    
-    auto future = sc_WritePWM_client->async_send_request(request);
-
-    if(async) return 0;
-    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future) ==
-      rclcpp::FutureReturnCode::SUCCESS)
-    {
-      return future.get()->result;
-    } else {
-      RCLCPP_ERROR(this->get_logger(), "sc_WritePos call failed");
-      return -1;
-    }
-  }
-
-  int sc_ReadPos(int id){
-    
-    if (!sc_ReadPos_client->wait_for_service(1s)) {
-      RCLCPP_WARN(this->get_logger(), "sc_ReadPos Service not available yet");
-      return -1;
-    }
-    
-    auto request = std::make_shared<custom_msgs::srv::ID::Request>();
-    request->id = id;
-
-    auto future = sc_ReadPos_client->async_send_request(request);
-
-    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future) ==
-      rclcpp::FutureReturnCode::SUCCESS)
-    {
-      return future.get()->result;
-    } else {
-      RCLCPP_ERROR(this->get_logger(), "sc_ReadPos call failed");
-      return -1;
-    }
-  }
-
-  int sc_WritePos(int id, int pos, int time, int speed = 0, int async = true){
-    
-    if (!sc_WritePos_client->wait_for_service(1s)) {
-      RCLCPP_WARN(this->get_logger(), "sc_WritePos Service not available yet");
-      return -1;
-    }
-    
-    auto request = std::make_shared<custom_msgs::srv::SCWritePos::Request>();
-    request->id = id;
-    request->position = pos;
-    request->time = time;
-    request->speed = speed;
-    
-    auto future = sc_WritePos_client->async_send_request(request);
-
-    if(async) return 0;
-    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future) ==
-      rclcpp::FutureReturnCode::SUCCESS)
-    {
-      return future.get()->result;
-    } else {
-      RCLCPP_ERROR(this->get_logger(), "sc_WritePos call failed");
-      return -1;
-    }
-  }
-
-  // declare service clients
-  rclcpp::Client<custom_msgs::srv::WriteData>::SharedPtr sc_WriteData_client;
-  rclcpp::Client<custom_msgs::srv::ID>::SharedPtr sc_PWMMode_client;
-  rclcpp::Client<custom_msgs::srv::SCWritePWM>::SharedPtr sc_WritePWM_client;
-  rclcpp::Client<custom_msgs::srv::ID>::SharedPtr sc_ReadPos_client;
-  rclcpp::Client<custom_msgs::srv::SCWritePos>::SharedPtr sc_WritePos_client;
 
 
   rclcpp::TimerBase::SharedPtr timer_;

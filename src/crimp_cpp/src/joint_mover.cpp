@@ -19,11 +19,9 @@
 #include <map>
 
 #include "rclcpp/rclcpp.hpp"
+#include "std_msgs/msg/string.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
-
-#include "custom_msgs/srv/sc_write_pos.hpp"
-#include "custom_msgs/srv/id.hpp"
-#include "custom_msgs/srv/st_write_pos.hpp"
+#include "SCServo.h"
 
 using std::placeholders::_1;
 using std::to_string;
@@ -36,6 +34,18 @@ public:
 JointMover() // constructor function
   : Node("joint_mover"), count_(0) // defines two variables
   {
+
+    const char* serialPort = "/dev/ttyAMA0";
+    RCLCPP_INFO(this->get_logger(), "Using serial port: %s", serialPort);
+
+    if (!sc.begin(1000000, serialPort)) {
+        RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
+    }
+
+    if (!sm_st.begin(1000000, serialPort)) {
+        RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
+    }
+
     joint_pos_pub = this->create_publisher<sensor_msgs::msg::JointState>("joint_pos", 10); // creates the publisher to joint_pos topic
 
     // FOR TESTING: calls timer_callback ever 0.5s
@@ -44,14 +54,12 @@ JointMover() // constructor function
     
     joint_target_sub = this->create_subscription<sensor_msgs::msg::JointState>("joint_targets", 10, 
       std::bind(&JointMover::sub_callback, this, _1)); // creates a subscriber to joint_targets topic
-    
-    sc_ReadPos_client = this->create_client<custom_msgs::srv::ID>("sc_ReadPos");
-    sc_WritePos_client = this->create_client<custom_msgs::srv::SCWritePos>("sc_WritePos");
-    st_ReadPos_client = this->create_client<custom_msgs::srv::ID>("st_ReadPos");
-    st_WritePos_client = this->create_client<custom_msgs::srv::STWritePos>("st_WritePos");
   }
 
 private:
+
+  SCSCL sc;     // sc.WritePos(id, uint16 position, uint16 time, uint16 velocity);
+  SMS_STS sm_st;   // st.WritePosEx(id, int16 position, uint16 velocity, uint8 ACC=0);
 
   // called when the timer triggers, gets and publishes the joint angles
   void get_joint_angles()
@@ -61,14 +69,16 @@ private:
       int id = joint_ids[joint_name];
       float pos;
       if(joint_name[0]=='w'){
-        int steps = sc_ReadPos(id);
+        int steps = sc.ReadPos(id);
         pos = sc_steps2angle(steps);
+        // NEED TO CONVERT FROM STEPS TO DEGREES
       }else if(joint_name[0]=='e'){
-        int steps = st_ReadPos(id);
+        int steps = sm_st.ReadPos(id);
         pos = st_steps2angle(steps);
+        // NEED TO CONVERT FROM STEPS TO DEGREES
       }
       joint_angles[joint_name] = pos;
-      // RCLCPP_INFO(this->get_logger(), "Publishing to joint_pos topic") // uncomment for debugging
+      // ROS_INFO(this->get_logger(), "Publishing to joint_pos topic") // uncomment for debugging
     }
 
     auto msg = sensor_msgs::msg::JointState();
@@ -80,7 +90,6 @@ private:
     msg.position = joint_angle_vector;
     joint_pos_pub->publish(msg);
   }
-  
   // called when joint targets are received
   void sub_callback(const sensor_msgs::msg::JointState & msg) {
     //RCLCPP_INFO(this->get_logger(), "Message received from joint_targets topic") // uncomment for debugging
@@ -94,7 +103,6 @@ private:
       }
     }
   }
-  
   // moves a wrist joint to a target position at a set velocity or over a set time
   void wrist_move(int id, float position, int velocity, int time=0){
     if(position >= 150) position = 150; // joint max limit
@@ -102,19 +110,17 @@ private:
     int steps = sc_angle2steps(position);
     if(velocity == 0){velocity = st_default_vel; }
     if(time==0){
-      sc_WritePos(id, steps, time, velocity);
+      sc.WritePos(id, steps, time, velocity);
     }
   }
-  
   // moves an elbow joint to a target position at a set velocity
   void elbow_move(int id, float position, int velocity){
     if(position >= 300) position = 300; // joint max limit
     if(position <= 60) position = 60; // joint min limit
     int steps = st_angle2steps(position);
     if(velocity == 0){velocity = st_default_vel; }
-    st_WritePos(id, steps, velocity, 50);
+    sm_st.WritePosEx(id, steps, velocity, 50);
   }
-  
   // convert between steps and angles
   float sc_steps2angle(int steps){
     float angle = (steps/1023.0)*150.0;
@@ -132,89 +138,10 @@ private:
     int steps = (angle/360.0)*4095.0;
     return steps;
   }
-  
-  int sc_ReadPos(int id){
-    auto request = std::make_shared<custom_msgs::srv::ID::Request>();
-    request->id = id;
-
-    auto future = sc_ReadPos_client->async_send_request(request);
-
-    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future) ==
-      rclcpp::FutureReturnCode::SUCCESS)
-    {
-      return future.get()->result;
-    } else {
-      RCLCPP_ERROR(this->get_logger(), "sc_ReadPos call failed");
-      return -1;
-    }
-  }
-
-  int sc_WritePos(int id, int pos, int time, int speed = 0, int async = true){
-    auto request = std::make_shared<custom_msgs::srv::SCWritePos::Request>();
-    request->id = id;
-    request->position = pos;
-    request->time = time;
-    request->speed = speed;
-    
-    auto future = sc_WritePos_client->async_send_request(request);
-
-    if(async) return 0;
-    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future) ==
-      rclcpp::FutureReturnCode::SUCCESS)
-    {
-      return future.get()->result;
-    } else {
-      RCLCPP_ERROR(this->get_logger(), "sc_WritePos call failed");
-      return -1;
-    }
-  }
-
-  int st_ReadPos(int id){
-    auto request = std::make_shared<custom_msgs::srv::ID::Request>();
-    request->id = id;
-
-    auto future = st_ReadPos_client->async_send_request(request);
-
-    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future) ==
-      rclcpp::FutureReturnCode::SUCCESS)
-    {
-      return future.get()->result;
-    } else {
-      RCLCPP_ERROR(this->get_logger(), "st_ReadPos call failed");
-      return -1;
-    }
-  }
-
-  int st_WritePos(int id, int pos, int speed, int acc, int async = true){
-    auto request = std::make_shared<custom_msgs::srv::STWritePos::Request>();
-    request->id = id;
-    request->position = pos;
-    request->speed = speed;
-    request->acc = acc;
-    
-    auto future = st_WritePos_client->async_send_request(request);
-
-    if(async) return 0;
-    if (rclcpp::spin_until_future_complete(this->get_node_base_interface(), future) ==
-      rclcpp::FutureReturnCode::SUCCESS)
-    {
-      return future.get()->result;
-    } else {
-      RCLCPP_ERROR(this->get_logger(), "st_WritePos call failed");
-      return -1;
-    }
-  }
-
   // define variables
   rclcpp::TimerBase::SharedPtr timer_;
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_pos_pub;
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_target_sub;
-
-  rclcpp::Client<custom_msgs::srv::ID>::SharedPtr sc_ReadPos_client;
-  rclcpp::Client<custom_msgs::srv::SCWritePos>::SharedPtr sc_WritePos_client;
-  rclcpp::Client<custom_msgs::srv::ID>::SharedPtr st_ReadPos_client;
-  rclcpp::Client<custom_msgs::srv::STWritePos>::SharedPtr st_WritePos_client;
-
   size_t count_;
   std::vector<std::string> joint_names = {"elbow_1", "elbow_2", "elbow_3", "wrist_1", "wrist_2"};
   std::map<std::string, int> joint_ids = {

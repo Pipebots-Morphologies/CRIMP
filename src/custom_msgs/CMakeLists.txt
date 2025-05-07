@@ -15,6 +15,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/SuctionForce.msg"
   "msg/SuctionRequest.msg"
   "srv/ID.srv"
+  "srv/SuctionControl.srv"
   "srv/SCWritePos.srv"
   "srv/SCWritePWM.srv"
   "srv/STWritePos.srv"
