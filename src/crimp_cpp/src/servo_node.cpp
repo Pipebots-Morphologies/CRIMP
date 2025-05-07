@@ -58,10 +58,16 @@ private:
 
   void sub_callback(const sensor_msgs::msg::JointState & msg) {
     for (int i = 0; i < msg.name.size(); i++) {
+      // account for backlash
+      get_joint_angles();
+      float backlash = requested_angles[msg.name[i]]-joint_angles[msg.name[i]];
+      float target_angle = msg.position[i] + backlash;
+      requested_angles[msg.name[i]] = target_angle;
+
       if (msg.name[i][0] == 'w') {
-        wrist_move(joint_ids[msg.name[i]], msg.position[i], msg.velocity[i]);
+        wrist_move(joint_ids[msg.name[i]], target_angle, msg.velocity[i]);
       } else if (msg.name[i][0] == 'e') {
-        elbow_move(joint_ids[msg.name[i]], msg.position[i], msg.velocity[i]);
+        elbow_move(joint_ids[msg.name[i]], target_angle, msg.velocity[i]);
       }
     }
   }
@@ -206,7 +212,10 @@ private:
     {"elbow_1", 180}, {"elbow_2", 180}, {"elbow_3", 180},
     {"wrist_1", 75}, {"wrist_2", 75}
   };
-
+  std::map<std::string, float> requested_angles = {
+    {"elbow_1", 180}, {"elbow_2", 180}, {"elbow_3", 180},
+    {"wrist_1", 75}, {"wrist_2", 75}
+  };
 
   int sc_default_vel = 400;
   int st_default_vel = 1200;
