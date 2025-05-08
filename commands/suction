@@ -4,4 +4,4 @@ cup1="$1"
 cup2="$2"
 
 msg="{cup_1: "$cup1", cup_2: "$cup2"}"
-ros2 topic pub --once /activate_suction custom_msgs/msg/SuctionRequest "$msg"
+ros2 service call /suction_control custom_msgs/srv/SuctionControl "$msg"

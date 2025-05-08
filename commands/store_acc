@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+if [[ "$1" == "" ]]; then
+    echo "Error in store_acc"
+    echo "Enter a value"
+    exit 1
+fi
+
+export ACC=$1

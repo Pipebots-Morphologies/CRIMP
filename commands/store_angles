@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+for var in "$1" "$2" "$3"
+do 
+    if [[ "$var" == "" ]]; then
+        echo "Error in store_angles"
+        echo "Enter an angle for each joint"
+        exit 1
+    fi
+done
+
+export ELBOW_1=$1
+export ELBOW_2=$2
+export ELBOW_3=$3
