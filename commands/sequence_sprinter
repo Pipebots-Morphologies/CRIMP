@@ -1,0 +1,48 @@
+#!/usr/bin/bash
+
+echo "Step 1: Release front suction cup"
+read -p "Press Enter..."
+
+./suction -1 1
+
+
+echo "Step 2: lift front leg"
+read -p "Press Enter..."
+
+v=500
+a=20
+./set_all_joints 136.51 61.66 161.84 $v $a
+
+echo "Step 3:extend front leg & normalise front cup"
+read -p "Press Enter..."
+
+v=600
+a=30
+./set_all_joints 111.77 121.08 126.55 $v $a
+
+./suction 0 1
+
+echo "Step 4: press front leg - 5mm"
+read -p "Press Enter..."
+
+v=300
+a=10
+./set_all_joints 120.9 120 119.1 $v $a
+
+echo "Step 5: atatch front cup"
+read -p "Press Enter..."
+
+./suction 1 1
+
+echo "Step 6: release rear cup"
+read -p "Press Enter..."
+
+./suction 1 -1
+
+
+
+
+
+
+
+

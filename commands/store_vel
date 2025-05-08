@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+if [[ "$var" == "" ]]; then
+    echo "Error in store_vel"
+    echo "Enter a value"
+    exit 1
+fi
+
+export VEL=$1

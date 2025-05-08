@@ -57,6 +57,48 @@ private:
     if(msg.data == false) return;
 
     closed_position();
+
+    int back_foot = 2;
+    while(true){
+      for(int back_foot = 1; back_foot < 3; back_foot++)
+        // attach back foot
+        
+        // detach front foot
+        // calc global to local transform
+        for(int stage = 0; stage < 3; stage++){
+          // set target pose
+          // calculate current pose
+          // publish target joint angles
+        }
+        // do
+          // push up
+          // measure load
+          // while(load < threshhold)
+    }
+  }
+
+  void beginIK(const std_msgs::msg::Bool &msg){
+    if(msg.data == false) return;
+
+    closed_position();
+
+    // start loop
+      // attach foot
+      // detach front foot
+      // calc global to local transform
+      for(int stage = 0; stage < 3; stage++){
+        // set target pose
+        // measure foot tilt
+        // calculate current pose
+        // perform inverse kinematics
+        // calculate velocity profiles
+        // publish IK solutions
+      }
+      // do
+        // push up
+        // measure load
+        // while(load < threshhold)
+    //end loop
   }
 
   void set_position(float elbow_1, float elbow_2, float elbow_3){
