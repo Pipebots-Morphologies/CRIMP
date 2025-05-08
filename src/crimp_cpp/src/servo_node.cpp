@@ -9,11 +9,13 @@
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "custom_msgs/srv/suction_control.hpp"
+#include "custom_msgs/srv/report_pose.hpp"
 #include "SCServo.h"
 
 using std::placeholders::_1;
 using std::placeholders::_2;
 using namespace std::chrono_literals;
+using std::string;
 
 
 class ServoController : public rclcpp::Node
@@ -25,19 +27,22 @@ public:
     RCLCPP_INFO(this->get_logger(), "Using serial port: %s", serialPort);
 
     if (!sc.begin(1000000, serialPort)) {
-        RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
+      RCLCPP_ERROR(this->get_logger(), "Failed to init SCSCL motor!");
     }
 
     if (!sm_st.begin(1000000, serialPort)) {
-        RCLCPP_ERROR(this->get_logger(), "Failed to init SMS_STS motor!");
+      RCLCPP_ERROR(this->get_logger(), "Failed to init SMS_STS motor!");
     }
 
     joint_pos_pub = this->create_publisher<sensor_msgs::msg::JointState>("joint_pos", 10);
     joint_target_sub = this->create_subscription<sensor_msgs::msg::JointState>(
-        "joint_targets", 10, std::bind(&ServoController::sub_callback, this, _1));
+      "joint_targets", 10, std::bind(&ServoController::sub_callback, this, _1));
 
     suction_service = this->create_service<custom_msgs::srv::SuctionControl>(
-        "suction_control", std::bind(&ServoController::handle_suction_request, this, _1, _2));
+      "suction_control", std::bind(&ServoController::handle_suction_request, this, _1, _2));
+
+    report_pose_service = this->create_service<custom_msgs::srv::ReportPose>(
+      "report_pose", std::bind(&ServoController::handle_report_pose, this, _1, _2));
 
     timer_ = this->create_wall_timer(500ms, std::bind(&ServoController::get_joint_angles, this));
 
@@ -55,22 +60,46 @@ private:
   SCSCL sc;
   SMS_STS sm_st;
 
+  void match_velocities(sensor_msgs::msg::JointState & msg){
+    get_joint_angles();
+
+    std::vector<float> differences(3);
+    float max_dif = 0;
+    for(int i = 0; i<3; i++){
+      float dif = msg.position[i]-joint_angles[joint_names[i]];
+      differences[i] = dif;
+      if(dif > max_dif) max_dif = dif;
+    }
+    std::vector<int> vels(3), accs(3);
+    int v = msg.velocity[0];
+    int a = msg.effort[0];
+    for( int i = 0; i<3; i++){
+      float scale = differences[i]/max_dif;
+      vels[i] = v*scale;
+      accs[i] = a*scale;
+    }
+
+    msg.velocity = vels;
+    msg.effort = accs;
+  }
 
   void sub_callback(const sensor_msgs::msg::JointState & msg) {
-    for (int i = 0; i < msg.name.size(); i++) {
-      // account for backlash
-      get_joint_angles();
-      float backlash = requested_angles[msg.name[i]]-joint_angles[msg.name[i]];
-      float target_angle = msg.position[i] + backlash;
-      requested_angles[msg.name[i]] = target_angle;
 
+    match_velocities(msg);
+
+    for (int i = 0; i < msg.name.size(); i++) {
+      float target_angle = msg.position[i]; 
+      if(msg.name[i] == "elbow_1") target_angle = 360 - target_angle;
+      requested_angles[msg.name[i]] = target_angle;
+ 
       if (msg.name[i][0] == 'w') {
-        wrist_move(joint_ids[msg.name[i]], target_angle, msg.velocity[i]);
+        wrist_move(joint_ids[msg.name[i]], target_angle, msg.velocity[i], msg.effort[i]);
       } else if (msg.name[i][0] == 'e') {
-        elbow_move(joint_ids[msg.name[i]], target_angle, msg.velocity[i]);
+        elbow_move(joint_ids[msg.name[i]], target_angle, msg.velocity[i], msg.effort[i]);
       }
     }
   }
+
 
 
   void wrist_move(int id, float position, int velocity, int time = 0) {
@@ -87,7 +116,7 @@ private:
     if (position <= 60) position = 60;
     int steps = st_angle2steps(position);
     if (velocity == 0) { velocity = st_default_vel; }
-    sm_st.WritePosEx(id, steps, velocity, 50);
+    sm_st.WritePosEx(id, steps, velocity, 25);
   }
 
 
@@ -191,6 +220,61 @@ private:
   }
 
 
+  void forward_kinematics(string base, float t1, float t2, float t3, float& x, float& y, float& theta) {
+    float l1 = 122, l2 = 152, l3 = 152, l4 = 122; // Replace with your real link lengths (meters)
+    float rad1, rad2, rad3;
+    rad2 = t2 * M_PI / 180.0f;
+
+    if(base == "rear"){
+      rad1 = t1 * M_PI / 180.0f;
+      rad3 = t3 * M_PI / 180.0f;
+    }
+
+    else if (base == "front") {
+      rad1 = t3 * M_PI / 180.0f;
+      rad3 = t1 * M_PI / 180.0f;
+    }
+
+    else{
+      RCLCPP_WARN(this->get_logger(), "Unknown base '%s'. Defaulting to 'front'.", base.c_str());
+      rad1 = t3 * M_PI / 180.0f;
+      rad3 = t1 * M_PI / 180.0f;
+    }
+  
+    float total_angle = rad1 + rad2 + rad3;
+  
+    x = l2 * sin(rad1) - l3 * sin(rad1 + rad2) + l4 * sin(total_angle);
+    y = -l1 + l2 * cos(rad1) - l3 * cos(rad1 + rad2) - l4 * sin(total_angle);
+
+    theta = 360 - total_angle * 180.0 / M_PI; // Orientation of the end effector
+  }  
+
+
+  void handle_report_pose(
+    const std::shared_ptr<custom_msgs::srv::ReportPose::Request> request,
+    std::shared_ptr<custom_msgs::srv::ReportPose::Response> response)
+  {
+    get_joint_angles(); // Updates joint_angles map
+    string base = request->base;
+  
+    float t1 = 360 -  joint_angles["elbow_1"];
+    float t2 = joint_angles["elbow_2"];
+    float t3 = joint_angles["elbow_3"];
+    float x, y, theta;
+  
+    forward_kinematics(base, t1, t2, t3, x, y, theta);
+  
+    response->elbow_1 = t1;
+    response->elbow_2 = t2;
+    response->elbow_3 = t3;
+    response->x = x;
+    response->y = y;
+    response->theta = theta;
+  
+    RCLCPP_INFO(this->get_logger(), "[%s base] Current Joint Angles: [%.2f, %.2f, %.2f], Current pose (%.3f, %.2f, %.2f de)", base.c_str(), t1, t2, t3, x, y, theta);
+  }
+  
+
   float sc_steps2angle(int steps) { return (steps / 1023.0f) * 150.0f; }
   int sc_angle2steps(float angle) { return (angle / 150.0f) * 1023.0f; }
   float st_steps2angle(int steps) { return (steps / 4095.0f) * 360.0f; }
@@ -201,6 +285,7 @@ private:
   rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_pos_pub;
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_target_sub;
   rclcpp::Service<custom_msgs::srv::SuctionControl>::SharedPtr suction_service;
+  rclcpp::Service<custom_msgs::srv::ReportPose>::SharedPtr report_pose_service;
 
 
   std::vector<std::string> joint_names = {"elbow_1", "elbow_2", "elbow_3", "wrist_1", "wrist_2"};

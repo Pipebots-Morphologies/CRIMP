@@ -1,100 +1,81 @@
 #!/bin/bash
 
-echo "Step 1: Release front suction cup"
-read -p "Press Enter..."
 
-ros2 topic pub --once /activate_suction custom_msgs/msg/SuctionRequest "{
-  cup_1: -1,
-  cup_2: 1
-}"
-
-echo "Step 2: lift front leg"
+echo "enter pose 1"
 read -p "Press Enter..."
 
 ros2 topic pub --once /joint_targets sensor_msgs/msg/JointState "{
   name: [\"elbow_1\", \"elbow_2\", \"elbow_3\", \"wrist_1\", \"wrist_2\"],
-  position: [136.51, 61.66, 198.16, 85.0, 90.0],
+  position: [210, 60, 150, 85.0, 90.0],
   velocity: [600.0, 0.0, 600.0, 0.0, 0.0]
 }"
 
 
-echo "Step 3:extend front leg & normalise front cup"
+echo "release front"
 read -p "Press Enter..."
 
 ros2 topic pub --once /joint_targets sensor_msgs/msg/JointState "{
   name: [\"elbow_1\", \"elbow_2\", \"elbow_3\", \"wrist_1\", \"wrist_2\"],
-  position: [111.77, 121.08, 233.45, 85.0, 90.0],
-  velocity: [600.0, 0.0, 600.0, 0.0, 0.0]
+  position: [197.4, 62.27, 133.12, 85.0, 90.0],
+  velocity: [300.0, 300.0, 300.0, 0.0, 0.0]
 }"
 
-ros2 topic pub --once /activate_suction custom_msgs/msg/SuctionRequest "{
-  cup_1: 0,
-  cup_2: 1
+
+ros2 topic pub --once /joint_targets sensor_msgs/msg/JointState "{
+  name: [\"elbow_1\", \"elbow_2\", \"elbow_3\", \"wrist_1\", \"wrist_2\"],
+  position: [229.05, 114.14, 112.19, 85.0, 90.0],
+  velocity: [300.0, 600.0, 300.0, 0.0, 0.0]
 }"
 
-echo "Step 4: press front leg - 5mm"
+
+ros2 topic pub --once /joint_targets sensor_msgs/msg/JointState "{
+  name: [\"elbow_1\", \"elbow_2\", \"elbow_3\", \"wrist_1\", \"wrist_2\"],
+  position: [235.99, 111.98, 124.01, 85.0, 90.0],
+  velocity: [150.0, 150.0, 150.0, 0.0, 0.0]
+}"
+
+echo "attatch"
+read -p "Press Enter..."
+
+ros2 service call /suction_control custom_msgs/srv/SuctionControl "{cup_1: 1, cup_2: 1}"
+
+echo "detatch rear"
+read -p "Press Enter..."
+
+ros2 service call /suction_control custom_msgs/srv/SuctionControl "{cup_1: -1, cup_2: 1}"
+
+echo "lifting rear leg "
 read -p "Press Enter..."
 
 ros2 topic pub --once /joint_targets sensor_msgs/msg/JointState "{
   name: [\"elbow_1\", \"elbow_2\", \"elbow_3\", \"wrist_1\", \"wrist_2\"],
-  position: [120.9, 120, 240.9, 85.0, 90.0],
-  velocity: [600.0, 0.0, 600.0, 0.0, 0.0]
+  position: [246.81, 114.14, 131.95, 85.0, 90.0],
+  velocity: [300.0, 300.0, 300.0, 0.0, 0.0]
 }"
 
-echo "Step 5: atatch front cup"
-read -p "Press Enter..."
-
-ros2 topic pub --once /activate_suction custom_msgs/msg/SuctionRequest "{
-  cup_1: 1,
-  cup_2: 1
-}"
-
-echo "Step 6: release rear cup"
-read -p "Press Enter..."
-
-ros2 topic pub --once /activate_suction custom_msgs/msg/SuctionRequest "{
-  cup_1: 1,
-  cup_2: -1
-}"
-
-echo "Step 7: lift rear leg"
+echo "pulling rear leg &normalise"
 read -p "Press Enter..."
 
 ros2 topic pub --once /joint_targets sensor_msgs/msg/JointState "{
   name: [\"elbow_1\", \"elbow_2\", \"elbow_3\", \"wrist_1\", \"wrist_2\"],
-  position: [126.55, 121.08, 248.3, 85.0, 90.0],
-  velocity: [600.0, 0.0, 600.0, 0.0, 0.0]
+  position: [225.88, 62.27, 163.6, 85.0, 90.0],
+  velocity: [300.0, 600.0, 300.0, 0.0, 0.0]
 }"
 
-echo "Step 8: contract rear leg & normalise rear cup"
+ros2 service call /suction_control custom_msgs/srv/SuctionControl "{cup_1: 0, cup_2: 1}"
+
+echo "pressing rear leg "
 read -p "Press Enter..."
 
 ros2 topic pub --once /joint_targets sensor_msgs/msg/JointState "{
   name: [\"elbow_1\", \"elbow_2\", \"elbow_3\", \"wrist_1\", \"wrist_2\"],
-  position: [161.84, 61.66, 223.49, 85.0, 90.0],
-  velocity: [600.0, 0.0, 600.0, 0.0, 0.0]
+  position: [207.31, 59.14, 145.16, 85.0, 90.0],
+  velocity: [150.0, 150.0, 150.0, 0.0, 0.0]
 }"
 
-ros2 topic pub --once /activate_suction custom_msgs/msg/SuctionRequest "{
-  cup_1: 1,
-  cup_2: 0
-}"
-
-echo "Step 9: press rear leg"
+echo "atatch"
 read -p "Press Enter..."
 
-ros2 topic pub --once /joint_targets sensor_msgs/msg/JointState "{
-  name: [\"elbow_1\", \"elbow_2\", \"elbow_3\", \"wrist_1\", \"wrist_2\"],
-  position: [148.4 60, 208.4, 85.0, 90.0],
-  velocity: [600.0, 0.0, 600.0, 0.0, 0.0]
-}"
-
-echo "Step 10: attatch rear cup"
-read -p "Press Enter..."
-
-ros2 topic pub --once /activate_suction custom_msgs/msg/SuctionRequest "{
-  cup_1: 1,
-  cup_2: 1
-}"
+ros2 service call /suction_control custom_msgs/srv/SuctionControl "{cup_1: 1, cup_2: 1}"
 
 echo "Sequence complete."
