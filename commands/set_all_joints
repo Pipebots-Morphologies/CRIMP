@@ -15,14 +15,14 @@ e3="$3"
 v="$4"
 a="$5"
 
-default_vel = 0;
-default_a = 0;
+default_vel=600;
+default_a=25;
 
-if [[ "$v" == ""]]; then
-    v1 = $default_vel
+if [[ "$v" == "" ]]; then
+    v=$default_vel
 fi
-if [[ "$a" == ""]]; then 
-    a = $default_a
+if [[ "$a" == "" ]]; then 
+    a=$default_a
 fi
 
 
@@ -31,10 +31,8 @@ if [[ "$1" == "" ]]; then
     exit 1
 fi
 
-a="$7"
-
 
 # Construct and publish the message
-msg="{name: [\"elbow_1\", \"elbow_2\", \"elbow_3\"], position: [$e1, $e2, $e3], velocity: [$v], effort: [$a]}"
+msg="{name: [\"elbow_1\", \"elbow_2\", \"elbow_3\"], position: [$e1, $e2, $e3], velocity: [$v, $v, $v], effort: [$a, $a, $a]}"
 
 ros2 topic pub --once /joint_targets sensor_msgs/msg/JointState "$msg"

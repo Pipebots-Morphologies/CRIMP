@@ -60,46 +60,59 @@ private:
   SCSCL sc;
   SMS_STS sm_st;
 
-  void match_velocities(sensor_msgs::msg::JointState & msg){
+  std::vector<double> get_modifiers(const sensor_msgs::msg::JointState & msg){
+    RCLCPP_INFO(this->get_logger(), "get modifiers");
     get_joint_angles();
 
     std::vector<float> differences(3);
     float max_dif = 0;
     for(int i = 0; i<3; i++){
       float dif = msg.position[i]-joint_angles[joint_names[i]];
+      if(dif<0) dif = -dif;
       differences[i] = dif;
       if(dif > max_dif) max_dif = dif;
     }
-    std::vector<int> vels(3), accs(3);
-    int v = msg.velocity[0];
-    int a = msg.effort[0];
+
+    RCLCPP_INFO(this->get_logger(), "get modifiers 2");
+    std::vector<double> modifiers(3);
+
+    if(max_dif == 0) return {1,1,1};
     for( int i = 0; i<3; i++){
-      float scale = differences[i]/max_dif;
-      vels[i] = v*scale;
-      accs[i] = a*scale;
+      modifiers[i]  = differences[i]/max_dif;
     }
 
-    msg.velocity = vels;
-    msg.effort = accs;
+    return modifiers;
   }
 
   void sub_callback(const sensor_msgs::msg::JointState & msg) {
+    RCLCPP_INFO(this->get_logger(), "Suib callback");
+    
+    auto modifiers = get_modifiers(msg);
 
-    match_velocities(msg);
+    RCLCPP_INFO(this->get_logger(), "Suib callback 2");
+    
+    std::vector<double> vels(3), accs(3);
+    int v = msg.velocity[0];
+    int a = msg.effort[0];
+    for( int i = 0; i<3; i++){
+      vels[i] = v*modifiers[i];
+      accs[i] = a*modifiers[i];
+    }
+    RCLCPP_INFO(this->get_logger(), "Suib callback 3");
 
     for (int i = 0; i < msg.name.size(); i++) {
       float target_angle = msg.position[i]; 
+      target_angle -= joint_offsets[msg.name[i]];
       if(msg.name[i] == "elbow_1") target_angle = 360 - target_angle;
       requested_angles[msg.name[i]] = target_angle;
- 
+      RCLCPP_INFO(this->get_logger(), "Suib callback 4");
       if (msg.name[i][0] == 'w') {
-        wrist_move(joint_ids[msg.name[i]], target_angle, msg.velocity[i], msg.effort[i]);
+        wrist_move(joint_ids[msg.name[i]], target_angle, 0, 0);
       } else if (msg.name[i][0] == 'e') {
-        elbow_move(joint_ids[msg.name[i]], target_angle, msg.velocity[i], msg.effort[i]);
+        elbow_move(joint_ids[msg.name[i]], target_angle, vels[i], accs[i]);
       }
     }
   }
-
 
 
   void wrist_move(int id, float position, int velocity, int time = 0) {
@@ -111,12 +124,20 @@ private:
   }
 
 
-  void elbow_move(int id, float position, int velocity) {
-    if (position >= 300) position = 300;
-    if (position <= 60) position = 60;
+  void elbow_move(int id, float position, int velocity, int acc) {
+    if(id == 2){
+      if (position >= 300) position = 300;
+      else if (position <= 60) position = 60;
+    }
+    else{
+      if (position >= 255) position = 255;
+      else if (position <= 105) position = 105;
+    } 
+    
     int steps = st_angle2steps(position);
-    if (velocity == 0) { velocity = st_default_vel; }
-    sm_st.WritePosEx(id, steps, velocity, 25);
+    if (velocity == 0) velocity = st_default_vel; 
+    if (acc ==  0 ) acc = 50;
+    sm_st.WritePosEx(id, steps, velocity, acc);
   }
 
 
@@ -130,7 +151,9 @@ private:
       } else {
         int steps = sm_st.ReadPos(id);
         pos = st_steps2angle(steps);
+        if(joint_name == "elbow_1") pos = 360 - pos;
       }
+      pos += joint_offsets[joint_name];
       joint_angles[joint_name] = pos;
     }
 
@@ -244,7 +267,7 @@ private:
     float total_angle = rad1 + rad2 + rad3;
   
     x = l2 * sin(rad1) - l3 * sin(rad1 + rad2) + l4 * sin(total_angle);
-    y = -l1 + l2 * cos(rad1) - l3 * cos(rad1 + rad2) - l4 * sin(total_angle);
+    y = -l1 + l2 * cos(rad1) - l3 * cos(rad1 + rad2) + l4 * cos(total_angle);
 
     theta = 360 - total_angle * 180.0 / M_PI; // Orientation of the end effector
   }  
@@ -257,7 +280,7 @@ private:
     get_joint_angles(); // Updates joint_angles map
     string base = request->base;
   
-    float t1 = 360 -  joint_angles["elbow_1"];
+    float t1 = joint_angles["elbow_1"];
     float t2 = joint_angles["elbow_2"];
     float t3 = joint_angles["elbow_3"];
     float x, y, theta;
@@ -271,7 +294,7 @@ private:
     response->y = y;
     response->theta = theta;
   
-    RCLCPP_INFO(this->get_logger(), "[%s base] Current Joint Angles: [%.2f, %.2f, %.2f], Current pose (%.3f, %.2f, %.2f de)", base.c_str(), t1, t2, t3, x, y, theta);
+    RCLCPP_INFO(this->get_logger(), "[%s base] \n Current Joint Angles: [%.2f, %.2f, %.2f] , \n Current pose X: %.2f, Y: %.2f, Theta: %.2f deg", base.c_str(), t1, t2, t3, x, y, theta);
   }
   
 
@@ -300,6 +323,10 @@ private:
   std::map<std::string, float> requested_angles = {
     {"elbow_1", 180}, {"elbow_2", 180}, {"elbow_3", 180},
     {"wrist_1", 75}, {"wrist_2", 75}
+  };
+  std::map<std::string, float> joint_offsets = {
+    {"elbow_1", 2}, {"elbow_2", 0.5}, {"elbow_3", 2},
+    {"wrist_1", 0}, {"wrist_2", 0}
   };
 
   int sc_default_vel = 400;

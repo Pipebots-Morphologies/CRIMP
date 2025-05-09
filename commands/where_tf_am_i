@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+side="$1"
+
+if [[ $side == "" ]]; then
+	echo "Nah mate thats not allowed"
+	exit 1
+fi
+
+ros2 service call /report_pose custom_msgs/srv/ReportPose "{base: \"$side\"}"
