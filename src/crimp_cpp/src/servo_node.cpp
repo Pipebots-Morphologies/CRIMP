@@ -60,56 +60,64 @@ private:
   SCSCL sc;
   SMS_STS sm_st;
 
-  std::vector<double> get_modifiers(const sensor_msgs::msg::JointState & msg){
-    RCLCPP_INFO(this->get_logger(), "get modifiers");
+  std::map<string, double> get_modifiers(const sensor_msgs::msg::JointState & msg){
     get_joint_angles();
 
-    std::vector<float> differences(3);
+    std::map<string, double> modifiers = {
+      {"elbow_1", 1}, {"elbow_2", 1}, {"elbow_3", 1}
+    };
+
+    std::map<string, double> differences = {
+      {"elbow_1", 1}, {"elbow_2", 1}, {"elbow_3", 1}
+    };
     float max_dif = 0;
-    for(int i = 0; i<3; i++){
-      float dif = msg.position[i]-joint_angles[joint_names[i]];
+
+    int msg_length = msg.name.size();
+    for(int i = 0; i < msg_length; i++){
+      string joint_name = msg.name[i];
+      if(joint_name[0] == 'w') continue;
+      float dif = msg.position[i]-joint_angles[joint_name];
       if(dif<0) dif = -dif;
-      differences[i] = dif;
+      differences[joint_name] = dif;
       if(dif > max_dif) max_dif = dif;
     }
 
-    RCLCPP_INFO(this->get_logger(), "get modifiers 2");
-    std::vector<double> modifiers(3);
-
-    if(max_dif == 0) return {1,1,1};
-    for( int i = 0; i<3; i++){
-      modifiers[i]  = differences[i]/max_dif;
+    if(max_dif == 0) {
+      return modifiers;
+    }
+    for( int i = 0; i<msg_length; i++){
+      string joint_name = msg.name[i];
+      if(joint_name[0] == 'e'){
+        modifiers[joint_name]  = differences[joint_name]/max_dif;
+      }
     }
 
     return modifiers;
   }
 
   void sub_callback(const sensor_msgs::msg::JointState & msg) {
-    RCLCPP_INFO(this->get_logger(), "Suib callback");
+    RCLCPP_INFO(this->get_logger(), "Sub callback");
     
     auto modifiers = get_modifiers(msg);
 
-    RCLCPP_INFO(this->get_logger(), "Suib callback 2");
+    RCLCPP_INFO(this->get_logger(), "Sub callback 2");
     
-    std::vector<double> vels(3), accs(3);
     int v = msg.velocity[0];
     int a = msg.effort[0];
-    for( int i = 0; i<3; i++){
-      vels[i] = v*modifiers[i];
-      accs[i] = a*modifiers[i];
-    }
-    RCLCPP_INFO(this->get_logger(), "Suib callback 3");
 
     for (int i = 0; i < msg.name.size(); i++) {
       float target_angle = msg.position[i]; 
-      target_angle -= joint_offsets[msg.name[i]];
-      if(msg.name[i] == "elbow_1") target_angle = 360 - target_angle;
-      requested_angles[msg.name[i]] = target_angle;
-      RCLCPP_INFO(this->get_logger(), "Suib callback 4");
-      if (msg.name[i][0] == 'w') {
-        wrist_move(joint_ids[msg.name[i]], target_angle, 0, 0);
-      } else if (msg.name[i][0] == 'e') {
-        elbow_move(joint_ids[msg.name[i]], target_angle, vels[i], accs[i]);
+
+      string joint_name = msg.name[i];
+      target_angle -= joint_offsets[joint_name];
+      if(joint_name == "elbow_1") target_angle = 360 - target_angle;
+
+      requested_angles[joint_name] = target_angle;
+
+      if (joint_name[0] == 'w') {
+        wrist_move(joint_ids[joint_name], target_angle, v, 0);
+      } else if (joint_name[0] == 'e') {
+        elbow_move(joint_ids[joint_name], target_angle, v*modifiers[joint_name], a*modifiers[joint_name]);
       }
     }
   }
@@ -311,20 +319,20 @@ private:
   rclcpp::Service<custom_msgs::srv::ReportPose>::SharedPtr report_pose_service;
 
 
-  std::vector<std::string> joint_names = {"elbow_1", "elbow_2", "elbow_3", "wrist_1", "wrist_2"};
-  std::map<std::string, int> joint_ids = {
+  std::vector<string> joint_names = {"elbow_1", "elbow_2", "elbow_3", "wrist_1", "wrist_2"};
+  std::map<string, int> joint_ids = {
     {"elbow_1", 3}, {"elbow_2", 2}, {"elbow_3", 1},
     {"wrist_1", 6}, {"wrist_2", 5}
   };
-  std::map<std::string, float> joint_angles = {
+  std::map<string, float> joint_angles = {
     {"elbow_1", 180}, {"elbow_2", 180}, {"elbow_3", 180},
     {"wrist_1", 75}, {"wrist_2", 75}
   };
-  std::map<std::string, float> requested_angles = {
+  std::map<string, float> requested_angles = {
     {"elbow_1", 180}, {"elbow_2", 180}, {"elbow_3", 180},
     {"wrist_1", 75}, {"wrist_2", 75}
   };
-  std::map<std::string, float> joint_offsets = {
+  std::map<string, float> joint_offsets = {
     {"elbow_1", 2}, {"elbow_2", 0.5}, {"elbow_3", 2},
     {"wrist_1", 0}, {"wrist_2", 0}
   };

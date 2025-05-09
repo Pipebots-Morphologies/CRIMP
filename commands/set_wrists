@@ -1,0 +1,23 @@
+#!/usr/set/bash
+
+w1="$1"
+w2="$2"
+
+v="$3"
+
+if [[ "w1" == "" ]]; then
+    echo "Gimme some joint angles loser"
+    exit 1
+elif [[ "w2" == "" ]]; then
+    echo "Gimme some joint angles loser"
+    exit 1
+elif [[ "v" == "" ]]; then 
+    v=800
+fi
+
+# Construct and publish the message
+msg="{name: [\"wrist_1\", \"wrist_2\"], position: [$w1, $w2], velocity: [$v, $v]}"
+
+ros2 topic pub --once /joint_targets sensor_msgs/msg/JointState "$msg"
+
+
