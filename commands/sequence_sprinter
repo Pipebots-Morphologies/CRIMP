@@ -4,58 +4,51 @@ echo "Setup home position"
 read -p "Press Enter..."
 v=600
 a=15
-./set_wrists 85 90
-./set_all_joints 150 60 150 $v $a
+./set_wrists 88 92 600
+./set_all_joints 150 60 150 600 15
 
 
 echo "Step 1: Atatch both cups"
 read -p "Press Enter..."
 ./suction 1 1
-./suction -1 1
-
 
 echo "Step 2: lift front leg"
 read -p "Press Enter..."
-v=600
-a=15
-#./set_all_joints 134.12 62.27 163.61 $v $a
+./suction 1 -1
 
-#echo "Step 3:extend front leg & normalise front cup"
-#read -p "Press Enter..."
-v=600
-a=15
-./set_all_joints 119.2 112.52 128.28 $v $a
+echo "Step 2: lift front leg"
+read -p "Press Enter..."
+./set_all_joints 134.12 62.27 163.61 600 15
 
-#echo "Step 4: press front leg - 5mm"
-#read -p "Press Enter..."
-v=300
-a=15
-./set_all_joints 125 109.5 117.5 $v $a
+echo "Step 3:extend front leg & normalise front cup"
+read -p "Press Enter..."
+./set_all_joints 119.2 112.52 128.28 600 15
 
+echo "Step 4: press front leg - 5mm"
+read -p "Press Enter..."
+./set_all_joints 125.5 112 123 600 15
 
 echo "Step 5: atatch front cup"
 read -p "Press Enter..."
-./suction 0 1
-./suction 1 1
-./suction 1 -1
-
-
-echo "Step 5: detatch rear cup"
-read -p "Press Enter..."
-v=600
-a=15
-#./set_all_joints 131.95 114.14 113.91 $v $a
-
-./set_all_joints 157.21 60.57 142.22 $v $a
-
-
-./set_all_joints 145 58 148 $v $a
-
-
-echo "Step 5: detatch rear cup"
-read -p "Press Enter..."
-
 ./suction 1 0
+./suction 1 1
+./suction -1 1
+
+echo "Step 5: detatch rear cup"
+read -p "Press Enter..."
+./set_all_joints 131.95 114.14 113.91 600 15
+
+echo "Step 5: detatch rear cup"
+read -p "Press Enter..."
+./set_all_joints 157.21 60.57 142.22 600 15
+
+echo "Step 5: detatch rear cup"
+read -p "Press Enter..."
+./set_all_joints 148 60 151 600 15
+
+echo "Step 5: detatch rear cup"
+read -p "Press Enter..."
+./suction 0 1
 ./suction 1 1
 
 

@@ -60,6 +60,20 @@ private:
   SCSCL sc;
   SMS_STS sm_st;
 
+  bool is_moving(int iterations){
+    int counter = 0;
+    for(int i = 0; i < iterations; i++){
+      int e1 = sm_st.ReadMove(3);
+      int e2 = sm_st.ReadMove(2);
+      int e3 = sm_st.ReadMove(1);
+      if(e1 == 0 && e2 == 0 && e3 ==0){
+        counter += 1;
+      }
+      rclcpp::sleep_for(20ms);
+    }
+    return counter < iterations;
+  }
+
   std::map<string, double> get_modifiers(const sensor_msgs::msg::JointState & msg){
     get_joint_angles();
 
@@ -97,6 +111,10 @@ private:
 
   void sub_callback(const sensor_msgs::msg::JointState & msg) {
     RCLCPP_INFO(this->get_logger(), "Sub callback");
+
+    while(is_moving(5)){
+      rclcpp::sleep_for(100ms);
+    }
     
     auto modifiers = get_modifiers(msg);
 
@@ -196,10 +214,23 @@ private:
     bool steep_flag = false, last_steep_flag = steep_flag;
     int pos = sc.ReadPos(id), prev_pos = pos;
 
-    sc.PWMMode(id);
-    sc.WritePWM(id, speed * direction);
+    bool PwmModeSucess = sc.PWMMode(id);
+    RCLCPP_INFO(this->get_logger(), "set Pwm = %d ", PwmModeSucess);
+
+    bool speedWriteSuccess = sc.WritePWM(id, speed * direction);        
+    RCLCPP_INFO(this->get_logger(), "Set speed = %d", speedWriteSuccess);
+
+    auto start = std::chrono::steady_clock::now();
+    auto timeout = std::chrono::seconds(30);
 
     while (counter < turns) {
+
+      auto now = std::chrono::steady_clock::now();
+        if (now - start > timeout) {
+          RCLCPP_WARN(this->get_logger(), "Timeout in rotate() — exiting.");
+          break;
+        }
+
       rclcpp::sleep_for(5ms);
       pos = sc.ReadPos(id);
       if (pos == -1) continue;  
@@ -224,11 +255,15 @@ private:
       last_steep_flag = steep_flag;
     }
     sc.WritePWM(id, 0);
+    RCLCPP_INFO(this->get_logger(), "Stop Turning servo: %d ", id);
     centre(id);
+
   }
 
 
   void centre(int id){
+
+    RCLCPP_INFO(this->get_logger(), "Centering servo: %d ", id);
 
     sc.writeByte(id, 0x30, 0); //unlock eprom
     sc.writeWord(id, 0x09, 20); //set lower angle limit
@@ -245,6 +280,9 @@ private:
     const std::shared_ptr<custom_msgs::srv::SuctionControl::Request> request,
     std::shared_ptr<custom_msgs::srv::SuctionControl::Response> response)
   {
+    while(is_moving(20)){
+      rclcpp::sleep_for(100ms);
+    }
     driveLogic(foot.front, request->cup_1);
     driveLogic(foot.rear, request->cup_2);
     response->success = true;
@@ -333,7 +371,7 @@ private:
     {"wrist_1", 75}, {"wrist_2", 75}
   };
   std::map<string, float> joint_offsets = {
-    {"elbow_1", 2}, {"elbow_2", 0.5}, {"elbow_3", 2},
+    {"elbow_1", 2}, {"elbow_2", 0.5}, {"elbow_3", -2},
     {"wrist_1", 0}, {"wrist_2", 0}
   };
 

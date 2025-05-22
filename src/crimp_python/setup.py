@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'motion_controller = crimp_python.motion_controller:main',
             'lidar = crimp_python.lidar:main'
         ],
     },
